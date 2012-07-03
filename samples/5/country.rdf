@@ -1,0 +1,543 @@
+<rdf:RDF
+    xmlns:Factbook="http://www.cs.toronto.edu/~yuana/2004/11/fackbook-ont#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://ws.nju.edu.cn/rdf/country/">
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/RussiaJapan">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >24</Factbook:amount>
+    <Factbook:fromCountry>
+      <Factbook:Country rdf:about="http://ws.nju.edu.cn/rdf/country/country/Russia">
+        <Factbook:countryName>Russia</Factbook:countryName>
+      </Factbook:Country>
+    </Factbook:fromCountry>
+    <Factbook:toCountry>
+      <Factbook:Country rdf:about="http://ws.nju.edu.cn/rdf/country/country/Japan">
+        <Factbook:countryName>Japan</Factbook:countryName>
+      </Factbook:Country>
+    </Factbook:toCountry>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/UKRussia">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Factbook:amount>
+    <Factbook:fromCountry>
+      <Factbook:Country rdf:about="http://ws.nju.edu.cn/rdf/country/country/UK">
+        <Factbook:countryName>UK</Factbook:countryName>
+      </Factbook:Country>
+    </Factbook:fromCountry>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/73713739">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1482729</Factbook:population>
+    <Factbook:cityName>Lu'an</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:CurrencyValue rdf:about="http://ws.nju.edu.cn/rdf/country/currencyValue/RUR">
+    <Factbook:forCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:exchangeRateInUsd rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.035</Factbook:exchangeRateInUsd>
+    <Factbook:inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2012</Factbook:inYear>
+    <Factbook:forCurrency>
+      <Factbook:Currency rdf:about="http://ws.nju.edu.cn/rdf/country/currency/RUR">
+        <Factbook:currenctTitle>RUR</Factbook:currenctTitle>
+      </Factbook:Currency>
+    </Factbook:forCurrency>
+  </Factbook:CurrencyValue>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1819702945">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry>
+      <Factbook:Country rdf:about="http://ws.nju.edu.cn/rdf/country/country/China">
+        <Factbook:countryName>China</Factbook:countryName>
+      </Factbook:Country>
+    </Factbook:inCountry>
+    <Factbook:companyName>Shanda</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/655378646">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >605940</Factbook:population>
+    <Factbook:cityName>Kagoshima</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:CapitalCity rdf:about="http://ws.nju.edu.cn/rdf/country/city/335430064">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >601723</Factbook:population>
+    <Factbook:area rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</Factbook:area>
+    <Factbook:cityName>Washington</Factbook:cityName>
+  </Factbook:CapitalCity>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/600972397">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:companyName>Tredair</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/367776686">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >91404</Factbook:population>
+    <Factbook:cityName>Southport</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/USAJapan">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Factbook:amount>
+    <Factbook:fromCountry>
+      <Factbook:Country rdf:about="http://ws.nju.edu.cn/rdf/country/country/USA">
+        <Factbook:countryName>USA</Factbook:countryName>
+      </Factbook:Country>
+    </Factbook:fromCountry>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/RussiaChina">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/371007270">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry>
+      <Factbook:Country rdf:about="http://ws.nju.edu.cn/rdf/country/country/Korea">
+        <Factbook:countryName>Korea</Factbook:countryName>
+      </Factbook:Country>
+    </Factbook:inCountry>
+    <Factbook:companyName>Softmax</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/717988815">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:companyName>Imation</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/67106022">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:companyName>Enkei</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/JapanChina">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1335434676">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >549361</Factbook:population>
+    <Factbook:cityName>Orenburg</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/JapanUK">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >18</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/USARussia">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1209018940">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:companyName>Gazprom Media</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/JapanKorea">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >30</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1993955031">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >945942</Factbook:population>
+    <Factbook:cityName>San Jose</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:CapitalCity rdf:about="http://ws.nju.edu.cn/rdf/country/city/1984487174">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >10382754</Factbook:population>
+    <Factbook:area rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</Factbook:area>
+    <Factbook:cityName>Moscow</Factbook:cityName>
+  </Factbook:CapitalCity>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/KoreaUSA">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >10</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/ChinaJapan">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+  </Factbook:Exportation>
+  <Factbook:CapitalCity rdf:about="http://ws.nju.edu.cn/rdf/country/city/80989254">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8949447</Factbook:population>
+    <Factbook:area rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</Factbook:area>
+    <Factbook:cityName>Tokyo</Factbook:cityName>
+  </Factbook:CapitalCity>
+  <Factbook:CapitalCity rdf:about="http://ws.nju.edu.cn/rdf/country/city/1437477022">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >18827000</Factbook:population>
+    <Factbook:area rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >1</Factbook:area>
+    <Factbook:cityName>Beijing</Factbook:cityName>
+  </Factbook:CapitalCity>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/RussiaKorea">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1279572263">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >329727</Factbook:population>
+    <Factbook:cityName>Gwangmyeong</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1778785306">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:companyName>Hokuetsu Bank</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/USAKorea">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >10</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/JapanUSA">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1116939398">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:companyName>LG Group</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/RussiaUK">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/2131167875">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >124442</Factbook:population>
+    <Factbook:cityName>Visalia</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/KoreaJapan">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >30</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/479068750">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >180719</Factbook:population>
+    <Factbook:cityName>Newport News</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/KoreaRussia">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >20</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+  </Factbook:Exportation>
+  <Factbook:CapitalCity rdf:about="http://ws.nju.edu.cn/rdf/country/city/79771540">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >9794304</Factbook:population>
+    <Factbook:area rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</Factbook:area>
+    <Factbook:cityName>Seoul</Factbook:cityName>
+  </Factbook:CapitalCity>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1722971326">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >121817</Factbook:population>
+    <Factbook:cityName>Khasavyurt</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:CurrencyValue rdf:about="http://ws.nju.edu.cn/rdf/country/currencyValue/CNY">
+    <Factbook:forCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:exchangeRateInUsd rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.158</Factbook:exchangeRateInUsd>
+    <Factbook:inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2012</Factbook:inYear>
+    <Factbook:forCurrency>
+      <Factbook:Currency rdf:about="http://ws.nju.edu.cn/rdf/country/currency/CNY">
+        <Factbook:currenctTitle>CNY</Factbook:currenctTitle>
+      </Factbook:Currency>
+    </Factbook:forCurrency>
+  </Factbook:CurrencyValue>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/2012326437">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >646175</Factbook:population>
+    <Factbook:cityName>Krasnodar</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/UKJapan">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >18</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1246691461">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:companyName>Rosneft</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:CapitalCity rdf:about="http://ws.nju.edu.cn/rdf/country/city/2013264328">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >7172091</Factbook:population>
+    <Factbook:area rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</Factbook:area>
+    <Factbook:cityName>London</Factbook:cityName>
+  </Factbook:CapitalCity>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/623285354">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:companyName>Gravity Co., Ltd.</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/KoreaUK">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+  </Factbook:Exportation>
+  <Factbook:CurrencyValue rdf:about="http://ws.nju.edu.cn/rdf/country/currencyValue/USD">
+    <Factbook:forCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:exchangeRateInUsd rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.0</Factbook:exchangeRateInUsd>
+    <Factbook:inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2012</Factbook:inYear>
+    <Factbook:forCurrency>
+      <Factbook:Currency rdf:about="http://ws.nju.edu.cn/rdf/country/currency/USD">
+        <Factbook:currenctTitle>USD</Factbook:currenctTitle>
+      </Factbook:Currency>
+    </Factbook:forCurrency>
+  </Factbook:CurrencyValue>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/JapanRussia">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >24</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/523474519">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:companyName>Almaz-Antey</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:CurrencyValue rdf:about="http://ws.nju.edu.cn/rdf/country/currencyValue/KRW">
+    <Factbook:forCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:exchangeRateInUsd rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.001</Factbook:exchangeRateInUsd>
+    <Factbook:inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2012</Factbook:inYear>
+    <Factbook:forCurrency>
+      <Factbook:Currency rdf:about="http://ws.nju.edu.cn/rdf/country/currency/KRW">
+        <Factbook:currenctTitle>KRW</Factbook:currenctTitle>
+      </Factbook:Currency>
+    </Factbook:forCurrency>
+  </Factbook:CurrencyValue>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/537296016">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >62756</Factbook:population>
+    <Factbook:cityName>Iskitim</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/948059725">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >99962</Factbook:population>
+    <Factbook:cityName>Chelmsford</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/UKKorea">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >15</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1258313664">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >138364</Factbook:population>
+    <Factbook:cityName>Pocheon</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/65078211">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >474926</Factbook:population>
+    <Factbook:cityName>Chiba</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/810774948">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:companyName>Halliburton</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1473875107">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >226876</Factbook:population>
+    <Factbook:cityName>Garland</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/2073502">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:companyName>CNPC</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/ChinaUK">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/UKChina">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >3</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/745380212">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:companyName>Sinosteel</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/69492065">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >138614</Factbook:population>
+    <Factbook:cityName>Hanam</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/654282350">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:companyName>Juno Records</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:CurrencyValue rdf:about="http://ws.nju.edu.cn/rdf/country/currencyValue/GBP">
+    <Factbook:forCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:exchangeRateInUsd rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >1.596</Factbook:exchangeRateInUsd>
+    <Factbook:inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2012</Factbook:inYear>
+    <Factbook:forCurrency>
+      <Factbook:Currency rdf:about="http://ws.nju.edu.cn/rdf/country/currency/GBP">
+        <Factbook:currenctTitle>GBP</Factbook:currenctTitle>
+      </Factbook:Currency>
+    </Factbook:forCurrency>
+  </Factbook:CurrencyValue>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/RussiaUSA">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >8</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1512161185">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >579999</Factbook:population>
+    <Factbook:cityName>Oklahoma City</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1752532916">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:companyName>Devon Energy</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/ChinaUSA">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/USAChina">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/1178997465">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:companyName>Dashang Group</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/KoreaChina">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/744699707">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:companyName>Dell, Inc.</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/USAUK">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+  </Factbook:Exportation>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1995575789">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >617594</Factbook:population>
+    <Factbook:cityName>Boston</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/644090164">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:companyName>Asahi Glass</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/1779065630">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >64238</Factbook:population>
+    <Factbook:cityName>Tuapse</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:CurrencyValue rdf:about="http://ws.nju.edu.cn/rdf/country/currencyValue/JPY">
+    <Factbook:forCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Japan"/>
+    <Factbook:exchangeRateInUsd rdf:datatype="http://www.w3.org/2001/XMLSchema#float"
+    >0.012</Factbook:exchangeRateInUsd>
+    <Factbook:inYear rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >2012</Factbook:inYear>
+    <Factbook:forCurrency>
+      <Factbook:Currency rdf:about="http://ws.nju.edu.cn/rdf/country/currency/JPY">
+        <Factbook:currenctTitle>JPY</Factbook:currenctTitle>
+      </Factbook:Currency>
+    </Factbook:forCurrency>
+  </Factbook:CurrencyValue>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/UKUSA">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >6</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/USA"/>
+  </Factbook:Exportation>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/ChinaRussia">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >4</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Russia"/>
+  </Factbook:Exportation>
+  <Factbook:Company rdf:about="http://ws.nju.edu.cn/rdf/country/company/377350765">
+    <Factbook:revenues rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >0</Factbook:revenues>
+    <Factbook:inCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/UK"/>
+    <Factbook:companyName>Rising Star Games</Factbook:companyName>
+  </Factbook:Company>
+  <Factbook:City rdf:about="http://ws.nju.edu.cn/rdf/country/city/827123222">
+    <Factbook:population rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >145438</Factbook:population>
+    <Factbook:cityName>Torrance</Factbook:cityName>
+  </Factbook:City>
+  <Factbook:Exportation rdf:about="http://ws.nju.edu.cn/rdf/country/exportation/ChinaKorea">
+    <Factbook:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >5</Factbook:amount>
+    <Factbook:fromCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/China"/>
+    <Factbook:toCountry rdf:resource="http://ws.nju.edu.cn/rdf/country/country/Korea"/>
+  </Factbook:Exportation>
+</rdf:RDF>

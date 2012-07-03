@@ -1,0 +1,2238 @@
+@prefix map: <file:/C:/d2r-server-0.3.2/db2mapping.n3#> .
+@prefix db: <> .
+@prefix vocab: <http://www.owl-ontologies.com/WCCOntology.owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDriver "com.ibm.db2.jcc.DB2Driver";
+	d2rq:jdbcDSN "jdbc:db2://9.186.62.143:50000/wcc705";
+	d2rq:username "db2user";
+	d2rq:password "db2user";
+	.
+
+
+# Table WCC65DB.ADDRESS
+map:WCC65DB_ADDRESS a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.ADDRESS/@@WCC65DB.ADDRESS.ADDRESS_ID@@";
+	d2rq:class vocab:ADDRESS;
+	.
+map:WCC65DB_ADDRESS__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.ADDRESS #@@WCC65DB.ADDRESS.ADDRESS_ID@@";
+	.
+map:ADDRESS_COUNTRY_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:Country;
+	d2rq:column "WCC65DB.CDCOUNTRYTP.NAME";
+	d2rq:join "WCC65DB.ADDRESS.COUNTRY_TP_CD = WCC65DB.CDCOUNTRYTP.COUNTRY_TP_CD";
+	d2rq:condition "WCC65DB.CDCOUNTRYTP.LANG_TP_CD = 100"
+	.
+map:ADDRESS_RESIDENCE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:hasRESIDENCE_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDRESIDENCETP;
+	d2rq:join "WCC65DB.ADDRESS.RESIDENCE_TP_CD = WCC65DB.CDRESIDENCETP.RESIDENCE_TP_CD";
+	.
+map:ADDRESS_PROV_STATE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:Province;
+	d2rq:column "WCC65DB.CDPROVSTATETP.NAME";
+	d2rq:join "WCC65DB.ADDRESS.PROV_STATE_TP_CD = WCC65DB.CDPROVSTATETP.PROV_STATE_TP_CD";
+	d2rq:condition "WCC65DB.CDPROVSTATETP.LANG_TP_CD = 100"
+	.
+map:ADDRESS_ADDR_LINE_ONE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:ADDRESS_LINE;
+	d2rq:column "WCC65DB.ADDRESS.ADDR_LINE_ONE";
+	.
+map:ADDRESS_ADDR_LINE_TWO a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:ADDRESS_LINE;
+	d2rq:column "WCC65DB.ADDRESS.ADDR_LINE_TWO";
+	.
+map:ADDRESS_ADDR_LINE_THREE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:ADDRESS_LINE;
+	d2rq:column "WCC65DB.ADDRESS.ADDR_LINE_THREE";
+	.
+map:ADDRESS_CITY_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:CITY;
+	d2rq:column "WCC65DB.ADDRESS.CITY_NAME";
+	.
+map:ADDRESS_POSTAL_CODE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:Postal_Code;
+	d2rq:column "WCC65DB.ADDRESS.POSTAL_CODE";
+	.
+map:ADDRESS_RESIDENCE_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:Residence_Number;
+	d2rq:column "WCC65DB.ADDRESS.RESIDENCE_NUM";
+	.
+map:ADDRESS_LATITUDE_DEGREES a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:Latitude;
+	d2rq:column "WCC65DB.ADDRESS.LATITUDE_DEGREES";
+	.
+map:ADDRESS_LONGITUDE_DEGREES a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESS;
+	d2rq:property vocab:Longitude;
+	d2rq:column "WCC65DB.ADDRESS.LONGITUDE_DEGREES";
+	.
+
+
+
+# Table WCC65DB.ADDRESSGROUP
+map:WCC65DB_ADDRESSGROUP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.LOCATIONGROUP/@@WCC65DB.ADDRESSGROUP.LOCATION_GROUP_ID@@";
+	d2rq:class vocab:ADDRESS_GROUP;
+	.
+map:WCC65DB_ADDRESSGROUP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESSGROUP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.ADDRESSGROUP #@@WCC65DB.ADDRESSGROUP.LOCATION_GROUP_ID@@";
+	.
+map:ADDRESSGROUP_ADDRESS_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESSGROUP;
+	d2rq:property vocab:hasAddress;
+	d2rq:refersToClassMap map:WCC65DB_ADDRESS;
+	d2rq:join "WCC65DB.ADDRESSGROUP.ADDRESS_ID = WCC65DB.ADDRESS.ADDRESS_ID";
+	.
+map:ADDRESSGROUP_ADDR_USAGE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ADDRESSGROUP;
+	d2rq:property vocab:hasAddress_Usage;
+	d2rq:refersToClassMap map:WCC65DB_CDADDRUSAGETP;
+	d2rq:join "WCC65DB.ADDRESSGROUP.ADDR_USAGE_TP_CD = WCC65DB.CDADDRUSAGETP.ADDR_USAGE_TP_CD";
+	.
+
+
+
+
+# Table WCC65DB.BANKACCOUNT
+map:WCC65DB_BANKACCOUNT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.PAYMENTSOURCE/@@WCC65DB.BANKACCOUNT.PAYMENT_SOURCE_ID@@";
+	d2rq:class vocab:BANK_ACCOUNT;
+	.
+map:WCC65DB_BANKACCOUNT__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.BANKACCOUNT #@@WCC65DB.BANKACCOUNT.PAYMENT_SOURCE_ID@@";
+	.
+map:BANKACCOUNT_ACCT_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:hasAccount_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDACCOUNTTP;
+	d2rq:join "WCC65DB.BANKACCOUNT.ACCT_TP_CD = WCC65DB.CDACCOUNTTP.ACCT_TP_CD";
+	.
+map:BANKACCOUNT_ACCT_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:Account_Number;
+	d2rq:column "WCC65DB.BANKACCOUNT.ACCT_NUM";
+	.
+map:BANKACCOUNT_RECORDED_OPEN_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:RECORDED_OPEN_Datetime;
+	d2rq:column "WCC65DB.BANKACCOUNT.RECORDED_OPEN_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BANKACCOUNT_RECORDED_CLOSED_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:RECORDED_Closed_Datetime;
+	d2rq:column "WCC65DB.BANKACCOUNT.RECORDED_CLOSED_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BANKACCOUNT_BRANCH_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:BRANCH_Number;
+	d2rq:column "WCC65DB.BANKACCOUNT.BRANCH_NUM";
+	.
+map:BANKACCOUNT_BANK_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:ACCOUNT_BANK_Number;
+	d2rq:column "WCC65DB.BANKACCOUNT.BANK_NUM";
+	.
+map:BANKACCOUNT_DEPOSITOR_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BANKACCOUNT;
+	d2rq:property vocab:DEPOSITOR_NAME;
+	d2rq:column "WCC65DB.BANKACCOUNT.DEPOSITOR_NAME";
+	.
+
+
+
+# Table WCC65DB.BILLINGSUMMARY
+map:WCC65DB_BILLINGSUMMARY a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.BILLINGSUMMARY/@@WCC65DB.BILLINGSUMMARY.BILLING_SUMMARY_ID@@";
+	d2rq:class vocab:BILLING_SUMMARY;
+	.
+map:WCC65DB_BILLINGSUMMARY__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.BILLINGSUMMARY #@@WCC65DB.BILLINGSUMMARY.BILLING_SUMMARY_ID@@";
+	.
+map:BILLINGSUMMARY_BILLING_ST_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:hasBILLING_Status;
+	d2rq:refersToClassMap map:WCC65DB_CDBILLINGSTTP;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.BILLING_ST_TP_CD = WCC65DB.CDBILLINGSTTP.BILLING_ST_TP_CD";
+	.
+map:BILLINGSUMMARY_PYMT_MTHD_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:hasPayment_Method;
+	d2rq:refersToClassMap map:WCC65DB_CDPAYMENTMETHODTP;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.PYMT_MTHD_TP_CD = WCC65DB.CDPAYMENTMETHODTP.PYMT_MTHD_TP_CD";
+	.
+map:BILLINGSUMMARY_LAST_PY_MD_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:hasLast_Payment_Method;
+	d2rq:refersToClassMap map:WCC65DB_CDPAYMENTMETHODTP;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.LAST_PY_MD_TP_CD = WCC65DB.CDPAYMENTMETHODTP.PYMT_MTHD_TP_CD";
+	.
+map:BILLINGSUMMARY_EFFECTIVE_DATE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:EFFECTIVE_DATEtime;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.EFFECTIVE_DATE";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BILLINGSUMMARY_DUE_DATE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:DUE_DATEtime;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.DUE_DATE";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BILLINGSUMMARY_ACCOUNT_BALANCE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:ACCOUNT_BALANCE;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.ACCOUNT_BALANCE";
+	d2rq:datatype xsd:decimal;
+	.
+map:BILLINGSUMMARY_MIN_PAYMENT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:Minimum_PAYMENT;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.MIN_PAYMENT";
+	d2rq:datatype xsd:decimal;
+	.
+map:BILLINGSUMMARY_MAX_PAYMENT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:Maximum_PAYMENT;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.MAX_PAYMENT";
+	d2rq:datatype xsd:decimal;
+	.
+map:BILLINGSUMMARY_PAID_TO_DATE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:PAID_TO_DATEtime;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.PAID_TO_DATE";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BILLINGSUMMARY_PAYMENT_SOURCE_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:Paid_From;
+	d2rq:refersToClassMap map:WCC65DB_PAYMENTSOURCE;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.PAYMENT_SOURCE_ID = WCC65DB.PAYMENTSOURCE.PAYMENT_SOURCE_ID";
+	.
+map:BILLINGSUMMARY_WITHDRAWAL_DATETIME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:WITHDRAWAL_DATETIME;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.WITHDRAWAL_DATE";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BILLINGSUMMARY_LAST_PAYMENT_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:LAST_PAYMENT_Amount;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.LAST_PAYMENT_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:BILLINGSUMMARY_LAST_PAYMENT_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:LAST_PAYMENT_Datetime;
+	d2rq:column "WCC65DB.BILLINGSUMMARY.LAST_PAYMENT_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:BILLINGSUMMARY_FREQ_MODE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:hasBILLING_Frequency_MODE;
+	d2rq:refersToClassMap map:WCC65DB_CDRPTINGFREQTP;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.FREQ_MODE_TP_CD = WCC65DB.CDRPTINGFREQTP.RPTING_FREQ_TP_CD";
+	.
+map:BILLINGSUMMARY_CONTRACT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:BILLING_for_CONTRACT;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACT;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.CONTRACT_ID = WCC65DB.CONTRACT.CONTRACT_ID";
+	.
+map:BILLINGSUMMARY_CONTR_COMPONENT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_BILLINGSUMMARY;
+	d2rq:property vocab:BILLING_for_Contract_COMPONENT;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:join "WCC65DB.BILLINGSUMMARY.CONTR_COMPONENT_ID = WCC65DB.CONTRACTCOMPONENT.CONTR_COMPONENT_ID";
+	.
+
+
+
+
+# Table WCC65DB.CDACCOUNTTP
+map:WCC65DB_CDACCOUNTTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDACCOUNTTP/@@WCC65DB.CDACCOUNTTP.ACCT_TP_CD@@";
+	d2rq:class vocab:Account_Type;
+	d2rq:condition "WCC65DB.CDACCOUNTTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDACCOUNTTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDACCOUNTTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDACCOUNTTP #@@WCC65DB.CDACCOUNTTP.LANG_TP_CD@@/@@WCC65DB.CDACCOUNTTP.ACCT_TP_CD@@";
+	.
+map:CDACCOUNTTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDACCOUNTTP;
+	d2rq:property vocab:Account_Type_NAME;
+	d2rq:column "WCC65DB.CDACCOUNTTP.NAME";
+	.
+
+
+# Table WCC65DB.CDADDRUSAGETP
+map:WCC65DB_CDADDRUSAGETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDADDRUSAGETP/@@WCC65DB.CDADDRUSAGETP.ADDR_USAGE_TP_CD@@";
+	d2rq:class vocab:Address_Usage;
+	d2rq:condition "WCC65DB.CDADDRUSAGETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDADDRUSAGETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDADDRUSAGETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDADDRUSAGETP #@@WCC65DB.CDADDRUSAGETP.LANG_TP_CD@@/@@WCC65DB.CDADDRUSAGETP.ADDR_USAGE_TP_CD@@";
+	.
+map:CDADDRUSAGETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDADDRUSAGETP;
+	d2rq:property vocab:Address_Usage_NAME;
+	d2rq:column "WCC65DB.CDADDRUSAGETP.NAME";
+	.
+
+
+
+# Table WCC65DB.CDBILLINGSTTP
+map:WCC65DB_CDBILLINGSTTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDBILLINGSTTP/@@WCC65DB.CDBILLINGSTTP.BILLING_ST_TP_CD@@";
+	d2rq:class vocab:Billing_Status;
+	d2rq:condition "WCC65DB.CDBILLINGSTTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDBILLINGSTTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDBILLINGSTTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDBILLINGSTTP #@@WCC65DB.CDBILLINGSTTP.LANG_TP_CD@@/@@WCC65DB.CDBILLINGSTTP.BILLING_ST_TP_CD@@";
+	.
+map:CDBILLINGSTTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDBILLINGSTTP;
+	d2rq:property vocab:Billing_Status_NAME;
+	d2rq:column "WCC65DB.CDBILLINGSTTP.NAME";
+	.
+
+
+
+# Table WCC65DB.CDBILLTP
+map:WCC65DB_CDBILLTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDBILLTP/@@WCC65DB.CDBILLTP.BILL_TP_CD@@";
+	d2rq:class vocab:Bill_Type;
+	d2rq:condition "WCC65DB.CDBILLTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDBILLTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDBILLTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDBILLTP #@@WCC65DB.CDBILLTP.LANG_TP_CD@@/@@WCC65DB.CDBILLTP.BILL_TP_CD@@";
+	.
+map:CDBILLTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDBILLTP;
+	d2rq:property vocab:Bill_Type_NAME;
+	d2rq:column "WCC65DB.CDBILLTP.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDBUYSELLAGREETP
+map:WCC65DB_CDBUYSELLAGREETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDBUYSELLAGREETP/@@WCC65DB.CDBUYSELLAGREETP.BUY_SELL_AGR_TP_CD@@";
+	d2rq:class vocab:BUY_SELL_AGREEment_Type;
+	d2rq:condition "WCC65DB.CDBUYSELLAGREETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDBUYSELLAGREETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDBUYSELLAGREETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDBUYSELLAGREETP #@@WCC65DB.CDBUYSELLAGREETP.LANG_TP_CD@@/@@WCC65DB.CDBUYSELLAGREETP.BUY_SELL_AGR_TP_CD@@";
+	.
+map:CDBUYSELLAGREETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDBUYSELLAGREETP;
+	d2rq:property vocab:BUY_SELL_AGREEment_Type_NAME;
+	d2rq:column "WCC65DB.CDBUYSELLAGREETP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDCHARGECARDTP
+map:WCC65DB_CDCHARGECARDTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCHARGECARDTP/@@WCC65DB.CDCHARGECARDTP.CHARGE_CARD_TP_CD@@";
+	d2rq:class vocab:CHARGE_CARD_Type;
+	d2rq:condition "WCC65DB.CDCHARGECARDTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCHARGECARDTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCHARGECARDTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCHARGECARDTP #@@WCC65DB.CDCHARGECARDTP.LANG_TP_CD@@/@@WCC65DB.CDCHARGECARDTP.CHARGE_CARD_TP_CD@@";
+	.
+map:CDCHARGECARDTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCHARGECARDTP;
+	d2rq:property vocab:CHARGE_CARD_Type_NAME;
+	d2rq:column "WCC65DB.CDCHARGECARDTP.NAME";
+	.
+
+
+
+
+
+
+# Table WCC65DB.CDCLAIMROLETP
+map:WCC65DB_CDCLAIMROLETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCLAIMROLETP/@@WCC65DB.CDCLAIMROLETP.CLAIM_ROLE_TP_CD@@";
+	d2rq:class vocab:CLAIM_ROLE;
+	d2rq:condition "WCC65DB.CDCLAIMROLETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCLAIMROLETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLAIMROLETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCLAIMROLETP #@@WCC65DB.CDCLAIMROLETP.LANG_TP_CD@@/@@WCC65DB.CDCLAIMROLETP.CLAIM_ROLE_TP_CD@@";
+	.
+map:CDCLAIMROLETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLAIMROLETP;
+	d2rq:property vocab:CLAIM_ROLE_NAME;
+	d2rq:column "WCC65DB.CDCLAIMROLETP.NAME";
+	.
+
+
+# Table WCC65DB.CDCLAIMSTATUSTP
+map:WCC65DB_CDCLAIMSTATUSTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCLAIMSTATUSTP/@@WCC65DB.CDCLAIMSTATUSTP.CLAIM_STATUS_TP_CD@@";
+	d2rq:class vocab:CLAIM_STATUS_Type;
+	d2rq:condition "WCC65DB.CDCLAIMSTATUSTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCLAIMSTATUSTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLAIMSTATUSTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCLAIMSTATUSTP #@@WCC65DB.CDCLAIMSTATUSTP.LANG_TP_CD@@/@@WCC65DB.CDCLAIMSTATUSTP.CLAIM_STATUS_TP_CD@@";
+	.
+map:CDCLAIMSTATUSTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLAIMSTATUSTP;
+	d2rq:property vocab:CLAIM_STATUS_Type_NAME;
+	d2rq:column "WCC65DB.CDCLAIMSTATUSTP.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDCLAIMTP
+map:WCC65DB_CDCLAIMTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCLAIMTP/@@WCC65DB.CDCLAIMTP.CLAIM_TP_CD@@";
+	d2rq:class vocab:CLAIM_Type;
+	d2rq:condition "WCC65DB.CDCLAIMTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCLAIMTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLAIMTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCLAIMTP #@@WCC65DB.CDCLAIMTP.LANG_TP_CD@@/@@WCC65DB.CDCLAIMTP.CLAIM_TP_CD@@";
+	.
+map:CDCLAIMTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLAIMTP;
+	d2rq:property vocab:CLAIM_Type_NAME;
+	d2rq:column "WCC65DB.CDCLAIMTP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDCLIENTIMPTP
+map:WCC65DB_CDCLIENTIMPTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCLIENTIMPTP/@@WCC65DB.CDCLIENTIMPTP.CLIENT_IMP_TP_CD@@";
+	d2rq:class vocab:CLIENT_Importance;
+	d2rq:condition "WCC65DB.CDCLIENTIMPTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCLIENTIMPTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLIENTIMPTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCLIENTIMPTP #@@WCC65DB.CDCLIENTIMPTP.LANG_TP_CD@@/@@WCC65DB.CDCLIENTIMPTP.CLIENT_IMP_TP_CD@@";
+	.
+map:CDCLIENTIMPTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLIENTIMPTP;
+	d2rq:property vocab:CLIENT_Importance_NAME;
+	d2rq:column "WCC65DB.CDCLIENTIMPTP.NAME";
+	.
+
+
+
+# Table WCC65DB.CDCLIENTPOTENTP
+map:WCC65DB_CDCLIENTPOTENTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCLIENTPOTENTP/@@WCC65DB.CDCLIENTPOTENTP.CLIENT_POTEN_TP_CD@@";
+	d2rq:class vocab:CLIENT_POTENtial;
+	d2rq:condition "WCC65DB.CDCLIENTPOTENTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCLIENTPOTENTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLIENTPOTENTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCLIENTPOTENTP #@@WCC65DB.CDCLIENTPOTENTP.LANG_TP_CD@@/@@WCC65DB.CDCLIENTPOTENTP.CLIENT_POTEN_TP_CD@@";
+	.
+map:CDCLIENTPOTENTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLIENTPOTENTP;
+	d2rq:property vocab:CLIENT_POTENtial_NAME;
+	d2rq:column "WCC65DB.CDCLIENTPOTENTP.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDCLIENTSTTP
+map:WCC65DB_CDCLIENTSTTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCLIENTSTTP/@@WCC65DB.CDCLIENTSTTP.CLIENT_ST_TP_CD@@";
+	d2rq:class vocab:CLIENT_Status;
+	d2rq:condition "WCC65DB.CDCLIENTSTTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCLIENTSTTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLIENTSTTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCLIENTSTTP #@@WCC65DB.CDCLIENTSTTP.LANG_TP_CD@@/@@WCC65DB.CDCLIENTSTTP.CLIENT_ST_TP_CD@@";
+	.
+map:CDCLIENTSTTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCLIENTSTTP;
+	d2rq:property vocab:CLIENT_Status_NAME;
+	d2rq:column "WCC65DB.CDCLIENTSTTP.NAME";
+	.
+
+
+
+# Table WCC65DB.CDCONTMETHCAT
+map:WCC65DB_CDCONTMETHCAT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCONTMETHCAT/@@WCC65DB.CDCONTMETHCAT.CONT_METH_CAT_CD@@";
+	d2rq:class vocab:CONTactMETHod_Category;
+	d2rq:condition "WCC65DB.CDCONTMETHCAT.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCONTMETHCAT__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTMETHCAT;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCONTMETHCAT #@@WCC65DB.CDCONTMETHCAT.LANG_TP_CD@@/@@WCC65DB.CDCONTMETHCAT.CONT_METH_CAT_CD@@";
+	.
+map:CDCONTMETHCAT_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTMETHCAT;
+	d2rq:property vocab:CONTactMETHod_Category_NAME;
+	d2rq:column "WCC65DB.CDCONTMETHCAT.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDCONTMETHTP
+map:WCC65DB_CDCONTMETHTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCONTMETHTP/@@WCC65DB.CDCONTMETHTP.CONT_METH_TP_CD@@";
+	d2rq:class vocab:Contactmethod_Type;
+	d2rq:condition "WCC65DB.CDCONTMETHTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCONTMETHTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTMETHTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCONTMETHTP #@@WCC65DB.CDCONTMETHTP.LANG_TP_CD@@/@@WCC65DB.CDCONTMETHTP.CONT_METH_TP_CD@@";
+	.
+map:CDCONTMETHTP_CONT_METH_CAT_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTMETHTP;
+	d2rq:property vocab:hasCategory;
+	d2rq:refersToClassMap map:WCC65DB_CDCONTMETHCAT;
+	d2rq:join "WCC65DB.CDCONTMETHTP.CONT_METH_CAT_CD = WCC65DB.CDCONTMETHCAT.CONT_METH_CAT_CD";
+	.
+map:CDCONTMETHTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTMETHTP;
+	d2rq:property vocab:Contactmethod_Type_NAME;
+	d2rq:column "WCC65DB.CDCONTMETHTP.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDCONTRACTRELSTTP
+map:WCC65DB_CDCONTRACTRELSTTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCONTRACTRELSTTP/@@WCC65DB.CDCONTRACTRELSTTP.CONTR_REL_ST_TP_CD@@";
+	d2rq:class vocab:Contract_Relationship_Status;
+	d2rq:condition "WCC65DB.CDCONTRACTRELSTTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCONTRACTRELSTTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTRELSTTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCONTRACTRELSTTP #@@WCC65DB.CDCONTRACTRELSTTP.LANG_TP_CD@@/@@WCC65DB.CDCONTRACTRELSTTP.CONTR_REL_ST_TP_CD@@";
+	.
+map:CDCONTRACTRELSTTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTRELSTTP;
+	d2rq:property vocab:Contract_Relationship_Status_NAME;
+	d2rq:column "WCC65DB.CDCONTRACTRELSTTP.NAME";
+	.
+
+
+
+# Table WCC65DB.CDCONTRACTRELTP
+map:WCC65DB_CDCONTRACTRELTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCONTRACTRELTP/@@WCC65DB.CDCONTRACTRELTP.CONTR_REL_TP_CD@@";
+	d2rq:class vocab:Contract_Relationship_Type;
+	d2rq:condition "WCC65DB.CDCONTRACTRELTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCONTRACTRELTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTRELTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCONTRACTRELTP #@@WCC65DB.CDCONTRACTRELTP.LANG_TP_CD@@/@@WCC65DB.CDCONTRACTRELTP.CONTR_REL_TP_CD@@";
+	.
+map:CDCONTRACTRELTP_TO_FROM_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTRELTP;
+	d2rq:property vocab:Contract_Relationship_TO_FROM_NAME;
+	d2rq:column "WCC65DB.CDCONTRACTRELTP.TO_FROM_NAME";
+	.
+map:CDCONTRACTRELTP_FROM_TO_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTRELTP;
+	d2rq:property vocab:Contract_Relationship_FROM_TO_NAME;
+	d2rq:column "WCC65DB.CDCONTRACTRELTP.FROM_TO_NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDCONTRACTROLETP
+map:WCC65DB_CDCONTRACTROLETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCONTRACTROLETP/@@WCC65DB.CDCONTRACTROLETP.CONTR_ROLE_TP_CD@@";
+	d2rq:class vocab:CONTRACT_ROLE;
+	d2rq:condition "WCC65DB.CDCONTRACTROLETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCONTRACTROLETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTROLETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCONTRACTROLETP #@@WCC65DB.CDCONTRACTROLETP.LANG_TP_CD@@/@@WCC65DB.CDCONTRACTROLETP.CONTR_ROLE_TP_CD@@";
+	.
+map:CDCONTRACTROLETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCONTRACTROLETP;
+	d2rq:property vocab:CONTRACT_ROLE_NAME;
+	d2rq:column "WCC65DB.CDCONTRACTROLETP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDCURRENCYTP
+map:WCC65DB_CDCURRENCYTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDCURRENCYTP/@@WCC65DB.CDCURRENCYTP.CURRENCY_TP_CD@@";
+	d2rq:class vocab:CURRENCY;
+	d2rq:condition "WCC65DB.CDCURRENCYTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDCURRENCYTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCURRENCYTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDCURRENCYTP #@@WCC65DB.CDCURRENCYTP.LANG_TP_CD@@/@@WCC65DB.CDCURRENCYTP.CURRENCY_TP_CD@@";
+	.
+map:CDCURRENCYTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDCURRENCYTP;
+	d2rq:property vocab:CURRENCY_NAME;
+	d2rq:column "WCC65DB.CDCURRENCYTP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDENDREASONTP
+map:WCC65DB_CDENDREASONTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDENDREASONTP/@@WCC65DB.CDENDREASONTP.END_REASON_TP_CD@@";
+	d2rq:class vocab:END_REASON;
+	d2rq:condition "WCC65DB.CDENDREASONTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDENDREASONTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDENDREASONTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDENDREASONTP #@@WCC65DB.CDENDREASONTP.LANG_TP_CD@@/@@WCC65DB.CDENDREASONTP.END_REASON_TP_CD@@";
+	.
+map:CDENDREASONTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDENDREASONTP;
+	d2rq:property vocab:END_REASON_NAME;
+	d2rq:column "WCC65DB.CDENDREASONTP.NAME";
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.CDHIGHESTEDUTP
+map:WCC65DB_CDHIGHESTEDUTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDHIGHESTEDUTP/@@WCC65DB.CDHIGHESTEDUTP.HIGHEST_EDU_TP_CD@@";
+	d2rq:class vocab:HIGHEST_Education;
+	d2rq:condition "WCC65DB.CDHIGHESTEDUTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDHIGHESTEDUTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDHIGHESTEDUTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDHIGHESTEDUTP #@@WCC65DB.CDHIGHESTEDUTP.LANG_TP_CD@@/@@WCC65DB.CDHIGHESTEDUTP.HIGHEST_EDU_TP_CD@@";
+	.
+map:CDHIGHESTEDUTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDHIGHESTEDUTP;
+	d2rq:property vocab:HIGHEST_Education_NAME;
+	d2rq:column "WCC65DB.CDHIGHESTEDUTP.NAME";
+	.
+
+
+
+
+
+
+# Table WCC65DB.CDLOBTP
+map:WCC65DB_CDLOBTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDLOBTP/@@WCC65DB.CDLOBTP.LOB_TP_CD@@";
+	d2rq:class vocab:LOB_Type;
+	d2rq:condition "WCC65DB.CDLOBTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDLOBTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDLOBTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDLOBTP #@@WCC65DB.CDLOBTP.LANG_TP_CD@@/@@WCC65DB.CDLOBTP.LOB_TP_CD@@";
+	.
+map:CDLOBTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDLOBTP;
+	d2rq:property vocab:LOB_Type_NAME;
+	d2rq:column "WCC65DB.CDLOBTP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDMARITALSTTP
+map:WCC65DB_CDMARITALSTTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDMARITALSTTP/@@WCC65DB.CDMARITALSTTP.MARITAL_ST_TP_CD@@";
+	d2rq:class vocab:MARITAL_Status;
+	d2rq:condition "WCC65DB.CDMARITALSTTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDMARITALSTTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDMARITALSTTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDMARITALSTTP #@@WCC65DB.CDMARITALSTTP.LANG_TP_CD@@/@@WCC65DB.CDMARITALSTTP.MARITAL_ST_TP_CD@@";
+	.
+map:CDMARITALSTTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDMARITALSTTP;
+	d2rq:property vocab:MARITAL_Status_NAME;
+	d2rq:column "WCC65DB.CDMARITALSTTP.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDMETHODSTATUSTP
+map:WCC65DB_CDMETHODSTATUSTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDMETHODSTATUSTP/@@WCC65DB.CDMETHODSTATUSTP.METHOD_ST_TP_CD@@";
+	d2rq:class vocab:ContactMETHOD_STATUS;
+	d2rq:condition "WCC65DB.CDMETHODSTATUSTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDMETHODSTATUSTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDMETHODSTATUSTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDMETHODSTATUSTP #@@WCC65DB.CDMETHODSTATUSTP.LANG_TP_CD@@/@@WCC65DB.CDMETHODSTATUSTP.METHOD_ST_TP_CD@@";
+	.
+map:CDMETHODSTATUSTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDMETHODSTATUSTP;
+	d2rq:property vocab:ContactMETHOD_STATUS_NAME;
+	d2rq:column "WCC65DB.CDMETHODSTATUSTP.NAME";
+	.
+
+
+
+
+# Table WCC65DB.CDNAMEUSAGETP
+map:WCC65DB_CDNAMEUSAGETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDNAMEUSAGETP/@@WCC65DB.CDNAMEUSAGETP.NAME_USAGE_TP_CD@@";
+	d2rq:class vocab:Person_NAME_USAGE;
+	d2rq:condition "WCC65DB.CDNAMEUSAGETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDNAMEUSAGETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDNAMEUSAGETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDNAMEUSAGETP #@@WCC65DB.CDNAMEUSAGETP.LANG_TP_CD@@/@@WCC65DB.CDNAMEUSAGETP.NAME_USAGE_TP_CD@@";
+	.
+map:CDNAMEUSAGETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDNAMEUSAGETP;
+	d2rq:property vocab:Person_NAME_USAGE_NAME;
+	d2rq:column "WCC65DB.CDNAMEUSAGETP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDORGNAMETP
+map:WCC65DB_CDORGNAMETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDORGNAMETP/@@WCC65DB.CDORGNAMETP.ORG_NAME_TP_CD@@";
+	d2rq:class vocab:Organization_NAME_Type;
+	d2rq:condition "WCC65DB.CDORGNAMETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDORGNAMETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDORGNAMETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDORGNAMETP #@@WCC65DB.CDORGNAMETP.LANG_TP_CD@@/@@WCC65DB.CDORGNAMETP.ORG_NAME_TP_CD@@";
+	.
+map:CDORGNAMETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDORGNAMETP;
+	d2rq:property vocab:Organization_NAME_Type_NAME;
+	d2rq:column "WCC65DB.CDORGNAMETP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDORGTP
+map:WCC65DB_CDORGTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDORGTP/@@WCC65DB.CDORGTP.ORG_TP_CD@@";
+	d2rq:class vocab:Organization_Type;
+	d2rq:condition "WCC65DB.CDORGTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDORGTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDORGTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDORGTP #@@WCC65DB.CDORGTP.LANG_TP_CD@@/@@WCC65DB.CDORGTP.ORG_TP_CD@@";
+	.
+map:CDORGTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDORGTP;
+	d2rq:property vocab:Organization_Type_NAME;
+	d2rq:column "WCC65DB.CDORGTP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDPAYMENTMETHODTP
+map:WCC65DB_CDPAYMENTMETHODTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDPAYMENTMETHODTP/@@WCC65DB.CDPAYMENTMETHODTP.PYMT_MTHD_TP_CD@@";
+	d2rq:class vocab:PAYMENT_METHOD;
+	d2rq:condition "WCC65DB.CDPAYMENTMETHODTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDPAYMENTMETHODTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDPAYMENTMETHODTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDPAYMENTMETHODTP #@@WCC65DB.CDPAYMENTMETHODTP.LANG_TP_CD@@/@@WCC65DB.CDPAYMENTMETHODTP.PYMT_MTHD_TP_CD@@";
+	.
+map:CDPAYMENTMETHODTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDPAYMENTMETHODTP;
+	d2rq:property vocab:PAYMENT_METHOD_NAME;
+	d2rq:column "WCC65DB.CDPAYMENTMETHODTP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDPREFIXNAMETP
+map:WCC65DB_CDPREFIXNAMETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDPREFIXNAMETP/@@WCC65DB.CDPREFIXNAMETP.PREFIX_NAME_TP_CD@@";
+	d2rq:class vocab:Person_Name_PREFIX_Type;
+	d2rq:condition "WCC65DB.CDPREFIXNAMETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDPREFIXNAMETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDPREFIXNAMETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDPREFIXNAMETP #@@WCC65DB.CDPREFIXNAMETP.LANG_TP_CD@@/@@WCC65DB.CDPREFIXNAMETP.PREFIX_NAME_TP_CD@@";
+	.
+map:CDPREFIXNAMETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDPREFIXNAMETP;
+	d2rq:property vocab:Person_Name_PREFIX_Type_NAME;
+	d2rq:column "WCC65DB.CDPREFIXNAMETP.NAME";
+	.
+
+
+
+
+
+
+# Table WCC65DB.CDRELTP
+map:WCC65DB_CDRELTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDRELTP/@@WCC65DB.CDRELTP.REL_TP_CD@@";
+	d2rq:class vocab:Contact_Relationship_Type;
+	d2rq:condition "WCC65DB.CDRELTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDRELTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRELTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDRELTP #@@WCC65DB.CDRELTP.LANG_TP_CD@@/@@WCC65DB.CDRELTP.REL_TP_CD@@";
+	.
+map:CDRELTP_FROM_TO_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRELTP;
+	d2rq:property vocab:Contact_Relationship_FROM_TO_NAME;
+	d2rq:column "WCC65DB.CDRELTP.FROM_TO_NAME";
+	.
+map:CDRELTP_TO_FROM_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRELTP;
+	d2rq:property vocab:Contact_Relationship_TO_FROM_NAME;
+	d2rq:column "WCC65DB.CDRELTP.TO_FROM_NAME";
+	.
+
+
+
+
+
+
+# Table WCC65DB.CDRESIDENCETP
+map:WCC65DB_CDRESIDENCETP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDRESIDENCETP/@@WCC65DB.CDRESIDENCETP.RESIDENCE_TP_CD@@";
+	d2rq:class vocab:RESIDENCE_Type;
+	d2rq:condition "WCC65DB.CDRESIDENCETP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDRESIDENCETP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRESIDENCETP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDRESIDENCETP #@@WCC65DB.CDRESIDENCETP.LANG_TP_CD@@/@@WCC65DB.CDRESIDENCETP.RESIDENCE_TP_CD@@";
+	.
+map:CDRESIDENCETP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRESIDENCETP;
+	d2rq:property vocab:RESIDENCE_Type_NAME;
+	d2rq:column "WCC65DB.CDRESIDENCETP.NAME";
+	.
+
+
+
+
+
+# Table WCC65DB.CDRPTINGFREQTP
+map:WCC65DB_CDRPTINGFREQTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDRPTINGFREQTP/@@WCC65DB.CDRPTINGFREQTP.RPTING_FREQ_TP_CD@@";
+	d2rq:class vocab:Reporting_Frequency;
+	d2rq:condition "WCC65DB.CDRPTINGFREQTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDRPTINGFREQTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRPTINGFREQTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDRPTINGFREQTP #@@WCC65DB.CDRPTINGFREQTP.LANG_TP_CD@@/@@WCC65DB.CDRPTINGFREQTP.RPTING_FREQ_TP_CD@@";
+	.
+map:CDRPTINGFREQTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDRPTINGFREQTP;
+	d2rq:property vocab:Reporting_Frequency_NAME;
+	d2rq:column "WCC65DB.CDRPTINGFREQTP.NAME";
+	.
+
+
+
+
+
+
+# Table WCC65DB.CDUNDELREASONTP
+map:WCC65DB_CDUNDELREASONTP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CDUNDELREASONTP/@@WCC65DB.CDUNDELREASONTP.UNDEL_REASON_TP_CD@@";
+	d2rq:class vocab:Undeliverable_REASON;
+	d2rq:condition "WCC65DB.CDUNDELREASONTP.LANG_TP_CD = 100"
+	.
+map:WCC65DB_CDUNDELREASONTP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDUNDELREASONTP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CDUNDELREASONTP #@@WCC65DB.CDUNDELREASONTP.LANG_TP_CD@@/@@WCC65DB.CDUNDELREASONTP.UNDEL_REASON_TP_CD@@";
+	.
+map:CDUNDELREASONTP_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CDUNDELREASONTP;
+	d2rq:property vocab:Undeliverable_REASON_NAME;
+	d2rq:column "WCC65DB.CDUNDELREASONTP.NAME";
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.CHARGECARD
+map:WCC65DB_CHARGECARD a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.PAYMENTSOURCE/@@WCC65DB.CHARGECARD.PAYMENT_SOURCE_ID@@";
+	d2rq:class vocab:CHARGE_CARD;
+	.
+map:WCC65DB_CHARGECARD__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CHARGECARD;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CHARGECARD #@@WCC65DB.CHARGECARD.PAYMENT_SOURCE_ID@@";
+	.
+map:CHARGECARD_CHARGE_CARD_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CHARGECARD;
+	d2rq:property vocab:hasCHARGE_CARD_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDCHARGECARDTP;
+	d2rq:join "WCC65DB.CHARGECARD.CHARGE_CARD_TP_CD = WCC65DB.CDCHARGECARDTP.CHARGE_CARD_TP_CD";
+	.
+map:CHARGECARD_CHARGE_CARD_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CHARGECARD;
+	d2rq:property vocab:CHARGE_CARD_Number;
+	d2rq:column "WCC65DB.CHARGECARD.CHARGE_CARD_NUM";
+	.
+map:CHARGECARD_EXPIRY_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CHARGECARD;
+	d2rq:property vocab:EXPIRY_Datetime;
+	d2rq:column "WCC65DB.CHARGECARD.EXPIRY_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CHARGECARD_ON_CARD_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CHARGECARD;
+	d2rq:property vocab:ON_CARD_NAME;
+	d2rq:column "WCC65DB.CHARGECARD.ON_CARD_NAME";
+	.
+map:CHARGECARD_BANK_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CHARGECARD;
+	d2rq:property vocab:CHARGE_CARD_BANK_Number;
+	d2rq:column "WCC65DB.CHARGECARD.BANK_NUM";
+	.
+
+
+
+
+
+# Table WCC65DB.CLAIM
+map:WCC65DB_CLAIM a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CLAIM/@@WCC65DB.CLAIM.CLAIM_ID@@";
+	d2rq:class vocab:CLAIM;
+	.
+map:WCC65DB_CLAIM__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CLAIM #@@WCC65DB.CLAIM.CLAIM_ID@@";
+	.
+map:CLAIM_CLAIM_NUMBER a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:CLAIM_NUMBER;
+	d2rq:column "WCC65DB.CLAIM.CLAIM_NUMBER";
+	.
+map:CLAIM_CLAIM_DETAIL_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:CLAIM_DETAIL_Amount;
+	d2rq:column "WCC65DB.CLAIM.CLAIM_DETAIL_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CLAIM_CLAIM_PAID_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:CLAIM_PAID_Amount;
+	d2rq:column "WCC65DB.CLAIM.CLAIM_PAID_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CLAIM_OUTSTANDING_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:OUTSTANDING_Amount;
+	d2rq:column "WCC65DB.CLAIM.OUTSTANDING_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CLAIM_BENEFIT_CLAIM_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:BENEFIT_CLAIM_Amount;
+	d2rq:column "WCC65DB.CLAIM.BENEFIT_CLAIM_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CLAIM_CLAIM_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:hasCLAIM_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDCLAIMTP;
+	d2rq:join "WCC65DB.CLAIM.CLAIM_TP_CD = WCC65DB.CDCLAIMTP.CLAIM_TP_CD";
+	.
+map:CLAIM_LOB_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:hasLOB_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDLOBTP;
+	d2rq:join "WCC65DB.CLAIM.LOB_TP_CD = WCC65DB.CDLOBTP.LOB_TP_CD";
+	.
+map:CLAIM_CLAIM_STATUS_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:hasCLAIM_STATUS_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDCLAIMSTATUSTP;
+	d2rq:join "WCC65DB.CLAIM.CLAIM_STATUS_TP_CD = WCC65DB.CDCLAIMSTATUSTP.CLAIM_STATUS_TP_CD";
+	.
+map:CLAIM_STATUS_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:STATUS_Datetime;
+	d2rq:column "WCC65DB.CLAIM.STATUS_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CLAIM_CLAIM_INCURRED_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:CLAIM_INCURRED_Datetime;
+	d2rq:column "WCC65DB.CLAIM.CLAIM_INCURRED_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CLAIM_REPORTED_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:REPORTED_Datetime;
+	d2rq:column "WCC65DB.CLAIM.REPORTED_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CLAIM_Claim_Role a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIM;
+	d2rq:property vocab:hasClaim_Role;
+	d2rq:refersToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:join "WCC65DB.CLAIM.CLAIM_ID = WCC65DB.CLAIMROLE.CLAIM_ID";
+	.
+
+
+
+
+
+# Table WCC65DB.CLAIMCONTRACT
+map:WCC65DB_CLAIMCONTRACT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CLAIMCONTRACT/@@WCC65DB.CLAIMCONTRACT.CLAIM_CONTR_ID@@";
+	d2rq:class vocab:Has_ClaimRelation0;
+	.
+map:WCC65DB_CLAIMCONTRACT__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMCONTRACT;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CLAIMCONTRACT #@@WCC65DB.CLAIMCONTRACT.CLAIM_CONTR_ID@@";
+	.
+map:CLAIMCONTRACT_CLAIM_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMCONTRACT;
+	d2rq:property vocab:CLAIM_CONTRACT_Relationship_To;
+	d2rq:refersToClassMap map:WCC65DB_CLAIM;
+	d2rq:join "WCC65DB.CLAIMCONTRACT.CLAIM_ID = WCC65DB.CLAIM.CLAIM_ID";
+	.
+map:CLAIMCONTRACT_CONTRACT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMCONTRACT;
+	d2rq:property vocab:CLAIM_CONTRACT_Relationship_From;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACT;
+	d2rq:join "WCC65DB.CLAIMCONTRACT.CONTRACT_ID = WCC65DB.CONTRACT.CONTRACT_ID";
+	.
+map:CLAIMCONTRACT_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMCONTRACT;
+	d2rq:property vocab:CLAIM_START_Datetime;
+	d2rq:column "WCC65DB.CLAIMCONTRACT.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CLAIMCONTRACT_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMCONTRACT;
+	d2rq:property vocab:CLAIM_END_Datetime;
+	d2rq:column "WCC65DB.CLAIMCONTRACT.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+# Table WCC65DB.CLAIMROLE
+map:WCC65DB_CLAIMROLE a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CLAIMROLE/@@WCC65DB.CLAIMROLE.CLAIM_ROLE_ID@@";
+	d2rq:class vocab:Has_CLAIM_ROLERelation0;
+	.
+map:WCC65DB_CLAIMROLE__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CLAIMROLE #@@WCC65DB.CLAIMROLE.CLAIM_ROLE_ID@@";
+	.
+map:CLAIMROLE_CONT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:property vocab:CLAIM_ROLE_Relationship_To;
+	d2rq:refersToClassMap map:WCC65DB_CONTACT;
+	d2rq:join "WCC65DB.CLAIMROLE.CONT_ID = WCC65DB.CONTACT.CONT_ID";
+	.
+map:CLAIMROLE_CLAIM_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:property vocab:CLAIM_ROLE_Relationship_From;
+	d2rq:refersToClassMap map:WCC65DB_CLAIM;
+	d2rq:join "WCC65DB.CLAIMROLE.CLAIM_ID = WCC65DB.CLAIM.CLAIM_ID";
+	.
+map:CLAIMROLE_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:property vocab:CLAIM_ROLE_START_Datetime;
+	d2rq:column "WCC65DB.CLAIMROLE.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CLAIMROLE_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:property vocab:CLAIM_ROLE_END_Datetime;
+	d2rq:column "WCC65DB.CLAIMROLE.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CLAIM_ROLE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:property vocab:hasCLAIM_ROLE_Relationship_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDCLAIMROLETP;
+	d2rq:join "WCC65DB.CLAIMROLE.CLAIM_ROLE_TP_CD = WCC65DB.CDCLAIMROLETP.CLAIM_ROLE_TP_CD";
+	.
+
+
+
+
+# Table WCC65DB.CONTACT
+map:WCC65DB_CONTACT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTACT/@@WCC65DB.CONTACT.CONT_ID@@";
+	d2rq:class vocab:CONTACT;
+	.
+map:WCC65DB_CONTACT__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTACT #@@WCC65DB.CONTACT.CONT_ID@@";
+	.
+map:CONTACT_CREATED_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:CREATED_Datetime;
+	d2rq:column "WCC65DB.CONTACT.CREATED_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTACT_CONTACT_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:CONTACT_NAME;
+	d2rq:column "WCC65DB.CONTACT.CONTACT_NAME";
+	.
+map:CONTACT_PERSON_ORG_CODE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:PERSON_Organization_Flag;
+	d2rq:column "WCC65DB.CONTACT.PERSON_ORG_CODE";
+	.
+map:CONTACT_CONFIDENTIAL_IND a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:CONFIDENTIAL_Indication;
+	d2rq:column "WCC65DB.CONTACT.CONFIDENTIAL_IND";
+	.
+map:CONTACT_CLIENT_IMP_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:hasCLIENT_Importance;
+	d2rq:refersToClassMap map:WCC65DB_CDCLIENTIMPTP;
+	d2rq:join "WCC65DB.CONTACT.CLIENT_IMP_TP_CD = WCC65DB.CDCLIENTIMPTP.CLIENT_IMP_TP_CD";
+	.
+map:CONTACT_CLIENT_ST_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:hasCLIENT_Status;
+	d2rq:refersToClassMap map:WCC65DB_CDCLIENTSTTP;
+	d2rq:join "WCC65DB.CONTACT.CLIENT_ST_TP_CD = WCC65DB.CDCLIENTSTTP.CLIENT_ST_TP_CD";
+	.
+map:CONTACT_CLIENT_POTEN_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:hasCLIENT_Potential;
+	d2rq:refersToClassMap map:WCC65DB_CDCLIENTPOTENTP;
+	d2rq:join "WCC65DB.CONTACT.CLIENT_POTEN_TP_CD = WCC65DB.CDCLIENTPOTENTP.CLIENT_POTEN_TP_CD";
+	.
+map:CONTACT_RPTING_FREQ_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:hasReporting_Frequency;
+	d2rq:refersToClassMap map:WCC65DB_CDRPTINGFREQTP;
+	d2rq:join "WCC65DB.CONTACT.RPTING_FREQ_TP_CD = WCC65DB.CDRPTINGFREQTP.RPTING_FREQ_TP_CD";
+	.
+map:CONTACT_PROVIDED_BY_CONT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:PROVIDED_BY;
+	d2rq:refersToClassMap map:WCC65DB_CONTACT;
+	d2rq:alias "WCC65DB.CONTACT AS WCC65DB_CONTACT__alias";
+	d2rq:join "WCC65DB.CONTACT.PROVIDED_BY_CONT = WCC65DB_CONTACT__alias.CONT_ID";
+	.
+map:Contact_Equal_To a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:Equal_To;
+	d2rq:refersToClassMap map:WCC65DB_CONTEQUIV;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.CONTEQUIV.CONT_ID";
+	.
+map:Contact_hasContact_Relation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:hasContact_Relation;
+	d2rq:refersToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.CONTACTREL.FROM_CONT_ID";
+	.
+map:Contact_Play_Contract_Role_Relation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:Play_Contract_Role_Relation;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.CONTRACTROLE.CONT_ID";
+	.
+map:Contact_Play_Claim_Role_Relation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:Play_Claim_Role_Relation;
+	d2rq:refersToClassMap map:WCC65DB_CLAIMROLE;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.CLAIMROLE.CONT_ID";
+	.
+map:Contact_Located_At a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:Located_At;
+	d2rq:refersToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.LOCATIONGROUP.CONT_ID";
+	.
+map:Contact_Pay_Through a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:Pay_Through;
+	d2rq:refersToClassMap map:WCC65DB_PAYMENTSOURCE;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.PAYMENTSOURCE.CONT_ID";
+	.
+map:Contact_Receive_Money_From a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACT;
+	d2rq:property vocab:Receive_Money_From;
+	d2rq:refersToClassMap map:WCC65DB_INCOMESOURCE;
+	d2rq:join "WCC65DB.Contact.Cont_ID = WCC65DB.INCOMESOURCE.CONT_ID";
+	.
+
+
+
+
+
+
+# Table WCC65DB.CONTACTMETHOD
+map:WCC65DB_CONTACTMETHOD a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTACTMETHOD/@@WCC65DB.CONTACTMETHOD.CONTACT_METHOD_ID@@";
+	d2rq:class vocab:CONTACTMETHOD;
+	.
+map:WCC65DB_CONTACTMETHOD__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHOD;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTACTMETHOD #@@WCC65DB.CONTACTMETHOD.CONTACT_METHOD_ID@@";
+	.
+map:CONTACTMETHOD_ADDRESS_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHOD;
+	d2rq:property vocab:Sit_At;
+	d2rq:refersToClassMap map:WCC65DB_ADDRESS;
+	d2rq:join "WCC65DB.CONTACTMETHOD.ADDRESS_ID = WCC65DB.ADDRESS.ADDRESS_ID";
+	.
+map:CONTACTMETHOD_CONT_METH_CAT_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHOD;
+	d2rq:property vocab:hasCONTACTMETHOD_Category;
+	d2rq:refersToClassMap map:WCC65DB_CDCONTMETHTP;
+	d2rq:join "WCC65DB.CONTACTMETHOD.CONT_METH_CAT_CD = WCC65DB.CDCONTMETHTP.CONT_METH_CAT_CD";
+	.
+map:CONTACTMETHOD_REF_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHOD;
+	d2rq:property vocab:Reference_Number;
+	d2rq:column "WCC65DB.CONTACTMETHOD.REF_NUM";
+	.
+
+
+
+
+
+# Table WCC65DB.CONTACTMETHODGROUP
+map:WCC65DB_CONTACTMETHODGROUP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.LocationGROUP/@@WCC65DB.CONTACTMETHODGROUP.LOCATION_GROUP_ID@@";
+	d2rq:class vocab:CONTACTMETHOD_GROUP;
+	.
+map:WCC65DB_CONTACTMETHODGROUP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHODGROUP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTACTMETHODGROUP #@@WCC65DB.CONTACTMETHODGROUP.LOCATION_GROUP_ID@@";
+	.
+map:CONTACTMETHODGROUP_CONTACT_METHOD_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHODGROUP;
+	d2rq:property vocab:hasCONTACTMETHOD;
+	d2rq:refersToClassMap map:WCC65DB_CONTACTMETHOD;
+	d2rq:join "WCC65DB.CONTACTMETHODGROUP.CONTACT_METHOD_ID = WCC65DB.CONTACTMETHOD.CONTACT_METHOD_ID";
+	.
+map:CONTACTMETHODGROUP_METHOD_ST_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTMETHODGROUP;
+	d2rq:property vocab:hasCONTACTMETHOD_Status;
+	d2rq:refersToClassMap map:WCC65DB_CDMETHODSTATUSTP;
+	d2rq:join "WCC65DB.CONTACTMETHODGROUP.METHOD_ST_TP_CD = WCC65DB.CDMETHODSTATUSTP.METHOD_ST_TP_CD";
+	.
+
+
+
+
+
+# Table WCC65DB.CONTACTREL
+map:WCC65DB_CONTACTREL a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTACTREL/@@WCC65DB.CONTACTREL.CONT_REL_ID@@";
+	d2rq:class vocab:Has_CONTACTRelation0;
+	.
+map:WCC65DB_CONTACTREL__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTACTREL #@@WCC65DB.CONTACTREL.CONT_REL_ID@@";
+	.
+map:CONTACTREL_REL_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property vocab:hasCONTACT_Relationship_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDRELTP;
+	d2rq:join "WCC65DB.CONTACTREL.REL_TP_CD = WCC65DB.CDRELTP.REL_TP_CD";
+	.
+map:CONTACTREL_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property vocab:CONTACT_Relationship_START_Datetime;
+	d2rq:column "WCC65DB.CONTACTREL.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTACTREL_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property vocab:CONTACT_Relationship_END_Datetime;
+	d2rq:column "WCC65DB.CONTACTREL.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTACTREL_TO_CONT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property vocab:CONTACT_Relationship_TO;
+	d2rq:refersToClassMap map:WCC65DB_CONTACT;
+	d2rq:join "WCC65DB.CONTACTREL.TO_CONT_ID = WCC65DB.CONTACT.CONT_ID";
+	.
+map:CONTACTREL_FROM_CONT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property vocab:CONTACT_Relationship_FROM;
+	d2rq:refersToClassMap map:WCC65DB_CONTACT;
+	d2rq:join "WCC65DB.CONTACTREL.FROM_CONT_ID = WCC65DB.CONTACT.CONT_ID";
+	.
+map:CONTACTREL_END_REASON_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTACTREL;
+	d2rq:property vocab:hasEND_REASON;
+	d2rq:refersToClassMap map:WCC65DB_CDENDREASONTP;
+	d2rq:join "WCC65DB.CONTACTREL.END_REASON_TP_CD = WCC65DB.CDENDREASONTP.END_REASON_TP_CD";
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.CONTEQUIV
+map:WCC65DB_CONTEQUIV a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTEQUIV/@@WCC65DB.CONTEQUIV.CONT_EQUIV_ID@@";
+	d2rq:class vocab:Equal_ToRelation0;
+	.
+map:WCC65DB_CONTEQUIV__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTEQUIV;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTEQUIV #@@WCC65DB.CONTEQUIV.CONT_EQUIV_ID@@";
+	.
+map:CONTEQUIV_CONT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTEQUIV;
+	d2rq:property vocab:Equal_To_Contact;
+	d2rq:refersToClassMap map:WCC65DB_CONTACT;
+	d2rq:join "WCC65DB.CONTEQUIV.CONT_ID = WCC65DB.CONTACT.CONT_ID";
+	.
+map:CONTEQUIV_ADMIN_SYS_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTEQUIV;
+	d2rq:property vocab:Equal_To_ADMIN_System;
+	d2rq:column "WCC65DB.CDADMINSYSTP.NAME";
+	d2rq:join "WCC65DB.CONTEQUIV.ADMIN_SYS_TP_CD = WCC65DB.CDADMINSYSTP.ADMIN_SYS_TP_CD";
+	d2rq:condition "WCC65DB.CDADMINSYSTP.LANG_TP_CD = 100"
+	.
+map:CONTEQUIV_ADMIN_CLIENT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTEQUIV;
+	d2rq:property vocab:Equal_To_ADMIN_Client_Identity;
+	d2rq:column "WCC65DB.CONTEQUIV.ADMIN_CLIENT_ID";
+	.
+map:CONTEQUIV_DESCRIPTION a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTEQUIV;
+	d2rq:property vocab:Equal_To_DESCRIPTION;
+	d2rq:column "WCC65DB.CONTEQUIV.DESCRIPTION";
+	.
+
+
+
+
+
+
+
+
+# Table WCC65DB.CONTRACT
+map:WCC65DB_CONTRACT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTRACT/@@WCC65DB.CONTRACT.CONTRACT_ID@@";
+	d2rq:class vocab:CONTRACT;
+	.
+map:WCC65DB_CONTRACT__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTRACT #@@WCC65DB.CONTRACT.CONTRACT_ID@@";
+	.
+map:CONTRACT_CURRENCY_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:hasCONTRACT_CURRENCY;
+	d2rq:refersToClassMap map:WCC65DB_CDCURRENCYTP;
+	d2rq:join "WCC65DB.CONTRACT.CURRENCY_TP_CD = WCC65DB.CDCURRENCYTP.CURRENCY_TP_CD";
+	.
+map:CONTRACT_FREQ_MODE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:hasCONTRACT_Frequency_MODE;
+	d2rq:refersToClassMap map:WCC65DB_CDRPTINGFREQTP;
+	d2rq:join "WCC65DB.CONTRACT.FREQ_MODE_TP_CD = WCC65DB.CDRPTINGFREQTP.RPTING_FREQ_TP_CD";
+	.
+map:CONTRACT_BILL_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:hasBILL_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDBILLTP;
+	d2rq:join "WCC65DB.CONTRACT.BILL_TP_CD = WCC65DB.CDBILLTP.BILL_TP_CD";
+	.
+map:CONTRACT_REPL_BY_CONTRACT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:Replaced_By;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACT;
+	d2rq:alias "WCC65DB.CONTRACT AS WCC65DB_CONTRACT__alias";
+	d2rq:join "WCC65DB.CONTRACT.REPL_BY_CONTRACT = WCC65DB_CONTRACT__alias.CONTRACT_ID";
+	.
+map:CONTRACT_PREMIUM_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:CONTRACT_PREMIUM_Amount;
+	d2rq:column "WCC65DB.CONTRACT.PREMIUM_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CONTRACT_NEXT_BILL_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:NEXT_BILL_Datetime;
+	d2rq:column "WCC65DB.CONTRACT.NEXT_BILL_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTRACT_CURR_CASH_VAL_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:CONTRACT_Current_CASH_Value_Amount;
+	d2rq:column "WCC65DB.CONTRACT.CURR_CASH_VAL_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CONTRACT_SERVICE_PROV_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:SERVICE_Provider;
+	d2rq:column "WCC65DB.CONTRACT.SERVICE_PROV_ID";
+	.
+map:Contract_Assembled_By a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:Assembled_By;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:join "WCC65DB.Contract.Contract_ID = WCC65DB.CONTRACTCOMPONENT.Contract_ID";
+	.
+map:Contract_hasClaim_Relation a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACT;
+	d2rq:property vocab:hasClaim_Relation;
+	d2rq:refersToClassMap map:WCC65DB_CLAIMCONTRACT;
+	d2rq:join "WCC65DB.Contract.Contract_ID = WCC65DB.CLAIMCONTRACT.Contract_ID";
+	.
+
+
+
+
+
+# Table WCC65DB.CONTRACTCOMPONENT
+map:WCC65DB_CONTRACTCOMPONENT a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTRACTCOMPONENT/@@WCC65DB.CONTRACTCOMPONENT.CONTR_COMPONENT_ID@@";
+	d2rq:class vocab:CONTRACT_COMPONENT;
+	.
+map:WCC65DB_CONTRACTCOMPONENT__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTRACTCOMPONENT #@@WCC65DB.CONTRACTCOMPONENT.CONTR_COMPONENT_ID@@";
+	.
+map:CONTRACTCOMPONENT_CONTRACT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property vocab:Assemble;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACT;
+	d2rq:join "WCC65DB.CONTRACTCOMPONENT.CONTRACT_ID = WCC65DB.CONTRACT.CONTRACT_ID";
+	.
+map:CONTRACTCOMPONENT_CURR_CASH_VAL_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property vocab:CONTRACT_COMPONENT_Current_CASH_Value_Amount;
+	d2rq:column "WCC65DB.CONTRACTCOMPONENT.CURR_CASH_VAL_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CONTRACTCOMPONENT_PREMIUM_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property vocab:CONTRACT_COMPONENT_PREMIUM_Amount;
+	d2rq:column "WCC65DB.CONTRACTCOMPONENT.PREMIUM_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:CONTRACTCOMPONENT_ISSUE_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property vocab:ISSUE_Datetime;
+	d2rq:column "WCC65DB.CONTRACTCOMPONENT.ISSUE_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTRACTCOMPONENT_HOLDING_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property vocab:Hold;
+	d2rq:refersToClassMap map:WCC65DB_HOLDING;
+	d2rq:join "WCC65DB.CONTRACTCOMPONENT.HOLDING_ID = WCC65DB.HOLDING.HOLDING_ID";
+	.
+map:CONTRACTCOMPONENT_EXPIRY_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:property vocab:CONTRACT_COMPONENT_EXPIRY_Datetime;
+	d2rq:column "WCC65DB.CONTRACTCOMPONENT.EXPIRY_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+# Table WCC65DB.CONTRACTREL
+map:WCC65DB_CONTRACTREL a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTRACTREL/@@WCC65DB.CONTRACTREL.CONTRACT_REL_ID@@";
+	d2rq:class vocab:Has_CONTRACTRelation0;
+	.
+map:WCC65DB_CONTRACTREL__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTRACTREL #@@WCC65DB.CONTRACTREL.CONTRACT_REL_ID@@";
+	.
+map:CONTRACTREL_TO_CONTRACT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property vocab:CONTRACT_Relationship_TO;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACT;
+	d2rq:join "WCC65DB.CONTRACTREL.TO_CONTRACT_ID = WCC65DB.CONTRACT.CONTRACT_ID";
+	.
+map:CONTRACTREL_FROM_CONTRACT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property vocab:CONTRACT_Relationship_FROM;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACT;
+	d2rq:join "WCC65DB.CONTRACTREL.FROM_CONTRACT_ID = WCC65DB.CONTRACT.CONTRACT_ID";
+	.
+map:CONTRACTREL_CONTR_REL_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property vocab:hasContract_Relationship_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDCONTRACTRELTP;
+	d2rq:join "WCC65DB.CONTRACTREL.CONTR_REL_TP_CD = WCC65DB.CDCONTRACTRELTP.CONTR_REL_TP_CD";
+	.
+map:CONTRACTREL_CONTR_REL_ST_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property vocab:hasCONTRACT_Relationship_Status;
+	d2rq:refersToClassMap map:WCC65DB_CDCONTRACTRELSTTP;
+	d2rq:join "WCC65DB.CONTRACTREL.CONTR_REL_ST_TP_CD = WCC65DB.CDCONTRACTRELSTTP.CONTR_REL_ST_TP_CD";
+	.
+map:CONTRACTREL_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property vocab:CONTRACT_Relationship_START_Datetime;
+	d2rq:column "WCC65DB.CONTRACTREL.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTRACTREL_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTREL;
+	d2rq:property vocab:CONTRACT_Relationship_END_Datetime;
+	d2rq:column "WCC65DB.CONTRACTREL.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+# Table WCC65DB.CONTRACTROLE
+map:WCC65DB_CONTRACTROLE a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTRACTROLE/@@WCC65DB.CONTRACTROLE.CONTRACT_ROLE_ID@@";
+	d2rq:class vocab:Has_CONTRACT_ROLERelation0;
+	.
+map:WCC65DB_CONTRACTROLE__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTRACTROLE #@@WCC65DB.CONTRACTROLE.CONTRACT_ROLE_ID@@";
+	.
+map:CONTRACTROLE_CONT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_From;
+	d2rq:refersToClassMap map:WCC65DB_CONTACT;
+	d2rq:join "WCC65DB.CONTRACTROLE.CONT_ID = WCC65DB.CONTACT.CONT_ID";
+	.
+map:CONTRACTROLE_CONTR_COMPONENT_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_To;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTCOMPONENT;
+	d2rq:join "WCC65DB.CONTRACTROLE.CONTR_COMPONENT_ID = WCC65DB.CONTRACTCOMPONENT.CONTR_COMPONENT_ID";
+	.
+map:CONTRACTROLE_CONTR_ROLE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property vocab:hasContract_ROLE;
+	d2rq:refersToClassMap map:WCC65DB_CDCONTRACTROLETP;
+	d2rq:join "WCC65DB.CONTRACTROLE.CONTR_ROLE_TP_CD = WCC65DB.CDCONTRACTROLETP.CONTR_ROLE_TP_CD";
+	.
+map:CONTRACTROLE_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property vocab:CONTRACT_ROLE_START_Datetime;
+	d2rq:column "WCC65DB.CONTRACTROLE.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTRACTROLE_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property vocab:CONTRACT_ROLE_END_Datetime;
+	d2rq:column "WCC65DB.CONTRACTROLE.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:Contract_hasContract_Role_Relationship a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:property vocab:hasContract_Role_Relationship;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:join "WCC65DB.CONTRACTROLE.CONTRACT_ROLE_ID = WCC65DB.CONTRACTROLEREL.CONTR_ROLE_FROM_ID";
+	.
+
+
+
+
+
+
+
+
+
+# Table WCC65DB.CONTRACTROLEREL
+map:WCC65DB_CONTRACTROLEREL a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.CONTRACTROLEREL/@@WCC65DB.CONTRACTROLEREL.CONTR_ROLE_REL_ID@@";
+	d2rq:class vocab:Has_CONTRACT_ROLE_RelationshipRelation0;
+	.
+map:WCC65DB_CONTRACTROLEREL__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.CONTRACTROLEREL #@@WCC65DB.CONTRACTROLEREL.CONTR_ROLE_REL_ID@@";
+	.
+map:CONTRACTROLEREL_REL_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDRELTP;
+	d2rq:join "WCC65DB.CONTRACTROLEREL.REL_TP_CD = WCC65DB.CDRELTP.REL_TP_CD";
+	.
+map:CONTRACTROLEREL_CONTR_ROLE_FROM_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_Relationship_FROM;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:join "WCC65DB.CONTRACTROLEREL.CONTR_ROLE_FROM_ID = WCC65DB.CONTRACTROLE.CONTRACT_ROLE_ID";
+	.
+map:CONTRACTROLEREL_CONTR_ROLE_TO_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_Relationship_TO;
+	d2rq:refersToClassMap map:WCC65DB_CONTRACTROLE;
+	d2rq:join "WCC65DB.CONTRACTROLEREL.CONTR_ROLE_TO_ID = WCC65DB.CONTRACTROLE.CONTRACT_ROLE_ID";
+	.
+map:CONTRACTROLEREL_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_START_Datetime;
+	d2rq:column "WCC65DB.CONTRACTROLEREL.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:CONTRACTROLEREL_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_CONTRACTROLEREL;
+	d2rq:property vocab:CONTRACT_ROLE_Relationship_END_Datetime;
+	d2rq:column "WCC65DB.CONTRACTROLEREL.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+
+
+# Table WCC65DB.HOLDING
+map:WCC65DB_HOLDING a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.HOLDING/@@WCC65DB.HOLDING.HOLDING_ID@@";
+	d2rq:class vocab:HOLDING;
+	.
+map:WCC65DB_HOLDING__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_HOLDING;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.HOLDING #@@WCC65DB.HOLDING.HOLDING_ID@@";
+	.
+map:HOLDING_HOLDING_CODE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_HOLDING;
+	d2rq:property vocab:HOLDING_Flag;
+	d2rq:column "WCC65DB.HOLDING.HOLDING_CODE";
+	.
+map:HOLDING_HOLDING_VALUE_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_HOLDING;
+	d2rq:property vocab:HOLDING_VALUE_Amount;
+	d2rq:column "WCC65DB.HOLDING.HOLDING_VALUE_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:HOLDING_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_HOLDING;
+	d2rq:property vocab:START_Datetime;
+	d2rq:column "WCC65DB.HOLDING.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:HOLDING_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_HOLDING;
+	d2rq:property vocab:END_Datetime;
+	d2rq:column "WCC65DB.HOLDING.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.INCOMESOURCE
+map:WCC65DB_INCOMESOURCE a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.INCOMESOURCE/@@WCC65DB.INCOMESOURCE.INCOME_SOURCE_ID@@";
+	d2rq:class vocab:INCOME_SOURCE;
+	.
+map:WCC65DB_INCOMESOURCE__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_INCOMESOURCE;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.INCOMESOURCE #@@WCC65DB.INCOMESOURCE.INCOME_SOURCE_ID@@";
+	.
+map:INCOMESOURCE_CURRENCY_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_INCOMESOURCE;
+	d2rq:property vocab:hasINCOME_SOURCE_CURRENCY;
+	d2rq:refersToClassMap map:WCC65DB_CDCURRENCYTP;
+	d2rq:join "WCC65DB.INCOMESOURCE.CURRENCY_TP_CD = WCC65DB.CDCURRENCYTP.CURRENCY_TP_CD";
+	.
+map:INCOMESOURCE_ANNUAL_AMT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_INCOMESOURCE;
+	d2rq:property vocab:ANNUAL_Amount;
+	d2rq:column "WCC65DB.INCOMESOURCE.ANNUAL_AMT";
+	d2rq:datatype xsd:decimal;
+	.
+map:INCOMESOURCE_INVEST_EXPER_YRS a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_INCOMESOURCE;
+	d2rq:property vocab:Investment_Experience_Year;
+	d2rq:column "WCC65DB.INCOMESOURCE.INVEST_EXPER_YRS";
+	d2rq:datatype xsd:short;
+	.
+map:INCOMESOURCE_INFO_OBTAINED_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_INCOMESOURCE;
+	d2rq:property vocab:Information_OBTAINED_Datetime;
+	d2rq:column "WCC65DB.INCOMESOURCE.INFO_OBTAINED_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+# Table WCC65DB.LOCATIONGROUP
+map:WCC65DB_LOCATIONGROUP a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.LOCATIONGROUP/@@WCC65DB.LOCATIONGROUP.LOCATION_GROUP_ID@@";
+	d2rq:class vocab:LOCATION_GROUP;
+	.
+map:WCC65DB_LOCATIONGROUP__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.LOCATIONGROUP #@@WCC65DB.LOCATIONGROUP.LOCATION_GROUP_ID@@";
+	.
+map:LOCATIONGROUP_UNDEL_REASON_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:hasUndeliverable_REASON;
+	d2rq:refersToClassMap map:WCC65DB_CDUNDELREASONTP;
+	d2rq:join "WCC65DB.LOCATIONGROUP.UNDEL_REASON_TP_CD = WCC65DB.CDUNDELREASONTP.UNDEL_REASON_TP_CD";
+	.
+map:LOCATIONGROUP_MEMBER_IND a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:MEMBER_Indication;
+	d2rq:column "WCC65DB.LOCATIONGROUP.MEMBER_IND";
+	.
+map:LOCATIONGROUP_LOC_GROUP_TP_CODE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:Address_Contactmethod_Flag;
+	d2rq:column "WCC65DB.LOCATIONGROUP.LOC_GROUP_TP_CODE";
+	.
+map:LOCATIONGROUP_EFFECT_START_MMDD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:Effective_START_MMDD;
+	d2rq:column "WCC65DB.LOCATIONGROUP.EFFECT_START_MMDD";
+	d2rq:datatype xsd:short;
+	.
+map:LOCATIONGROUP_EFFECT_END_MMDD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:Effective_END_MMDD;
+	d2rq:column "WCC65DB.LOCATIONGROUP.EFFECT_END_MMDD";
+	d2rq:datatype xsd:short;
+	.
+map:LOCATIONGROUP_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:LOCATION_GROUP_START_Datetime;
+	d2rq:column "WCC65DB.LOCATIONGROUP.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:LOCATIONGROUP_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_LOCATIONGROUP;
+	d2rq:property vocab:LOCATION_GROUP_END_Datetime;
+	d2rq:column "WCC65DB.LOCATIONGROUP.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.ORG
+map:WCC65DB_ORG a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.Contact/@@WCC65DB.ORG.CONT_ID@@";
+	d2rq:class vocab:Organization;
+	.
+map:WCC65DB_ORG__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORG;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.ORG #@@WCC65DB.ORG.CONT_ID@@";
+	.
+map:ORG_ORG_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORG;
+	d2rq:property vocab:hasOrganization_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDORGTP;
+	d2rq:join "WCC65DB.ORG.ORG_TP_CD = WCC65DB.CDORGTP.ORG_TP_CD";
+	.
+map:ORG_ESTABLISHED_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORG;
+	d2rq:property vocab:ESTABLISHED_Datetime;
+	d2rq:column "WCC65DB.ORG.ESTABLISHED_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:ORG_BUY_SELL_AGR_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORG;
+	d2rq:property vocab:hasBUY_SELL_Agreement_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDBUYSELLAGREETP;
+	d2rq:join "WCC65DB.ORG.BUY_SELL_AGR_TP_CD = WCC65DB.CDBUYSELLAGREETP.BUY_SELL_AGR_TP_CD";
+	.
+map:ORG_PROFIT_IND a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORG;
+	d2rq:property vocab:PROFIT_Indication;
+	d2rq:column "WCC65DB.ORG.PROFIT_IND";
+	.
+map:ORG_hasOrganization_Name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORG;
+	d2rq:property vocab:hasOrganization_Name;
+	d2rq:refersToClassMap map:WCC65DB_ORGNAME;
+	d2rq:join "WCC65DB.ORG.CONT_ID = WCC65DB.ORGNAME.CONT_ID";
+	.
+
+
+
+
+
+
+
+
+# Table WCC65DB.ORGNAME
+map:WCC65DB_ORGNAME a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.ORGNAME/@@WCC65DB.ORGNAME.ORG_NAME_ID@@";
+	d2rq:class vocab:Has_Organization_NameRelation0;
+	.
+map:WCC65DB_ORGNAME__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORGNAME;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.ORGNAME #@@WCC65DB.ORGNAME.ORG_NAME_ID@@";
+	.
+map:ORGNAME_ORG_NAME_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORGNAME;
+	d2rq:property vocab:hasOrganization_NAME_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDORGNAMETP;
+	d2rq:join "WCC65DB.ORGNAME.ORG_NAME_TP_CD = WCC65DB.CDORGNAMETP.ORG_NAME_TP_CD";
+	.
+map:ORGNAME_ORG_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORGNAME;
+	d2rq:property vocab:Organization_NAME_Value;
+	d2rq:column "WCC65DB.ORGNAME.ORG_NAME";
+	.
+map:ORGNAME_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORGNAME;
+	d2rq:property vocab:Organization_NAME_START_Datetime;
+	d2rq:column "WCC65DB.ORGNAME.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:ORGNAME_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_ORGNAME;
+	d2rq:property vocab:Organization_NAME_END_Datetime;
+	d2rq:column "WCC65DB.ORGNAME.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+# Table WCC65DB.PAYMENTSOURCE
+map:WCC65DB_PAYMENTSOURCE a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.PAYMENTSOURCE/@@WCC65DB.PAYMENTSOURCE.PAYMENT_SOURCE_ID@@";
+	d2rq:class vocab:PAYMENT_SOURCE;
+	.
+map:WCC65DB_PAYMENTSOURCE__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYMENTSOURCE;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.PAYMENTSOURCE #@@WCC65DB.PAYMENTSOURCE.PAYMENT_SOURCE_ID@@";
+	.
+map:PAYMENTSOURCE_PAYMENT_SRC_CODE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYMENTSOURCE;
+	d2rq:property vocab:PAYMENT_SOURCE_CODE;
+	d2rq:column "WCC65DB.PAYMENTSOURCE.PAYMENT_SRC_CODE";
+	.
+map:PAYMENTSOURCE_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYMENTSOURCE;
+	d2rq:property vocab:PAYMENT_SOURCE_START_Datetime;
+	d2rq:column "WCC65DB.PAYMENTSOURCE.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:PAYMENTSOURCE_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYMENTSOURCE;
+	d2rq:property vocab:PAYMENT_SOURCE_END_Datetime;
+	d2rq:column "WCC65DB.PAYMENTSOURCE.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+
+
+# Table WCC65DB.PAYROLLDEDUCTION
+map:WCC65DB_PAYROLLDEDUCTION a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.PAYMENTSOURCE/@@WCC65DB.PAYROLLDEDUCTION.PAYMENT_SOURCE_ID@@";
+	d2rq:class vocab:PAYROLL_DEDUCTION;
+	.
+map:WCC65DB_PAYROLLDEDUCTION__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYROLLDEDUCTION;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.PAYROLLDEDUCTION #@@WCC65DB.PAYROLLDEDUCTION.PAYMENT_SOURCE_ID@@";
+	.
+map:PAYROLLDEDUCTION_EMPLOYER_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYROLLDEDUCTION;
+	d2rq:property vocab:EMPLOYER_NAME;
+	d2rq:column "WCC65DB.PAYROLLDEDUCTION.EMPLOYER_NAME";
+	.
+map:PAYROLLDEDUCTION_PAYROLL_NO a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYROLLDEDUCTION;
+	d2rq:property vocab:PAYROLL_Number;
+	d2rq:column "WCC65DB.PAYROLLDEDUCTION.PAYROLL_NO";
+	.
+map:PAYROLLDEDUCTION_DESCRIPTION a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PAYROLLDEDUCTION;
+	d2rq:property vocab:PAYROLL_DESCRIPTION;
+	d2rq:column "WCC65DB.PAYROLLDEDUCTION.DESCRIPTION";
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.PERSON
+map:WCC65DB_PERSON a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.Contact/@@WCC65DB.PERSON.CONT_ID@@";
+	d2rq:class vocab:PERSON;
+	.
+map:WCC65DB_PERSON__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.PERSON #@@WCC65DB.PERSON.CONT_ID@@";
+	.
+map:PERSON_MARITAL_ST_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:hasMARITAL_Status;
+	d2rq:refersToClassMap map:WCC65DB_CDMARITALSTTP;
+	d2rq:join "WCC65DB.PERSON.MARITAL_ST_TP_CD = WCC65DB.CDMARITALSTTP.MARITAL_ST_TP_CD";
+	.
+map:PERSON_CITIZENSHIP_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:CITIZENSHIP;
+	d2rq:column "WCC65DB.CDCOUNTRYTP.NAME";
+	d2rq:join "WCC65DB.PERSON.CITIZENSHIP_TP_CD = WCC65DB.CDCOUNTRYTP.COUNTRY_TP_CD";
+	d2rq:condition "WCC65DB.CDCOUNTRYTP.LANG_TP_CD = 100"
+	.
+map:PERSON_HIGHEST_EDU_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:hasHIGHEST_Education;
+	d2rq:refersToClassMap map:WCC65DB_CDHIGHESTEDUTP;
+	d2rq:join "WCC65DB.PERSON.HIGHEST_EDU_TP_CD = WCC65DB.CDHIGHESTEDUTP.HIGHEST_EDU_TP_CD";
+	.
+map:PERSON_GENDER_TP_CODE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:hasGENDER;
+	d2rq:column "WCC65DB.PERSON.GENDER_TP_CODE";
+	.
+map:PERSON_BIRTH_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:BIRTH_Datetime;
+	d2rq:column "WCC65DB.PERSON.BIRTH_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:PERSON_CHILDREN_CT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:CHILDREN_Count;
+	d2rq:column "WCC65DB.PERSON.CHILDREN_CT";
+	d2rq:datatype xsd:short;
+	.
+map:PERSON_hasPerson_Name a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSON;
+	d2rq:property vocab:hasOrganization_Name;
+	d2rq:refersToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:join "WCC65DB.Person.CONT_ID = WCC65DB.PERSONNAME.CONT_ID";
+	.
+
+
+
+
+
+
+
+# Table WCC65DB.PERSONNAME
+map:WCC65DB_PERSONNAME a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.PERSONNAME/@@WCC65DB.PERSONNAME.PERSON_NAME_ID@@";
+	d2rq:class vocab:Has_PERSON_NAMERelation0;
+	.
+map:WCC65DB_PERSONNAME__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.PERSONNAME #@@WCC65DB.PERSONNAME.PERSON_NAME_ID@@";
+	.
+map:PERSONNAME_PREFIX_NAME_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:hasPERSON_NAME_PREFIX_Type;
+	d2rq:refersToClassMap map:WCC65DB_CDPREFIXNAMETP;
+	d2rq:join "WCC65DB.PERSONNAME.PREFIX_NAME_TP_CD = WCC65DB.CDPREFIXNAMETP.PREFIX_NAME_TP_CD";
+	.
+map:PERSONNAME_PREFIX_DESC a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:PERSON_NAME_PREFIX;
+	d2rq:column "WCC65DB.PERSONNAME.PREFIX_DESC";
+	.
+map:PERSONNAME_NAME_USAGE_TP_CD a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:hasPERSON_NAME_USAGE;
+	d2rq:refersToClassMap map:WCC65DB_CDNAMEUSAGETP;
+	d2rq:join "WCC65DB.PERSONNAME.NAME_USAGE_TP_CD = WCC65DB.CDNAMEUSAGETP.NAME_USAGE_TP_CD";
+	.
+map:PERSONNAME_GIVEN_NAME_ONE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:Person_GIVENNAME;
+	d2rq:column "WCC65DB.PERSONNAME.GIVEN_NAME_ONE";
+	.
+map:PERSONNAME_GIVEN_NAME_TWO a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:Person_GIVENNAME;
+	d2rq:column "WCC65DB.PERSONNAME.GIVEN_NAME_TWO";
+	.
+map:PERSONNAME_GIVEN_NAME_THREE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:Person_GIVENNAME;
+	d2rq:column "WCC65DB.PERSONNAME.GIVEN_NAME_THREE";
+	.
+map:PERSONNAME_GIVEN_NAME_FOUR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:Person_GIVENNAME;
+	d2rq:column "WCC65DB.PERSONNAME.GIVEN_NAME_FOUR";
+	.
+map:PERSONNAME_LAST_NAME a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:Person_LASTNAME;
+	d2rq:column "WCC65DB.PERSONNAME.LAST_NAME";
+	.
+map:PERSONNAME_START_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:PERSON_NAME_START_Datetime;
+	d2rq:column "WCC65DB.PERSONNAME.START_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+map:PERSONNAME_END_DT a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PERSONNAME;
+	d2rq:property vocab:PERSON_NAME_END_Datetime;
+	d2rq:column "WCC65DB.PERSONNAME.END_DT";
+	d2rq:datatype xsd:dateTime;
+	.
+
+
+
+
+
+
+
+
+# Table WCC65DB.PROPERTY
+map:WCC65DB_PROPERTY a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.Holding/@@WCC65DB.PROPERTY.HOLDING_ID@@";
+	d2rq:class vocab:PROPERTY;
+	.
+map:WCC65DB_PROPERTY__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PROPERTY;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.PROPERTY #@@WCC65DB.PROPERTY.HOLDING_ID@@";
+	.
+map:PROPERTY_ADDRESS_ID a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_PROPERTY;
+	d2rq:property vocab:At;
+	d2rq:refersToClassMap map:WCC65DB_ADDRESS;
+	d2rq:join "WCC65DB.PROPERTY.ADDRESS_ID = WCC65DB.ADDRESS.ADDRESS_ID";
+	.
+
+
+
+
+
+
+# Table WCC65DB.VEHICLE
+map:WCC65DB_VEHICLE a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:uriPattern "WCC65DB.Holding/@@WCC65DB.VEHICLE.HOLDING_ID@@";
+	d2rq:class vocab:VEHICLE;
+	.
+map:WCC65DB_VEHICLE__label a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_VEHICLE;
+	d2rq:property rdfs:label;
+	d2rq:pattern "WCC65DB.VEHICLE #@@WCC65DB.VEHICLE.HOLDING_ID@@";
+	.
+map:VEHICLE_VIN_NUM a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_VEHICLE;
+	d2rq:property vocab:VIN_Number;
+	d2rq:column "WCC65DB.VEHICLE.VIN_NUM";
+	.
+map:VEHICLE_VEHICLE_MAKE a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_VEHICLE;
+	d2rq:property vocab:VEHICLE_Maker;
+	d2rq:column "WCC65DB.VEHICLE.VEHICLE_MAKE";
+	.
+map:VEHICLE_VEHICLE_MODEL a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_VEHICLE;
+	d2rq:property vocab:VEHICLE_MODEL;
+	d2rq:column "WCC65DB.VEHICLE.VEHICLE_MODEL";
+	.
+map:VEHICLE_VEHICLE_YEAR a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:WCC65DB_VEHICLE;
+	d2rq:property vocab:VEHICLE_YEAR;
+	d2rq:column "WCC65DB.VEHICLE.VEHICLE_YEAR";
+	d2rq:datatype xsd:long;
+	.

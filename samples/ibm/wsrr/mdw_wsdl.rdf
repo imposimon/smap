@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY mdw_wsdl "http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/">
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/" 
+         xmlns:owl="http://www.w3.org/2002/07/owl#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about=""/>
+
+<!-- Classes -->
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding" rdfs:label="Web Service Binding"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingFault"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingFaultReference"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingMessageReference"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingOperation"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Description" rdfs:label="Web Service Description"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Endpoint"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InputMessage">
+    <rdfs:comment>To be used by message references and fault references instead of direction property</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/OutputMessage"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Interface" rdfs:label="Web Service Interface"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFault"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFaultReference"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceMessageReference"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceOperation"/>
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/OutputMessage">
+    <rdfs:comment>To be used by message references and fault references instead of direction property</rdfs:comment>
+    <owl:disjointWith rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InputMessage"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/SOAPBinding" rdfs:comment="WSDL SOAP binding">
+    <rdfs:subClassOf rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Service"/>
+  
+  <owl:Class rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/WSDLDocument" rdfs:label="Document in Web Service Description Language"/>
+<!-- Annotation Properties -->
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+
+<!-- Datatype Properties -->
+  
+  <owl:DatatypeProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/localName"/>
+
+  <owl:DatatypeProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/content"/>
+
+  <!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/namespace"/>
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/address">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Endpoint"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/import"/>
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/xsdDocument"/>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/binding">
+    <rdfs:comment>To be used for pointing to a Binding from Description</rdfs:comment>
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Description"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/bindingFault">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingFault"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/bindingFaultReference">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingOperation"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingFaultReference"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/bindingMessageReference">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingOperation"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingMessageReference"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/bindingOperation">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingOperation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/binds">
+    <rdfs:comment>points from a binding component (or any sub-component) to the respective
+    interface component (or sub-component)</rdfs:comment>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/elementDeclaration"/>
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/endpoint">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Service"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Endpoint"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/implements">
+    <rdfs:comment>points from a service to the interface that the service implements</rdfs:comment>
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Service"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Interface"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/interface">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Description"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Interface"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/interfaceFault">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Interface"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFault"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/interfaceFaultReference">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceOperation"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFaultReference"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/interfaceFaultReferenceFault">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFaultReference"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFault"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/interfaceMessageReference">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceOperation"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceMessageReference"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/interfaceOperation">
+    <rdfs:comment>used on interface to link to an operation</rdfs:comment>
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Interface"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceOperation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/service">
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Description"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Service"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/typeDefinition"/>
+  <owl:ObjectProperty rdf:about="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/usesBinding">
+    <rdfs:comment>To be used for pointing to a Binding from Endpoint</rdfs:comment>
+    <rdfs:domain rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Endpoint"/>
+    <rdfs:range rdf:resource="http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding"/>
+  </owl:ObjectProperty>
+</rdf:RDF>

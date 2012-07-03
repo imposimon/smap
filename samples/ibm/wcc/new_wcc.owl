@@ -1,0 +1,4350 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY owl2 "http://www.w3.org/2006/12/owl2#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY owl2xml "http://www.w3.org/2006/12/owl2-xml#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+    <!ENTITY WCCOntology "http://www.owl-ontologies.com/WCCOntology.owl#" >
+]>
+
+
+<rdf:RDF xmlns="http://www.owl-ontologies.com/WCCOntology.owl#"
+     xml:base="http://www.owl-ontologies.com/WCCOntology.owl"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl2xml="http://www.w3.org/2006/12/owl2-xml#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl2="http://www.w3.org/2006/12/owl2#"
+     xmlns:WCCOntology="http://www.owl-ontologies.com/WCCOntology.owl#">
+    <owl:Ontology rdf:about=""/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Assemble -->
+
+    <owl:ObjectProperty rdf:about="#Assemble">
+        <owl:inverseOf rdf:resource="#Assembled_By"/>
+        <rdfs:range rdf:resource="#CONTRACT"/>
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Assembled_By -->
+
+    <owl:ObjectProperty rdf:about="#Assembled_By">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="#CONTRACT_COMPONENT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#At -->
+
+    <owl:ObjectProperty rdf:about="#At">
+        <rdfs:range rdf:resource="#ADDRESS"/>
+        <rdfs:domain rdf:resource="#PROPERTY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BILLING_for_CONTRACT -->
+
+    <owl:ObjectProperty rdf:about="#BILLING_for_CONTRACT">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="#CONTRACT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BILLING_for_Contract_COMPONENT -->
+
+    <owl:ObjectProperty rdf:about="#BILLING_for_Contract_COMPONENT">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="#CONTRACT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_Relationship_CHILD -->
+
+    <owl:ObjectProperty rdf:about="#CATEGORY_Relationship_CHILD">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:range rdf:resource="#CATEGORY"/>
+        <rdfs:domain rdf:resource="#Has_CATEGORY_NODERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_Relationship_PARENT -->
+
+    <owl:ObjectProperty rdf:about="#CATEGORY_Relationship_PARENT">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:range rdf:resource="#CATEGORY"/>
+        <rdfs:domain rdf:resource="#Has_CATEGORY_NODERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_CONTRACT_Relationship_From -->
+
+    <owl:ObjectProperty rdf:about="#CLAIM_CONTRACT_Relationship_From">
+        <rdfs:range rdf:resource="#CONTRACT"/>
+        <rdfs:domain rdf:resource="#Has_ClaimRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_CONTRACT_Relationship_To -->
+
+    <owl:ObjectProperty rdf:about="#CLAIM_CONTRACT_Relationship_To">
+        <rdfs:range rdf:resource="#CLAIM"/>
+        <rdfs:domain rdf:resource="#Has_ClaimRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_ROLE_Relationship_From -->
+
+    <owl:ObjectProperty rdf:about="#CLAIM_ROLE_Relationship_From">
+        <rdfs:range rdf:resource="#CLAIM"/>
+        <rdfs:domain rdf:resource="#Has_CLAIM_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_ROLE_Relationship_To -->
+
+    <owl:ObjectProperty rdf:about="#CLAIM_ROLE_Relationship_To">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Has_CLAIM_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACT_Relationship_FROM -->
+
+    <owl:ObjectProperty rdf:about="#CONTACT_Relationship_FROM">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Has_CONTACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACT_Relationship_TO -->
+
+    <owl:ObjectProperty rdf:about="#CONTACT_Relationship_TO">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Has_CONTACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_From -->
+
+    <owl:ObjectProperty rdf:about="#CONTRACT_ROLE_Relationship_From">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_Relationship_FROM -->
+
+    <owl:ObjectProperty rdf:about="#CONTRACT_ROLE_Relationship_Relationship_FROM">
+        <rdfs:range rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_Relationship_TO -->
+
+    <owl:ObjectProperty rdf:about="#CONTRACT_ROLE_Relationship_Relationship_TO">
+        <rdfs:range rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_To -->
+
+    <owl:ObjectProperty rdf:about="#CONTRACT_ROLE_Relationship_To">
+        <rdfs:range rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_Relationship_FROM -->
+
+    <owl:ObjectProperty rdf:about="#CONTRACT_Relationship_FROM">
+        <rdfs:range rdf:resource="#CONTRACT"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_Relationship_TO -->
+
+    <owl:ObjectProperty rdf:about="#CONTRACT_Relationship_TO">
+        <rdfs:range rdf:resource="#CONTRACT"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Collapsed_Into -->
+
+    <owl:ObjectProperty rdf:about="#Collapsed_Into">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Inactivated_Contact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Duplicated_As -->
+
+    <owl:ObjectProperty rdf:about="#Duplicated_As">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Inactivated_Contact"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Equal_To -->
+
+    <owl:ObjectProperty rdf:about="#Equal_To">
+        <rdf:type rdf:resource="&owl;SymmetricProperty"/>
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <owl:inverseOf rdf:resource="#Equal_To"/>
+        <rdfs:range rdf:resource="#Equal_ToRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Equal_To_Contact -->
+
+    <owl:ObjectProperty rdf:about="#Equal_To_Contact">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#Equal_ToRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_Claim_Role -->
+
+    <owl:ObjectProperty rdf:about="#Has_Claim_Role">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Has_CLAIM_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_Contract -->
+
+    <owl:ObjectProperty rdf:about="#Has_Contract">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Has_CONTRACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_Contract_Role -->
+
+    <owl:ObjectProperty rdf:about="#Has_Contract_Role">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_Person_Name -->
+
+    <owl:ObjectProperty rdf:about="#Has_Person_Name">
+        <rdfs:range rdf:resource="#Has_PERSON_NAMERelation0"/>
+        <rdfs:domain rdf:resource="#PERSON"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Hold -->
+
+    <owl:ObjectProperty rdf:about="#Hold">
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:range rdf:resource="#HOLDING"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Located_At -->
+
+    <owl:ObjectProperty rdf:about="#Located_At">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="#LOCATION_GROUP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODCUT_CONTRACT_Relationship_FROM -->
+
+    <owl:ObjectProperty rdf:about="#PRODCUT_CONTRACT_Relationship_FROM">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCT_CONTRACTRelation0"/>
+        <rdfs:range rdf:resource="#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODCUT_CONTRACT_Relationship_TO -->
+
+    <owl:ObjectProperty rdf:about="#PRODCUT_CONTRACT_Relationship_TO">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:range rdf:resource="#CONTRACT"/>
+        <rdfs:domain rdf:resource="#Has_PRODUCT_CONTRACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relatinship_FROM -->
+
+    <owl:ObjectProperty rdf:about="#PRODUCT_Relatinship_FROM">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCTRelation0"/>
+        <rdfs:range rdf:resource="#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relationship_TO -->
+
+    <owl:ObjectProperty rdf:about="#PRODUCT_Relationship_TO">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCTRelation0"/>
+        <rdfs:range rdf:resource="#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PROVIDED_BY -->
+
+    <owl:ObjectProperty rdf:about="#PROVIDED_BY">
+        <rdfs:range rdf:resource="#CONTACT"/>
+        <rdfs:domain rdf:resource="#CONTACT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Paid_From -->
+
+    <owl:ObjectProperty rdf:about="#Paid_From">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="#PAYMENT_SOURCE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Pay_Through -->
+
+    <owl:ObjectProperty rdf:about="#Pay_Through">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="#PAYMENT_SOURCE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Play_Claim_Role_Relation -->
+
+    <owl:ObjectProperty rdf:about="#Play_Claim_Role_Relation">
+        <rdfs:range rdf:resource="#CLAIM"/>
+        <rdfs:domain rdf:resource="#CONTACT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Play_Contract_Role_Relation -->
+
+    <owl:ObjectProperty rdf:about="#Play_Contract_Role_Relation">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Receive_Money_From -->
+
+    <owl:ObjectProperty rdf:about="#Receive_Money_From">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="#INCOME_SOURCE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Replace_By -->
+
+    <owl:ObjectProperty rdf:about="#Replace_By">
+        <rdfs:range rdf:resource="#CONTRACT"/>
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Sit_At -->
+
+    <owl:ObjectProperty rdf:about="#Sit_At">
+        <rdfs:range rdf:resource="#ADDRESS"/>
+        <rdfs:domain rdf:resource="#CONTACTMETHOD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasAccount_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasAccount_Type">
+        <rdfs:range rdf:resource="#Account_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BANK_ACCOUNT"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasAddress -->
+
+    <owl:ObjectProperty rdf:about="#hasAddress">
+        <rdfs:range rdf:resource="#ADDRESS"/>
+        <rdfs:domain rdf:resource="#ADDRESS_GROUP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasAddress_Usage -->
+
+    <owl:ObjectProperty rdf:about="#hasAddress_Usage">
+        <rdfs:range rdf:resource="#Address_Usage"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#ADDRESS_GROUP"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasBILLING_Frequency_MODE -->
+
+    <owl:ObjectProperty rdf:about="#hasBILLING_Frequency_MODE">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="#Reporting_Frequency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasBILLING_Status -->
+
+    <owl:ObjectProperty rdf:about="#hasBILLING_Status">
+        <rdfs:range rdf:resource="#Billing_Status"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BILLING_SUMMARY"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasBILL_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasBILL_Type">
+        <rdfs:range rdf:resource="#Bill_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CONTRACT"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasBUY_SELL_Agreement_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasBUY_SELL_Agreement_Type">
+        <rdfs:range rdf:resource="#BUY_SELL_AGREEment_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Organization"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasBilling_Currency -->
+
+    <owl:ObjectProperty rdf:about="#hasBilling_Currency">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="#CURRENCY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCATEGORY_HIERACHY -->
+
+    <owl:ObjectProperty rdf:about="#hasCATEGORY_HIERACHY">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="#CATEGORY_HIERACHY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCATEGORY_HIERACHY_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasCATEGORY_HIERACHY_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY_HIERACHY"/>
+        <rdfs:range rdf:resource="#CATEGORY_HIERACHY_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCHARGE_CARD_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasCHARGE_CARD_Type">
+        <rdfs:range rdf:resource="#CHARGE_CARD_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CHARGE_CARD"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCLAIM_STATUS_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasCLAIM_STATUS_Type">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="#CLAIM_STATUS_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCLAIM_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasCLAIM_Type">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="#CLAIM_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCLIENT_Importance -->
+
+    <owl:ObjectProperty rdf:about="#hasCLIENT_Importance">
+        <rdfs:range rdf:resource="#CLIENT_Importance"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CONTACT"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCLIENT_Potential -->
+
+    <owl:ObjectProperty rdf:about="#hasCLIENT_Potential">
+        <rdfs:range rdf:resource="#CLIENT_POTENtial"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CONTACT"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCLIENT_Status -->
+
+    <owl:ObjectProperty rdf:about="#hasCLIENT_Status">
+        <rdfs:range rdf:resource="#CLIENT_Status"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CONTACT"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTACTMETHOD -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTACTMETHOD">
+        <rdfs:range rdf:resource="#CONTACTMETHOD"/>
+        <rdfs:domain rdf:resource="#CONTACTMETHOD_GROUP"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTACTMETHOD_Category -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTACTMETHOD_Category">
+        <rdfs:domain rdf:resource="#CONTACTMETHOD"/>
+        <rdfs:range rdf:resource="#CONTactMETHod_Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTACTMETHOD_Status -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTACTMETHOD_Status">
+        <rdfs:domain rdf:resource="#CONTACTMETHOD_GROUP"/>
+        <rdfs:range rdf:resource="#ContactMETHOD_STATUS"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTACT_Relationship_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTACT_Relationship_Type">
+        <rdfs:range rdf:resource="#Contact_Relationship_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTRACT_CURRENCY -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTRACT_CURRENCY">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="#CURRENCY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTRACT_Frequency_MODE -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTRACT_Frequency_MODE">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="#Reporting_Frequency"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCONTRACT_Relationship_Status -->
+
+    <owl:ObjectProperty rdf:about="#hasCONTRACT_Relationship_Status">
+        <rdfs:range rdf:resource="#Contract_Relationship_Status"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="#hasCategory">
+        <rdfs:range rdf:resource="#CONTactMETHod_Category"/>
+        <rdfs:domain rdf:resource="#Contactmethod_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasClaim_Currency -->
+
+    <owl:ObjectProperty rdf:about="#hasClaim_Currency">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="#CURRENCY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasClaim_Relation -->
+
+    <owl:ObjectProperty rdf:about="#hasClaim_Relation">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="#Has_ClaimRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasClaim_Role -->
+
+    <owl:ObjectProperty rdf:about="#hasClaim_Role">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="#Has_CLAIM_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasContact_Relation -->
+
+    <owl:ObjectProperty rdf:about="#hasContact_Relation">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="#Has_CONTACTRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasContract_Component_Currency -->
+
+    <owl:ObjectProperty rdf:about="#hasContract_Component_Currency">
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:range rdf:resource="#CURRENCY"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasContract_ROLE -->
+
+    <owl:ObjectProperty rdf:about="#hasContract_ROLE">
+        <rdfs:range rdf:resource="#CONTRACT_ROLE"/>
+        <rdfs:domain rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasContract_Relationship_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasContract_Relationship_Type">
+        <rdfs:range rdf:resource="#Contract_Relationship_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasContract_Role_Relationship -->
+
+    <owl:ObjectProperty rdf:about="#hasContract_Role_Relationship">
+        <rdfs:domain rdf:resource="#Has_CONTRACT_ROLERelation0"/>
+        <rdfs:range rdf:resource="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasEND_REASON -->
+
+    <owl:ObjectProperty rdf:about="#hasEND_REASON">
+        <rdfs:range rdf:resource="#END_REASON"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasHIGHEST_Education -->
+
+    <owl:ObjectProperty rdf:about="#hasHIGHEST_Education">
+        <rdfs:range rdf:resource="#HIGHEST_Education"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#PERSON"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasINCOME_SOURCE_CURRENCY -->
+
+    <owl:ObjectProperty rdf:about="#hasINCOME_SOURCE_CURRENCY">
+        <rdfs:range rdf:resource="#CURRENCY"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#INCOME_SOURCE"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasLOB_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasLOB_Type">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="#LOB_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasLast_Payment_Method -->
+
+    <owl:ObjectProperty rdf:about="#hasLast_Payment_Method">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="#PAYMENT_METHOD"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasMARITAL_Status -->
+
+    <owl:ObjectProperty rdf:about="#hasMARITAL_Status">
+        <rdfs:range rdf:resource="#MARITAL_Status"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#PERSON"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasOrganization_NAME_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasOrganization_NAME_Type">
+        <rdfs:range rdf:resource="#Organization_NAME_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_Organization_NameRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasOrganization_Name -->
+
+    <owl:ObjectProperty rdf:about="#hasOrganization_Name">
+        <rdfs:range rdf:resource="#Has_Organization_NameRelation0"/>
+        <rdfs:domain rdf:resource="#Organization"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasOrganization_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasOrganization_Type">
+        <rdfs:range rdf:resource="#Organization_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Organization"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPARENT_PRODUCT_TYPE -->
+
+    <owl:ObjectProperty rdf:about="#hasPARENT_PRODUCT_TYPE">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:range rdf:resource="#PRODUCT_TYPE"/>
+        <rdfs:domain rdf:resource="#PRODUCT_TYPE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPERSON_NAME_PREFIX_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPERSON_NAME_PREFIX_Type">
+        <rdfs:range rdf:resource="#Person_Name_PREFIX_Type"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPERSON_NAME_USAGE -->
+
+    <owl:ObjectProperty rdf:about="#hasPERSON_NAME_USAGE">
+        <rdfs:range rdf:resource="#Person_NAME_USAGE"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODCUT_CONTRACT_Relationship_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODCUT_CONTRACT_Relationship_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCT_CONTRACTRelation0"/>
+        <rdfs:range rdf:resource="#PRODUCT_CONTRACT_Relationship_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_AVAILABILITY_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_AVAILABILITY_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="#PRODUCT_AVAILABILITY_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_CATEGORY_Relatinship_CATEGORY -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_CATEGORY_Relatinship_CATEGORY">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:range rdf:resource="#CATEGORY"/>
+        <rdfs:domain rdf:resource="#Has_PRODCUT_CATEGORYRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_CATEGORY_Relatinship_HIERACHY -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_CATEGORY_Relatinship_HIERACHY">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:range rdf:resource="#CATEGORY_HIERACHY"/>
+        <rdfs:domain rdf:resource="#Has_PRODCUT_CATEGORYRelation0"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_CATEGORY_Relatinship_PRODUCT -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_CATEGORY_Relatinship_PRODUCT">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODCUT_CATEGORYRelation0"/>
+        <rdfs:range rdf:resource="#PRODUCT"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_PRIMARY_TARGET_MARKET_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_PRIMARY_TARGET_MARKET_Type">
+        <rdfs:comment xml:lang="en">MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="#PRODUCT_PRIMARY_TARGET_MARKET_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_Relationship_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_Relationship_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCTRelation0"/>
+        <rdfs:range rdf:resource="#PRODUCT_Relationship_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_STATUS_REASON_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_STATUS_REASON_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="#PRODUCT_STATUS_REASON_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_STATUS_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_STATUS_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="#PRODUCT_STATUS_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_STRUCTURE_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_STRUCTURE_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="#PRODUCT_STRUCTURE_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPRODUCT_TYPE -->
+
+    <owl:ObjectProperty rdf:about="#hasPRODUCT_TYPE">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="#PRODUCT_TYPE"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasPayment_Method -->
+
+    <owl:ObjectProperty rdf:about="#hasPayment_Method">
+        <rdfs:range rdf:resource="#PAYMENT_METHOD"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#BILLING_SUMMARY"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasRESIDENCE_Type -->
+
+    <owl:ObjectProperty rdf:about="#hasRESIDENCE_Type">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="#RESIDENCE_Type"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasReporting_Frequency -->
+
+    <owl:ObjectProperty rdf:about="#hasReporting_Frequency">
+        <rdfs:range rdf:resource="#Reporting_Frequency"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#CONTACT"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasUndeliverable_REASON -->
+
+    <owl:ObjectProperty rdf:about="#hasUndeliverable_REASON">
+        <rdfs:range rdf:resource="#Undeliverable_REASON"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#LOCATION_GROUP"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#rest -->
+
+    <owl:ObjectProperty rdf:about="&rdf;rest"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#oneOf -->
+
+    <owl:ObjectProperty rdf:about="&owl;oneOf"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ACCOUNT_BALANCE -->
+
+    <owl:DatatypeProperty rdf:about="#ACCOUNT_BALANCE">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ACCOUNT_BANK_Number -->
+
+    <owl:DatatypeProperty rdf:about="#ACCOUNT_BANK_Number">
+        <rdfs:domain rdf:resource="#BANK_ACCOUNT"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ADDRESS_LINE -->
+
+    <owl:DatatypeProperty rdf:about="#ADDRESS_LINE">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ANNUAL_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#ANNUAL_Amount">
+        <rdfs:domain rdf:resource="#INCOME_SOURCE"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Account_Number -->
+
+    <owl:DatatypeProperty rdf:about="#Account_Number">
+        <rdfs:domain rdf:resource="#BANK_ACCOUNT"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Account_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Account_Type_NAME">
+        <rdfs:domain rdf:resource="#Account_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Address_Contactmethod_Flag -->
+
+    <owl:DatatypeProperty rdf:about="#Address_Contactmethod_Flag">
+        <rdfs:domain rdf:resource="#LOCATION_GROUP"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Address_Usage_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Address_Usage_NAME">
+        <rdfs:domain rdf:resource="#Address_Usage"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BENEFIT_CLAIM_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#BENEFIT_CLAIM_Amount">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BRANCH_Number -->
+
+    <owl:DatatypeProperty rdf:about="#BRANCH_Number">
+        <rdfs:domain rdf:resource="#BANK_ACCOUNT"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BUY_SELL_AGREEment_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#BUY_SELL_AGREEment_Type_NAME">
+        <rdfs:domain rdf:resource="#BUY_SELL_AGREEment_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Bill_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Bill_Type_NAME">
+        <rdfs:domain rdf:resource="#Bill_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Billing_Status_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Billing_Status_NAME">
+        <rdfs:domain rdf:resource="#Billing_Status"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Birth_Place -->
+
+    <owl:DatatypeProperty rdf:about="#Birth_Place">
+        <rdfs:domain rdf:resource="#PERSON"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Brith_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#Brith_Datetime">
+        <rdfs:domain rdf:resource="#PERSON"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_CODE -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_CODE">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_DESCRIPTION">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_END_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_HIERACHY_DESCRIPTION">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY_HIERACHY"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_HIERACHY_END_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY_HIERACHY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_HIERACHY_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY_HIERACHY"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_HIERACHY_START_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY_HIERACHY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_HIERACHY_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY_HIERACHY_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_IS_LEAF -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_IS_LEAF">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_IS_ROOT -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_IS_ROOT">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_Relationship_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_Relationship_END_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_CATEGORY_NODERelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_Relationship_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_Relationship_START_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_CATEGORY_NODERelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_STRAT_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGORY_STRAT_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGRORY_ASSOCIATE_INDIVIDAUL -->
+
+    <owl:DatatypeProperty rdf:about="#CATEGRORY_ASSOCIATE_INDIVIDAUL">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#CATEGORY"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CHARGE_CARD_BANK_Number -->
+
+    <owl:DatatypeProperty rdf:about="#CHARGE_CARD_BANK_Number">
+        <rdfs:domain rdf:resource="#CHARGE_CARD"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CHARGE_CARD_Number -->
+
+    <owl:DatatypeProperty rdf:about="#CHARGE_CARD_Number">
+        <rdfs:domain rdf:resource="#CHARGE_CARD"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CHARGE_CARD_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CHARGE_CARD_Type_NAME">
+        <rdfs:domain rdf:resource="#CHARGE_CARD_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CHILDREN_Count -->
+
+    <owl:DatatypeProperty rdf:about="#CHILDREN_Count">
+        <rdfs:domain rdf:resource="#PERSON"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CITIZENSHIP -->
+
+    <owl:DatatypeProperty rdf:about="#CITIZENSHIP">
+        <rdfs:domain rdf:resource="#PERSON"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CITY -->
+
+    <owl:DatatypeProperty rdf:about="#CITY">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_DETAIL_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_DETAIL_Amount">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_ClaimRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_INCURRED_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_INCURRED_Datetime">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_NUMBER -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_NUMBER">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_PAID_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_PAID_Amount">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_ROLE_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_ROLE_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CLAIM_ROLERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_ROLE_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_ROLE_NAME">
+        <rdfs:domain rdf:resource="#CLAIM_ROLE"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_ROLE_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_ROLE_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CLAIM_ROLERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_ClaimRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_STATUS_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_STATUS_Type_NAME">
+        <rdfs:domain rdf:resource="#CLAIM_STATUS_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CLAIM_Type_NAME">
+        <rdfs:domain rdf:resource="#CLAIM_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLIENT_Importance_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CLIENT_Importance_NAME">
+        <rdfs:domain rdf:resource="#CLIENT_Importance"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLIENT_POTENtial_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CLIENT_POTENtial_NAME">
+        <rdfs:domain rdf:resource="#CLIENT_POTENtial"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLIENT_Status_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CLIENT_Status_NAME">
+        <rdfs:domain rdf:resource="#CLIENT_Status"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONFIDENTIAL_Indication -->
+
+    <owl:DatatypeProperty rdf:about="#CONFIDENTIAL_Indication">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACT_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CONTACT_NAME">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACT_Relationship_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTACT_Relationship_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACT_Relationship_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTACT_Relationship_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_COMPONENT_Current_CASH_Value_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_COMPONENT_Current_CASH_Value_Amount">
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_COMPONENT_EXPIRY_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_COMPONENT_EXPIRY_Datetime">
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_COMPONENT_PREMIUM_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_COMPONENT_PREMIUM_Amount">
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_Current_CASH_Value_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_Current_CASH_Value_Amount">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_PREMIUM_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_PREMIUM_Amount">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_ROLE_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACT_ROLERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_ROLE_Relationship_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_ROLE_Relationship_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_Relationship_Type -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_ROLE_Relationship_Type">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_ROLE_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACT_ROLERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_Relationship_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_Relationship_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_Relationship_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CONTRACT_Relationship_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_CONTRACTRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTactMETHod_Category_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CONTactMETHod_Category_NAME">
+        <rdfs:domain rdf:resource="#CONTactMETHod_Category"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CREATED_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#CREATED_Datetime">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CURRENCY_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#CURRENCY_NAME">
+        <rdfs:domain rdf:resource="#CURRENCY"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ContactMETHOD_STATUS_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#ContactMETHOD_STATUS_NAME">
+        <rdfs:domain rdf:resource="#ContactMETHOD_STATUS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contact_Relationship_End_Reason -->
+
+    <owl:DatatypeProperty rdf:about="#Contact_Relationship_End_Reason">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range>
+            <rdf:Description>
+                <rdf:type rdf:resource="&owl;DataRange"/>
+                <owl:oneOf>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="&rdf;List"/>
+                        <rdf:first rdf:datatype="&xsd;string"
+                            >Organization Dissolved</rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="&rdf;List"/>
+                                <rdf:first rdf:datatype="&xsd;string">Person Deceased</rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="&rdf;List"/>
+                                        <rdf:first rdf:datatype="&xsd;string">Retired</rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="&rdf;List"/>
+                                                <rdf:first rdf:datatype="&xsd;string">Terminated</rdf:first>
+                                                <rdf:rest rdf:resource="&rdf;nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </owl:oneOf>
+            </rdf:Description>
+        </rdfs:range>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contact_Relationship_FROM_TO_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Contact_Relationship_FROM_TO_NAME">
+        <rdfs:domain rdf:resource="#Contact_Relationship_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contact_Relationship_TO_FROM_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Contact_Relationship_TO_FROM_NAME">
+        <rdfs:domain rdf:resource="#Contact_Relationship_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contact_Role_Name -->
+
+    <owl:DatatypeProperty rdf:about="#Contact_Role_Name">
+        <rdfs:domain rdf:resource="#CONTRACT_ROLE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contactmethod_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Contactmethod_Type_NAME">
+        <rdfs:domain rdf:resource="#Contactmethod_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contract_Relationship_FROM_TO_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Contract_Relationship_FROM_TO_NAME">
+        <rdfs:domain rdf:resource="#Contract_Relationship_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contract_Relationship_Status_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Contract_Relationship_Status_NAME">
+        <rdfs:domain rdf:resource="#Contract_Relationship_Status"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contract_Relationship_TO_FROM_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Contract_Relationship_TO_FROM_NAME">
+        <rdfs:domain rdf:resource="#Contract_Relationship_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Country -->
+
+    <owl:DatatypeProperty rdf:about="#Country">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#DEPOSITOR_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#DEPOSITOR_NAME">
+        <rdfs:domain rdf:resource="#BANK_ACCOUNT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#DUE_DATEtime -->
+
+    <owl:DatatypeProperty rdf:about="#DUE_DATEtime">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#EFFECTIVE_DATEtime -->
+
+    <owl:DatatypeProperty rdf:about="#EFFECTIVE_DATEtime">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#EMPLOYER_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#EMPLOYER_NAME">
+        <rdfs:domain rdf:resource="#PAYROLL_DEDUCTION"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#END_Datetime">
+        <rdfs:domain rdf:resource="#HOLDING"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#END_REASON_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#END_REASON_NAME">
+        <rdfs:domain rdf:resource="#END_REASON"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ESTABLISHED_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#ESTABLISHED_Datetime">
+        <rdfs:domain rdf:resource="#Organization"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#EXPIRY_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#EXPIRY_Datetime">
+        <rdfs:domain rdf:resource="#CHARGE_CARD"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Effective_END_MMDD -->
+
+    <owl:DatatypeProperty rdf:about="#Effective_END_MMDD">
+        <rdfs:domain rdf:resource="#LOCATION_GROUP"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Effective_START_MMDD -->
+
+    <owl:DatatypeProperty rdf:about="#Effective_START_MMDD">
+        <rdfs:domain rdf:resource="#LOCATION_GROUP"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Equal_To_ADMIN_Client_Identity -->
+
+    <owl:DatatypeProperty rdf:about="#Equal_To_ADMIN_Client_Identity">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Equal_ToRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Equal_To_ADMIN_System -->
+
+    <owl:DatatypeProperty rdf:about="#Equal_To_ADMIN_System">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Equal_ToRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Equal_To_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#Equal_To_DESCRIPTION">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Equal_ToRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#HIGHEST_Education_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#HIGHEST_Education_NAME">
+        <rdfs:domain rdf:resource="#HIGHEST_Education"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#HOLDING_Flag -->
+
+    <owl:DatatypeProperty rdf:about="#HOLDING_Flag">
+        <rdfs:domain rdf:resource="#HOLDING"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#HOLDING_VALUE_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#HOLDING_VALUE_Amount">
+        <rdfs:domain rdf:resource="#HOLDING"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ISSUE_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#ISSUE_Datetime">
+        <rdfs:domain rdf:resource="#CONTRACT_COMPONENT"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Information_OBTAINED_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#Information_OBTAINED_Datetime">
+        <rdfs:domain rdf:resource="#INCOME_SOURCE"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Invertment_Experience_Year -->
+
+    <owl:DatatypeProperty rdf:about="#Invertment_Experience_Year">
+        <rdfs:domain rdf:resource="#INCOME_SOURCE"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LAST_PAYMENT_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#LAST_PAYMENT_Amount">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LAST_PAYMENT_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#LAST_PAYMENT_Datetime">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LOB_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#LOB_Type_NAME">
+        <rdfs:domain rdf:resource="#LOB_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LOCATION_GROUP_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#LOCATION_GROUP_END_Datetime">
+        <rdfs:domain rdf:resource="#LOCATION_GROUP"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LOCATION_GROUP_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#LOCATION_GROUP_START_Datetime">
+        <rdfs:domain rdf:resource="#LOCATION_GROUP"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Latitude -->
+
+    <owl:DatatypeProperty rdf:about="#Latitude">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Longitude -->
+
+    <owl:DatatypeProperty rdf:about="#Longitude">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#MARITAL_Status_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#MARITAL_Status_NAME">
+        <rdfs:domain rdf:resource="#MARITAL_Status"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#MEMBER_Indication -->
+
+    <owl:DatatypeProperty rdf:about="#MEMBER_Indication">
+        <rdfs:domain rdf:resource="#LOCATION_GROUP"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Maximum_PAYMENT -->
+
+    <owl:DatatypeProperty rdf:about="#Maximum_PAYMENT">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Minimum_PAYMENT -->
+
+    <owl:DatatypeProperty rdf:about="#Minimum_PAYMENT">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#NEXT_BILL_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#NEXT_BILL_Datetime">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ON_CARD_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#ON_CARD_NAME">
+        <rdfs:domain rdf:resource="#CHARGE_CARD"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#OUTSTANDING_Amount -->
+
+    <owl:DatatypeProperty rdf:about="#OUTSTANDING_Amount">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;float"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_NAME_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#Organization_NAME_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_Organization_NameRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_NAME_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#Organization_NAME_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_Organization_NameRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_NAME_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Organization_NAME_Type_NAME">
+        <rdfs:domain rdf:resource="#Organization_NAME_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_NAME_Value -->
+
+    <owl:DatatypeProperty rdf:about="#Organization_NAME_Value">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_Organization_NameRelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Organization_Type_NAME">
+        <rdfs:domain rdf:resource="#Organization_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAID_TO_DATEtime -->
+
+    <owl:DatatypeProperty rdf:about="#PAID_TO_DATEtime">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYMENT_METHOD_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PAYMENT_METHOD_NAME">
+        <rdfs:domain rdf:resource="#PAYMENT_METHOD"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYMENT_SOURCE_CODE -->
+
+    <owl:DatatypeProperty rdf:about="#PAYMENT_SOURCE_CODE">
+        <rdfs:domain rdf:resource="#PAYMENT_SOURCE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYMENT_SOURCE_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PAYMENT_SOURCE_END_Datetime">
+        <rdfs:domain rdf:resource="#PAYMENT_SOURCE"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYMENT_SOURCE_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PAYMENT_SOURCE_START_Datetime">
+        <rdfs:domain rdf:resource="#PAYMENT_SOURCE"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYROLL_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#PAYROLL_DESCRIPTION">
+        <rdfs:domain rdf:resource="#PAYROLL_DEDUCTION"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYROLL_Number -->
+
+    <owl:DatatypeProperty rdf:about="#PAYROLL_Number">
+        <rdfs:domain rdf:resource="#PAYROLL_DEDUCTION"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PERSON_NAME_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PERSON_NAME_END_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PERSON_NAME_PREFIX -->
+
+    <owl:DatatypeProperty rdf:about="#PERSON_NAME_PREFIX">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PERSON_NAME_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PERSON_NAME_START_Datetime">
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PERSON_Organization_Flag -->
+
+    <owl:DatatypeProperty rdf:about="#PERSON_Organization_Flag">
+        <rdfs:domain rdf:resource="#CONTACT"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODCUT_CONTRACT_Relationship_END_Daytime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODCUT_CONTRACT_Relationship_END_Daytime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCT_CONTRACTRelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODCUT_CONTRACT_Relationship_START_Daytime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODCUT_CONTRACT_Relationship_START_Daytime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCT_CONTRACTRelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_AVAILABILITY_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_AVAILABILITY_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_AVAILABILITY_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_CATEGORY_Relatinship_END_DateTime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_CATEGORY_Relatinship_END_DateTime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODCUT_CATEGORYRelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_CATEGORY_Relatinship_START_DateTime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_CATEGORY_Relatinship_START_DateTime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODCUT_CATEGORYRelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_CONTRACT_Relationship_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_CONTRACT_Relationship_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_CONTRACT_Relationship_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_DESCRIPTION">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_PRIMARY_TARGET_MARKET_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_PRIMARY_TARGET_MARKET_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_PRIMARY_TARGET_MARKET_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relationship_Description -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_Relationship_Description">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCTRelation0"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relationship_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_Relationship_END_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCTRelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relationship_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_Relationship_START_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#Has_PRODUCTRelation0"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relationship_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_Relationship_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_Relationship_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_SHORT_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_SHORT_DESCRIPTION">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_STATUS_REASON_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_STATUS_REASON_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_STATUS_REASON_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_STATUS_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_STATUS_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_STATUS_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_STRUCTURE_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_STRUCTURE_Type_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_STRUCTURE_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_TYPE_DESCRIPTION -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_TYPE_DESCRIPTION">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_TYPE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_TYPE_END_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_TYPE_END_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_TYPE"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_TYPE_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_TYPE_NAME">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_TYPE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_TYPE_START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#PRODUCT_TYPE_START_Datetime">
+        <rdfs:comment>MDM8</rdfs:comment>
+        <rdfs:domain rdf:resource="#PRODUCT_TYPE"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PROFIT_Indication -->
+
+    <owl:DatatypeProperty rdf:about="#PROFIT_Indication">
+        <rdfs:domain rdf:resource="#Organization"/>
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Person_GIVENNAME -->
+
+    <owl:DatatypeProperty rdf:about="#Person_GIVENNAME">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Person_LASTNAME -->
+
+    <owl:DatatypeProperty rdf:about="#Person_LASTNAME">
+        <rdfs:range rdf:resource="&xsd;string"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#Has_PERSON_NAMERelation0"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Person_NAME_USAGE_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Person_NAME_USAGE_NAME">
+        <rdfs:domain rdf:resource="#Person_NAME_USAGE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Person_Name_PREFIX_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Person_Name_PREFIX_Type_NAME">
+        <rdfs:domain rdf:resource="#Person_Name_PREFIX_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Postal_Code -->
+
+    <owl:DatatypeProperty rdf:about="#Postal_Code">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Province -->
+
+    <owl:DatatypeProperty rdf:about="#Province">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#RECORDED_Closed_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#RECORDED_Closed_Datetime">
+        <rdfs:domain rdf:resource="#BANK_ACCOUNT"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#RECORDED_OPEN_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#RECORDED_OPEN_Datetime">
+        <rdfs:domain rdf:resource="#BANK_ACCOUNT"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#REPORTED_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#REPORTED_Datetime">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#RESIDENCE_Type_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#RESIDENCE_Type_NAME">
+        <rdfs:domain rdf:resource="#RESIDENCE_Type"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Reference_Number -->
+
+    <owl:DatatypeProperty rdf:about="#Reference_Number">
+        <rdfs:domain rdf:resource="#CONTACTMETHOD"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Reporting_Frequency_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Reporting_Frequency_NAME">
+        <rdfs:domain rdf:resource="#Reporting_Frequency"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Residence_Number -->
+
+    <owl:DatatypeProperty rdf:about="#Residence_Number">
+        <rdfs:domain rdf:resource="#ADDRESS"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#SERVICE_Provider -->
+
+    <owl:DatatypeProperty rdf:about="#SERVICE_Provider">
+        <rdfs:domain rdf:resource="#CONTRACT"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#START_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#START_Datetime">
+        <rdfs:domain rdf:resource="#HOLDING"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#STATUS_Datetime -->
+
+    <owl:DatatypeProperty rdf:about="#STATUS_Datetime">
+        <rdfs:domain rdf:resource="#CLAIM"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Undeliverable_REASON_NAME -->
+
+    <owl:DatatypeProperty rdf:about="#Undeliverable_REASON_NAME">
+        <rdfs:domain rdf:resource="#Undeliverable_REASON"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#VEHICLE_MODEL -->
+
+    <owl:DatatypeProperty rdf:about="#VEHICLE_MODEL">
+        <rdfs:domain rdf:resource="#VEHICLE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#VEHICLE_Maker -->
+
+    <owl:DatatypeProperty rdf:about="#VEHICLE_Maker">
+        <rdfs:domain rdf:resource="#VEHICLE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#VEHICLE_YEAR -->
+
+    <owl:DatatypeProperty rdf:about="#VEHICLE_YEAR">
+        <rdfs:domain rdf:resource="#VEHICLE"/>
+        <rdfs:range rdf:resource="&xsd;int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#VIN_Number -->
+
+    <owl:DatatypeProperty rdf:about="#VIN_Number">
+        <rdfs:domain rdf:resource="#VEHICLE"/>
+        <rdfs:range rdf:resource="&xsd;string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#WITHDRAWAL_DATETIME -->
+
+    <owl:DatatypeProperty rdf:about="#WITHDRAWAL_DATETIME">
+        <rdfs:domain rdf:resource="#BILLING_SUMMARY"/>
+        <rdfs:range rdf:resource="&xsd;dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#hasGENDER -->
+
+    <owl:DatatypeProperty rdf:about="#hasGENDER">
+        <rdfs:range rdf:resource="&xsd;boolean"/>
+        <rdfs:domain>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="#PERSON"/>
+                    <rdf:Description rdf:about="&owl;Thing"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:domain>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#first -->
+
+    <owl:DatatypeProperty rdf:about="&rdf;first"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ADDRESS -->
+
+    <owl:Class rdf:about="#ADDRESS"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ADDRESS_GROUP -->
+
+    <owl:Class rdf:about="#ADDRESS_GROUP">
+        <rdfs:subClassOf rdf:resource="#LOCATION_GROUP"/>
+        <owl:disjointWith rdf:resource="#CONTACTMETHOD_GROUP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Account_Type -->
+
+    <owl:Class rdf:about="#Account_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Address_Usage -->
+
+    <owl:Class rdf:about="#Address_Usage"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BANK_ACCOUNT -->
+
+    <owl:Class rdf:about="#BANK_ACCOUNT">
+        <rdfs:subClassOf rdf:resource="#PAYMENT_SOURCE"/>
+        <owl:disjointWith rdf:resource="#CHARGE_CARD"/>
+        <owl:disjointWith rdf:resource="#PAYROLL_DEDUCTION"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BILLING_SUMMARY -->
+
+    <owl:Class rdf:about="#BILLING_SUMMARY"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#BUY_SELL_AGREEment_Type -->
+
+    <owl:Class rdf:about="#BUY_SELL_AGREEment_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Bill_Type -->
+
+    <owl:Class rdf:about="#Bill_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Billing_Status -->
+
+    <owl:Class rdf:about="#Billing_Status"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY -->
+
+    <owl:Class rdf:about="#CATEGORY"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY -->
+
+    <owl:Class rdf:about="#CATEGORY_HIERACHY">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CATEGORY_HIERACHY_Type -->
+
+    <owl:Class rdf:about="#CATEGORY_HIERACHY_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CHARGE_CARD -->
+
+    <owl:Class rdf:about="#CHARGE_CARD">
+        <rdfs:subClassOf rdf:resource="#PAYMENT_SOURCE"/>
+        <owl:disjointWith rdf:resource="#PAYROLL_DEDUCTION"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CHARGE_CARD_Type -->
+
+    <owl:Class rdf:about="#CHARGE_CARD_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM -->
+
+    <owl:Class rdf:about="#CLAIM"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_ROLE -->
+
+    <owl:Class rdf:about="#CLAIM_ROLE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_STATUS_Type -->
+
+    <owl:Class rdf:about="#CLAIM_STATUS_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLAIM_Type -->
+
+    <owl:Class rdf:about="#CLAIM_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLIENT_Importance -->
+
+    <owl:Class rdf:about="#CLIENT_Importance"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLIENT_POTENtial -->
+
+    <owl:Class rdf:about="#CLIENT_POTENtial">
+        <rdfs:subClassOf rdf:resource="#CLIENT_Importance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CLIENT_Status -->
+
+    <owl:Class rdf:about="#CLIENT_Status"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACT -->
+
+    <owl:Class rdf:about="#CONTACT"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACTMETHOD -->
+
+    <owl:Class rdf:about="#CONTACTMETHOD"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTACTMETHOD_GROUP -->
+
+    <owl:Class rdf:about="#CONTACTMETHOD_GROUP">
+        <rdfs:subClassOf rdf:resource="#LOCATION_GROUP"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT -->
+
+    <owl:Class rdf:about="#CONTRACT"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_COMPONENT -->
+
+    <owl:Class rdf:about="#CONTRACT_COMPONENT"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTRACT_ROLE -->
+
+    <owl:Class rdf:about="#CONTRACT_ROLE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CONTactMETHod_Category -->
+
+    <owl:Class rdf:about="#CONTactMETHod_Category"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#CURRENCY -->
+
+    <owl:Class rdf:about="#CURRENCY"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#ContactMETHOD_STATUS -->
+
+    <owl:Class rdf:about="#ContactMETHOD_STATUS"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contact_Relationship_Type -->
+
+    <owl:Class rdf:about="#Contact_Relationship_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contactmethod_Type -->
+
+    <owl:Class rdf:about="#Contactmethod_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contract_Relationship_Status -->
+
+    <owl:Class rdf:about="#Contract_Relationship_Status"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Contract_Relationship_Type -->
+
+    <owl:Class rdf:about="#Contract_Relationship_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#END_REASON -->
+
+    <owl:Class rdf:about="#END_REASON"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Equal_ToRelation0 -->
+
+    <owl:Class rdf:about="#Equal_ToRelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#HIGHEST_Education -->
+
+    <owl:Class rdf:about="#HIGHEST_Education"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#HOLDING -->
+
+    <owl:Class rdf:about="#HOLDING"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_CATEGORY_NODERelation0 -->
+
+    <owl:Class rdf:about="#Has_CATEGORY_NODERelation0">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_CLAIM_ROLERelation0 -->
+
+    <owl:Class rdf:about="#Has_CLAIM_ROLERelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_CONTACTRelation0 -->
+
+    <owl:Class rdf:about="#Has_CONTACTRelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_CONTRACTRelation0 -->
+
+    <owl:Class rdf:about="#Has_CONTRACTRelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_CONTRACT_ROLERelation0 -->
+
+    <owl:Class rdf:about="#Has_CONTRACT_ROLERelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_CONTRACT_ROLE_RelationshipRelation0 -->
+
+    <owl:Class rdf:about="#Has_CONTRACT_ROLE_RelationshipRelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_ClaimRelation0 -->
+
+    <owl:Class rdf:about="#Has_ClaimRelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_Organization_NameRelation0 -->
+
+    <owl:Class rdf:about="#Has_Organization_NameRelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_PERSON_NAMERelation0 -->
+
+    <owl:Class rdf:about="#Has_PERSON_NAMERelation0"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_PRODCUT_CATEGORYRelation0 -->
+
+    <owl:Class rdf:about="#Has_PRODCUT_CATEGORYRelation0">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_PRODUCTRelation0 -->
+
+    <owl:Class rdf:about="#Has_PRODUCTRelation0">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Has_PRODUCT_CONTRACTRelation0 -->
+
+    <owl:Class rdf:about="#Has_PRODUCT_CONTRACTRelation0">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#INCOME_SOURCE -->
+
+    <owl:Class rdf:about="#INCOME_SOURCE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Inactivated_Contact -->
+
+    <owl:Class rdf:about="#Inactivated_Contact">
+        <rdfs:subClassOf rdf:resource="#CONTACT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LOB_Type -->
+
+    <owl:Class rdf:about="#LOB_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#LOCATION_GROUP -->
+
+    <owl:Class rdf:about="#LOCATION_GROUP"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#MARITAL_Status -->
+
+    <owl:Class rdf:about="#MARITAL_Status"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization -->
+
+    <owl:Class rdf:about="#Organization">
+        <rdfs:subClassOf rdf:resource="#CONTACT"/>
+        <owl:disjointWith rdf:resource="#PERSON"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_NAME_Type -->
+
+    <owl:Class rdf:about="#Organization_NAME_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Organization_Type -->
+
+    <owl:Class rdf:about="#Organization_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYMENT_METHOD -->
+
+    <owl:Class rdf:about="#PAYMENT_METHOD"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYMENT_SOURCE -->
+
+    <owl:Class rdf:about="#PAYMENT_SOURCE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PAYROLL_DEDUCTION -->
+
+    <owl:Class rdf:about="#PAYROLL_DEDUCTION">
+        <rdfs:subClassOf rdf:resource="#PAYMENT_SOURCE"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PERSON -->
+
+    <owl:Class rdf:about="#PERSON">
+        <rdfs:subClassOf rdf:resource="#CONTACT"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT -->
+
+    <owl:Class rdf:about="#PRODUCT">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_AVAILABILITY_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_AVAILABILITY_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_CONTRACT_Relationship_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_CONTRACT_Relationship_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_PRIMARY_TARGET_MARKET_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_PRIMARY_TARGET_MARKET_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_Relationship_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_Relationship_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_STATUS_REASON_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_STATUS_REASON_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_STATUS_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_STATUS_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_STRUCTURE_Type -->
+
+    <owl:Class rdf:about="#PRODUCT_STRUCTURE_Type">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PRODUCT_TYPE -->
+
+    <owl:Class rdf:about="#PRODUCT_TYPE">
+        <rdfs:comment>MDM8</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#PROPERTY -->
+
+    <owl:Class rdf:about="#PROPERTY">
+        <rdfs:subClassOf rdf:resource="#HOLDING"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Person_NAME_USAGE -->
+
+    <owl:Class rdf:about="#Person_NAME_USAGE"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Person_Name_PREFIX_Type -->
+
+    <owl:Class rdf:about="#Person_Name_PREFIX_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#RESIDENCE_Type -->
+
+    <owl:Class rdf:about="#RESIDENCE_Type"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Reporting_Frequency -->
+
+    <owl:Class rdf:about="#Reporting_Frequency"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#Undeliverable_REASON -->
+
+    <owl:Class rdf:about="#Undeliverable_REASON"/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#VEHICLE -->
+
+    <owl:Class rdf:about="#VEHICLE">
+        <rdfs:subClassOf rdf:resource="#HOLDING"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#Thing -->
+
+    <owl:Class rdf:about="&owl;Thing"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid150 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid151 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid152 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid153 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid154 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid155 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid156 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid157 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid158 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid159 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid160 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid161 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid162 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid163 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid164 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid165 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid166 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid167 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid168 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid169 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid170 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid171 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid172 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid173 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid174 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid175 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid176 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid177 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid178 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid179 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid180 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid181 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid182 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid183 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid184 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid185 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid186 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid187 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid188 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid189 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid190 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid191 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid192 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid193 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid194 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid195 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid196 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid197 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid198 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid199 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid200 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid201 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid202 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid203 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid204 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid205 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid206 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid207 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid208 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid209 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid210 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid211 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid212 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid213 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid214 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid215 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid216 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid217 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid218 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid219 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid220 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid221 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid222 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid223 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid224 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid225 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid226 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid227 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid228 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid229 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid230 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid231 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid232 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid233 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid234 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid235 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid236 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid237 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid238 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid239 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid240 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid241 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid242 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid243 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid244 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid245 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid246 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid247 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid248 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid249 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid250 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid251 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid252 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid253 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid254 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid255 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid256 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid257 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid258 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid259 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid260 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid261 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid262 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid263 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid264 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid265 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid266 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid267 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid268 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid269 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid270 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid271 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid272 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid273 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid274 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid275 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid276 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid277 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid278 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid279 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid280 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid281 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid282 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid283 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid284 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid285 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid286 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid287 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.owl-ontologies.com/WCCOntology.owl#genid288 -->
+
+    <owl:Thing/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#nil -->
+
+    <owl:Thing rdf:about="&rdf;nil"/>
+</rdf:RDF>

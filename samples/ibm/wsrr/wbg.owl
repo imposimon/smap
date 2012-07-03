@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY owl "http://www.w3.org/2002/07/owl#">
+  <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+  <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#">
+  <!ENTITY wbg "http://umrr.dyn.webahead.ibm.com/resource/2008/wbg/">
+  <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">
+]>
+<rdf:RDF xml:base="http://umrr.dyn.webahead.ibm.com/resource/2008/wbg/" 
+         xmlns:owl="http://www.w3.org/2002/07/owl#" 
+         xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+<!-- Ontology Information -->
+  <owl:Ontology rdf:about="" rdfs:comment="WBG Ontology with Mapping to Dublin Core" rdfs:label="WBG Ontology" owl:versionInfo="0.6"/>
+
+<!-- Classes -->
+  <owl:Class rdf:about="BusinessCategory">
+    <rdfs:comment>Business categories represent standard business concepts. They are the basic building blocks of a business ontology. In the strictest interpretation, they represent the classes of an ontology.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="BusinessTerm">
+    <rdfs:comment>A Term is a business related keyword that can be associated with one or more objects in the repository. It provides the ability to classify these objects according to business concepts. Terms are grouped together to create Glossary information.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://purl.org/dc/dcmitype/Text"/>
+  </owl:Class>
+
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#boolean">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+  </rdfs:Datatype>
+
+<!-- Datatypes -->
+  <rdfs:Datatype rdf:about="http://www.w3.org/2001/XMLSchema#string"/>
+
+<!-- Annotation Properties -->
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#comment"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#label"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2002/07/owl#versionInfo"/>
+
+<!-- Datatype Properties -->
+  <owl:DatatypeProperty rdf:about="abbreviation">
+    <rdfs:comment>A short name used as the primary abbreviation of the Term.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="alternateAbbreviation" rdfs:comment="A secondary abbrevation of the Term.">
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="classification">
+    <rdfs:comment>Specifies the classification of a term based on its use in metadata naming standardization. The possible values are: NONE, PRIMARY, CLASS (SECONDARY) -- see definition in TermClassEnum enumeration. For example,the term 'Account' may be a primary concept and 'Balance' is a secondary term.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="example" rdfs:comment="Provides examples of the Term.">
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="isPreferedBusinessTerm">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment>Indicate if the business term is more prefered than other synonyms.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="isQualifier">
+    <rdfs:comment>A boolean indicator as to whether or not the term's primary purpose is to provide descriptive information about an object (TRUE) or to identify distinguishing characteristics of an object (FALSE). For example, the terms 'Beginning' and 'Ending' are qualifiers (or modifiers) for the Primary Term 'Account' and Secondary Term 'Balance'.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="longDescription">
+    <rdfs:comment>An unlimited non-structured textual description of the object.</rdfs:comment>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/description"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="name" rdfs:label="name">
+    <rdfs:comment>The name of an Object, either term or category</rdfs:comment>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/title"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="shortDescription">
+    <rdfs:comment>A short non-structured textual description, usually no more than 255 characters.</rdfs:comment>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/abstract"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="status">
+    <rdfs:comment>An indicator of acceptance status of the Term. Valid values are: CANDIDATE, ACCEPTED, STANDARD, and DEPRECATED; Definition of these values is provided in the corresponding Enumeration -- TermStatusEnum.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="usage" rdfs:comment="Specifies typical usages of the Term.">
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+
+<!-- Object Properties -->
+  <owl:ObjectProperty rdf:about="classify">
+    <rdfs:comment>One business term can classify anything. It is more like a tag than a formal classification.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+	<owl:inverseOf rdf:resource="isClassifiedBy"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="isClassifiedBy">
+    <rdfs:comment>one resource can be classified by business terms.</rdfs:comment>
+	<rdfs:range rdf:resource="BusinessTerm"/>
+  </owl:ObjectProperty>
+
+
+  <owl:ObjectProperty rdf:about="containsBusinessTerm">
+    <rdfs:comment>One business category can contain many business terms, but one business term can be contained by only one business category.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessCategory"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="hasRelatedBusinessTerm">
+    <rdfs:comment>One business term can be related to many business terms.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+    <owl:inverseOf rdf:resource="relatesToBusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="hasSynonym">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+    <rdfs:comment>One business term can have many synonyms.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/alternative"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="ofBusinessCategory">
+    <rdfs:comment>One business term can be contained by only one business category.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessCategory"/>
+    <owl:inverseOf rdf:resource="containsBusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>	
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="referenceBusinessTerm">
+    <rdfs:comment>One business category can refer many business terms in other business categories.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessCategory"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/references"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="referencedByBusinessCategory">
+    <rdfs:comment>One business term can be reference by many business categories.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessCategory"/>
+    <owl:inverseOf rdf:resource="referenceBusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isReferencedBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="relatesToBusinessTerm">
+    <rdfs:comment>One business term can relate to many business terms.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/relation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="replacedByBusinessTerm">
+    <rdfs:comment>One business term can only be replaced by one business term.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+    <owl:inverseOf rdf:resource="replacesBusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isReplacedBy"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="replacesBusinessTerm">
+    <rdfs:comment>One business term can replace many terms, but can be replaced by only one term.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/replaces"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="subBusinessCategory">
+    <rdfs:comment>One business category can have many subcategories, but only one super category.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessCategory"/>
+    <rdfs:range rdf:resource="BusinessCategory"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/hasPart"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="superBusinessCategory">
+    <rdfs:comment>One business category can have only one super category.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessCategory"/>
+    <rdfs:range rdf:resource="BusinessCategory"/>
+    <owl:inverseOf rdf:resource="subBusinessCategory"/>
+	<rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/isPartOf"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="superBusinessTerm">
+    <rdfs:comment>One business term can have super terms.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+    <owl:inverseOf rdf:resource="subBusinessTerm"/>
+	<rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+  </owl:ObjectProperty>
+  
+  <owl:ObjectProperty rdf:about="subBusinessTerm">
+    <rdfs:comment>One business term can have many sub terms.</rdfs:comment>
+    <rdfs:domain rdf:resource="BusinessTerm"/>
+    <rdfs:range rdf:resource="BusinessTerm"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
+  </owl:ObjectProperty>
+
+
+</rdf:RDF>

@@ -1,0 +1,82 @@
+body {
+	background: url(../img/tissue-pattern.jpg);
+}
+.header {
+	margin-bottom: 30px;
+}
+.header p {
+	font-size: 20px;
+	font-weight: 200;
+	inline-height: 20px;
+	margin-left: 20px;
+}
+#logo {
+	width: 200px;
+	margin-top: 30px;
+}
+
+
+a {
+	cursor: pointer;
+}
+
+.sampleRow {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.sampleBar {
+	font-size: 14px;
+	font-family: Tahoma;
+}
+
+#samplePane strong {
+	/* border: solid 1px; */
+	font-size: 17px;
+}
+
+#resultPane {
+	display: none;
+}
+
+#results {
+	/* margin: 10px; */
+	font-size: 16px;
+	font-family: "Consolas";
+	word-break: break-all;
+}
+
+#results ul {
+	/* margin-left: 31px; */
+	list-style-type: decimal;
+	list-style-position: inside;
+}
+
+.control-label {
+	margin-right: 15px;
+	font-size: 15px;
+}
+
+#results strong {
+	font-size: 18px;
+}
+
+.controls input {
+	width: 370px;
+}
+
+
+#inputPane {
+	/* border: solid 1px; */
+	/* height: 150px; */
+	padding-top: 20px;
+}
+
+#menuPane {
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+#input-group3 {
+	display:none;
+}

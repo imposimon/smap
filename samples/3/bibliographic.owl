@@ -1,0 +1,1033 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns="http://www.owl-ontologies.com/unnamed.owl#"
+    xml:base="http://www.owl-ontologies.com/unnamed.owl">
+  <owl:Ontology rdf:about=""/>
+  <owl:Class rdf:ID="Journal-Article-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Article-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Newspaper">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Periodical-Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Universal-Time-Spec">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Timepoint"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Doctoral-Thesis-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Thesis-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Computer-Program">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Miscellaneous-Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Publisher">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Organization"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Generic-Unpublished-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Non-Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Biblio-Text"/>
+  <owl:Class rdf:ID="Month-Name"/>
+  <owl:Class rdf:about="#Thesis-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Publisher-Name">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Biblio-Name"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Person">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Technical-Report-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Author">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="University">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Organization"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Timepoint">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Biblio-Thing"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Title">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Biblio-Name"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="City-Address">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Biblio-Name"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Biblio-Nl-Text">
+    <rdfs:subClassOf rdf:resource="#Biblio-Text"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Book-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Thesis">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Document"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Biblio-Name">
+    <rdfs:subClassOf rdf:resource="#Biblio-Text"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Multimedia-Document">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Miscellaneous-Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Miscellaneous-Publication">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Document"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Reference">
+    <rdfs:subClassOf rdf:resource="#Biblio-Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Article-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Journal">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Periodical-Publication"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Multimedia-Document-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Misc-Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Doctoral-Thesis">
+    <rdfs:subClassOf rdf:resource="#Thesis"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Edited-Book">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Book"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Non-Publication-Reference">
+    <rdfs:subClassOf rdf:resource="#Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Magazine-Article-Reference">
+    <rdfs:subClassOf rdf:resource="#Article-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Personal-Communication-Reference">
+    <rdfs:subClassOf rdf:resource="#Non-Publication-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Artwork-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Misc-Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Masters-Thesis">
+    <rdfs:subClassOf rdf:resource="#Thesis"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Technical-Manual">
+    <rdfs:subClassOf rdf:resource="#Miscellaneous-Publication"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Agent-Name">
+    <rdfs:subClassOf rdf:resource="#Biblio-Name"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Computer-Program-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Misc-Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Document">
+    <rdfs:subClassOf rdf:resource="#Biblio-Thing"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Masters-Thesis-Reference">
+    <rdfs:subClassOf rdf:resource="#Thesis-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Book">
+    <rdfs:subClassOf rdf:resource="#Document"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Author-Name">
+    <rdfs:subClassOf rdf:resource="#Biblio-Name"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Technical-Manual-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Misc-Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Technical-Report">
+    <rdfs:subClassOf rdf:resource="#Document"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Misc-Publication-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="#Organization">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Agent"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Calendar-Date">
+    <rdfs:subClassOf rdf:resource="#Timepoint"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Keyword">
+    <rdfs:subClassOf rdf:resource="#Biblio-Name"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Book-Section-Reference">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Publication-Reference"/>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:ID="Cartographic-Map">
+    <rdfs:subClassOf rdf:resource="#Miscellaneous-Publication"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Proceedings">
+    <rdfs:subClassOf rdf:resource="#Document"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Newspaper-Article-Reference">
+    <rdfs:subClassOf rdf:resource="#Article-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Year-Number"/>
+  <owl:Class rdf:ID="Artwork">
+    <rdfs:subClassOf rdf:resource="#Miscellaneous-Publication"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Conference">
+    <rdfs:subClassOf rdf:resource="#Biblio-Thing"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Periodical-Publication">
+    <rdfs:subClassOf rdf:resource="#Document"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Calendar-Year">
+    <rdfs:subClassOf rdf:resource="#Timepoint"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Edited-Book-Reference">
+    <rdfs:subClassOf rdf:resource="#Book-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Day-Number"/>
+  <owl:Class rdf:about="#Publication-Reference">
+    <rdfs:subClassOf rdf:resource="#Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Cartographic-Map-Reference">
+    <rdfs:subClassOf rdf:resource="#Misc-Publication-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Article">
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:someValuesFrom rdf:resource="#Document"/>
+        <owl:onProperty>
+          <owl:ObjectProperty rdf:ID="anySlot"/>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="#Document"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Magazine">
+    <rdfs:subClassOf rdf:resource="#Periodical-Publication"/>
+  </owl:Class>
+  <owl:Class rdf:ID="Proceedings-Paper-Reference">
+    <rdfs:subClassOf rdf:resource="#Publication-Reference"/>
+  </owl:Class>
+  <owl:Class rdf:about="#Agent">
+    <rdfs:subClassOf rdf:resource="#Biblio-Thing"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="Doc.Translator">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Doc.Author">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="#Author"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Doc.Series-Editor">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="#Person"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#anySlot">
+    <rdfs:range rdf:resource="#Reference"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="Doc.Editor">
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="cites">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="#Document"/>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Translator">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Address">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Person.address">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Person"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Author">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="day">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Timepoint"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Labels">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Doc.Awards">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Publisher.Address">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Publisher"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Doc.Target-Audience">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Notes">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Editor">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Author.penname">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Author"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Doc.General-Topics">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="month">
+    <rdfs:domain rdf:resource="#Timepoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Keywords">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Series-Editor">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Doc.Content">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Secondary-Author">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Doc.Type">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Tertiary-Author">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="year">
+    <rdfs:domain rdf:resource="#Timepoint"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="Ref.Secondary-Title">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:DatatypeProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Edition">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Periodical">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Number-Of-Volumes">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Timepoint.Year">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Timepoint"/>
+    <rdfs:range rdf:resource="#Year-Number"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Author.address">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Author"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Conf.Date">
+    <rdfs:domain rdf:resource="#Conference"/>
+    <rdfs:range rdf:resource="#Timepoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Publication-Date">
+    <rdfs:range rdf:resource="#Timepoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Booktitle">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Year">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Newspaper-Name">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Organization">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Type-Of-Work">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Timepoint.Minutes">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Timepoint"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Title">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="number">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Periodical-Publication"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Issue">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Timepoint.Day">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Timepoint"/>
+    <rdfs:range rdf:resource="#Day-Number"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Series-Title">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Document">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Abstract">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Book.ISBN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Book"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="volume">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Periodical-Publication"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Org.address">
+    <rdfs:domain rdf:resource="#Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Language">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Institution">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="#University"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Edition">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Conf.Name">
+    <rdfs:domain rdf:resource="#Conference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Conf.Address">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Conference"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Month">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="text">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:domain rdf:resource="#Biblio-Text"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Timepoint.Seconds">
+    <rdfs:domain rdf:resource="#Timepoint"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Publisher">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="#Publisher"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Agent.name">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Agent"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Volume">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Number-Of-Pages">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Thesis.University">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Thesis"/>
+    <rdfs:range rdf:resource="#University"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Magazine-Name">
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.Report-Number">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Conf.Organization">
+    <rdfs:domain rdf:resource="#Conference"/>
+    <rdfs:range rdf:resource="#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Conference">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdfs:range rdf:resource="#Conference"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Newspaper.ISSN">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Newspaper"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Ref.pages">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Reference"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.Dimensions">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Doc.key">
+    <rdfs:domain rdf:resource="#Document"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="month.name">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:domain rdf:resource="#Month-Name"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="day.number">
+    <rdfs:domain rdf:resource="#Day-Number"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="inDoc">
+    <owl:inverseOf>
+      <owl:InverseFunctionalProperty rdf:ID="hasArticles"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Document"/>
+    <rdfs:domain rdf:resource="#Article"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="Timepoint.Month">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Timepoint"/>
+    <rdfs:range rdf:resource="#Month-Name"/>
+  </owl:FunctionalProperty>
+  <owl:FunctionalProperty rdf:ID="year.number">
+    <rdfs:domain rdf:resource="#Year-Number"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </owl:FunctionalProperty>
+  <owl:InverseFunctionalProperty rdf:about="#hasArticles">
+    <owl:inverseOf rdf:resource="#inDoc"/>
+    <rdfs:range rdf:resource="#Article"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="#Document"/>
+  </owl:InverseFunctionalProperty>
+  <Calendar-Year rdf:ID="CY2002">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y2002">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2002</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Year-Number rdf:ID="Y1996">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1996</year.number>
+  </Year-Number>
+  <Calendar-Year rdf:ID="CY1988">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1988">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1988</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Year-Number rdf:ID="Y1986">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1986</year.number>
+  </Year-Number>
+  <Calendar-Year rdf:ID="CY2004">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y2004">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2004</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Year-Number rdf:ID="Y1992">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1992</year.number>
+  </Year-Number>
+  <Year-Number rdf:ID="Y1987">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1987</year.number>
+  </Year-Number>
+  <Calendar-Year rdf:ID="CY1983">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1983">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1983</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Year-Number rdf:ID="Y1991">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1991</year.number>
+  </Year-Number>
+  <Year-Number rdf:ID="Y1984">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1984</year.number>
+  </Year-Number>
+  <Proceedings rdf:ID="A_Bi-Level_Bernoulli_Scheme_for_Database_Sampling">
+    <Doc.Publication-Date rdf:resource="#CY2004"/>
+    <Doc.Publisher>
+      <Publisher rdf:ID="ACM">
+        <Agent.name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ACM</Agent.name>
+      </Publisher>
+    </Doc.Publisher>
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Doc.Number-Of-Pages>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >A Bi-Level Bernoulli Scheme for Database Sampling</Doc.Title>
+    <Doc.Conference>
+      <Conference rdf:ID="SIGMOD2004">
+        <Conf.Date rdf:resource="#CY2004"/>
+        <Conf.Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SIGMOD Conference</Conf.Name>
+      </Conference>
+    </Doc.Conference>
+  </Proceedings>
+  <Calendar-Year rdf:ID="CY1997">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1997">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1997</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Proceedings rdf:ID="Extending_Conceptual_Models_for_Web_Based_Applications">
+    <Doc.Publisher>
+      <Publisher rdf:ID="Springer">
+        <Agent.name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Springer</Agent.name>
+      </Publisher>
+    </Doc.Publisher>
+    <Doc.Conference>
+      <Conference rdf:ID="ER2003">
+        <Conf.Date>
+          <Calendar-Year rdf:ID="CY2003">
+            <Timepoint.Year>
+              <Year-Number rdf:ID="Y2003">
+                <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+                >2003</year.number>
+              </Year-Number>
+            </Timepoint.Year>
+          </Calendar-Year>
+        </Conf.Date>
+        <Conf.Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >ER</Conf.Name>
+      </Conference>
+    </Doc.Conference>
+    <Doc.Publication-Date rdf:resource="#CY2003"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Extending Conceptual Models for Web Based Applications</Doc.Title>
+    <Doc.Series-Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Lecture Notes in Computer Science</Doc.Series-Title>
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >16</Doc.Number-Of-Pages>
+  </Proceedings>
+  <Calendar-Year rdf:ID="CY1987">
+    <Timepoint.Year rdf:resource="#Y1987"/>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY1985">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1985">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1985</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Year-Number rdf:ID="Y2007">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2007</year.number>
+  </Year-Number>
+  <Calendar-Year rdf:ID="CY1991">
+    <Timepoint.Year rdf:resource="#Y1991"/>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY1992">
+    <Timepoint.Year rdf:resource="#Y1992"/>
+  </Calendar-Year>
+  <Periodical-Publication rdf:ID="An_Augmented_Voronoi_Roadmap_for_3D_Translational_Motion_Planning_for_a_Convex_Polyhedron_Moving_Amidst_Convex_Polyhedral_Obstacles">
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >26</Doc.Number-Of-Pages>
+    <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2</number>
+    <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >140</volume>
+    <Doc.Publication-Date>
+      <Calendar-Year rdf:ID="CY1995">
+        <Timepoint.Year>
+          <Year-Number rdf:ID="Y1995"/>
+        </Timepoint.Year>
+      </Calendar-Year>
+    </Doc.Publication-Date>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >An Augmented Voronoi Roadmap for 3D Translational Motion Planning for a Convex Polyhedron Moving Amidst Convex Polyhedral Obstacles</Doc.Title>
+  </Periodical-Publication>
+  <Year-Number rdf:ID="Y1998">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1998</year.number>
+  </Year-Number>
+  <Publisher rdf:ID="Morgan_Kaufmann">
+    <Agent.name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Morgan Kaufmann</Agent.name>
+  </Publisher>
+  <Book rdf:ID="The_TSQL2_Temporal_Query_Language">
+    <Doc.Publication-Date rdf:resource="#CY1995"/>
+    <Doc.Publisher>
+      <Publisher rdf:ID="Kluwer">
+        <Agent.name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >Kluwer</Agent.name>
+      </Publisher>
+    </Doc.Publisher>
+  </Book>
+  <Conference rdf:ID="VLDB2006">
+    <Conf.Date>
+      <Calendar-Year rdf:ID="CY2006">
+        <Timepoint.Year>
+          <Year-Number rdf:ID="Y2006">
+            <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2006</year.number>
+          </Year-Number>
+        </Timepoint.Year>
+      </Calendar-Year>
+    </Conf.Date>
+    <Conf.Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >VLDB</Conf.Name>
+  </Conference>
+  <Calendar-Year rdf:ID="CY1998">
+    <Timepoint.Year rdf:resource="#Y1998"/>
+  </Calendar-Year>
+  <Periodical-Publication rdf:ID="Discrete_Event_Multi-level_Models_for_Systems_Biology">
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >24</Doc.Number-Of-Pages>
+    <Doc.Publisher rdf:resource="#Springer"/>
+    <Doc.Publication-Date>
+      <Calendar-Year rdf:ID="CY2005">
+        <Timepoint.Year>
+          <Year-Number rdf:ID="Y2005">
+            <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+            >2005</year.number>
+          </Year-Number>
+        </Timepoint.Year>
+      </Calendar-Year>
+    </Doc.Publication-Date>
+    <Doc.Series-Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Lecture Notes in Computer Science</Doc.Series-Title>
+    <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1</volume>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Discrete Event Multi-level Models for Systems Biology</Doc.Title>
+  </Periodical-Publication>
+  <Calendar-Year rdf:ID="CY1993">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1993">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1993</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY1990">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1990">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1990</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Book rdf:ID="Building_an_Object-Oriented_Database_System_The_Story_of_O2">
+    <Book.ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1-55860-169-4</Book.ISBN>
+    <Doc.Publisher rdf:resource="#Morgan_Kaufmann"/>
+    <Doc.Publication-Date rdf:resource="#CY1992"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Building an Object-Oriented Database System, The Story of O2</Doc.Title>
+  </Book>
+  <Book rdf:ID="Multimedia_Data_Management_Using_Metadata_to_Integrate_and_Apply_Digital_Media">
+    <Doc.Publication-Date rdf:resource="#CY1998"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Multimedia Data Management Using Metadata to Integrate and Apply Digital Media</Doc.Title>
+    <Book.ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0-07-057735-8</Book.ISBN>
+    <Doc.Publisher rdf:resource="#Morgan_Kaufmann"/>
+  </Book>
+  <Proceedings rdf:ID="Speeding_up_search_in_peer-to-peer_networks_with_a_multi-way_tree_structure">
+    <Doc.Publication-Date rdf:resource="#CY2006"/>
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Doc.Number-Of-Pages>
+    <Doc.Conference>
+      <Conference rdf:ID="SIGMOD2006">
+        <Conf.Name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >SIGMOD Conference</Conf.Name>
+        <Conf.Date rdf:resource="#CY2006"/>
+      </Conference>
+    </Doc.Conference>
+    <Doc.Publisher rdf:resource="#ACM"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Speeding up search in peer-to-peer networks with a multi-way tree structure</Doc.Title>
+  </Proceedings>
+  <Calendar-Year rdf:ID="CY1982">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1982">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1982</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY1999">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1999">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1999</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Publisher rdf:ID="Elsevier_and_MIT_Press">
+    <Agent.name rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Elsevier and MIT Press</Agent.name>
+  </Publisher>
+  <Calendar-Year rdf:ID="CY2000">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y2000">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2000</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Book rdf:ID="The_Data_Mining_and_Knowledge_Discovery_Handbook">
+    <Doc.Publication-Date rdf:resource="#CY2005"/>
+    <Doc.Publisher rdf:resource="#Springer"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >The Data Mining and Knowledge Discovery Handbook</Doc.Title>
+    <Book.ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0-387-24435-2</Book.ISBN>
+  </Book>
+  <Calendar-Year rdf:ID="CY1994">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y1994">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >1994</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Periodical-Publication rdf:ID="Dynamic_indexing_for_multidimensional_non-ordered_discretedata_spaces_using_a_data-partitioning_approach">
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >46</Doc.Number-Of-Pages>
+    <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >2</number>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Dynamic indexing for multidimensional non-ordered discretedata spaces using a data-partitioning approach</Doc.Title>
+    <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >31</volume>
+    <Doc.Publication-Date rdf:resource="#CY2006"/>
+  </Periodical-Publication>
+  <Calendar-Year rdf:ID="CY1996">
+    <Timepoint.Year rdf:resource="#Y1996"/>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY2001">
+    <Timepoint.Year>
+      <Year-Number rdf:ID="Y2001">
+        <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+        >2001</year.number>
+      </Year-Number>
+    </Timepoint.Year>
+  </Calendar-Year>
+  <Proceedings rdf:ID="Implementing_Mapping_Composition">
+    <Doc.Conference rdf:resource="#VLDB2006"/>
+    <Doc.Publication-Date rdf:resource="#CY2006"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Implementing Mapping Composition</Doc.Title>
+    <Doc.Publisher rdf:resource="#ACM"/>
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Doc.Number-Of-Pages>
+  </Proceedings>
+  <Book rdf:ID="Handbook_of_Automated_Reasoning_in_2_volumes">
+    <Doc.Publisher rdf:resource="#Elsevier_and_MIT_Press"/>
+    <Book.ISBN rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >0-444-50813-9, 0-262-18223-8</Book.ISBN>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Handbook of Automated Reasoning (in 2 volumes)</Doc.Title>
+    <Doc.Publication-Date rdf:resource="#CY2001"/>
+  </Book>
+  <Proceedings rdf:ID="Safety_Guarantee_of_Continuous_Join_Queries_over_Punctuated_Data_Streams">
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >12</Doc.Number-Of-Pages>
+    <Doc.Conference rdf:resource="#VLDB2006"/>
+    <Doc.Publication-Date rdf:resource="#CY2006"/>
+    <Doc.Publisher rdf:resource="#ACM"/>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Safety Guarantee of Continuous Join Queries over Punctuated Data Streams</Doc.Title>
+  </Proceedings>
+  <Periodical-Publication rdf:ID="Discovering_the_Semantics_of_Relational_Tables_Through_Mappings">
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Discovering the Semantics of Relational Tables Through Mappings</Doc.Title>
+    <Doc.Series-Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Lecture Notes in Computer Science</Doc.Series-Title>
+    <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >4244</volume>
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >32</Doc.Number-Of-Pages>
+    <Doc.Publication-Date rdf:resource="#CY2006"/>
+    <Doc.Publisher rdf:resource="#Springer"/>
+  </Periodical-Publication>
+  <Calendar-Year rdf:ID="CY1986">
+    <Timepoint.Year rdf:resource="#Y1986"/>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY2007">
+    <Timepoint.Year rdf:resource="#Y2007"/>
+  </Calendar-Year>
+  <Periodical-Publication rdf:ID="Conjunction_on_processes_Full_abstraction_via_ready-tree_semantics">
+    <volume rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >373</volume>
+    <Doc.Number-Of-Pages rdf:datatype="http://www.w3.org/2001/XMLSchema#int"
+    >22</Doc.Number-Of-Pages>
+    <Doc.Title rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >Conjunction on processes: Full abstraction via ready-tree semantics</Doc.Title>
+    <Doc.Publication-Date rdf:resource="#CY2007"/>
+    <number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1-2</number>
+  </Periodical-Publication>
+  <Year-Number rdf:ID="Y1989">
+    <year.number rdf:datatype="http://www.w3.org/2001/XMLSchema#string"
+    >1989</year.number>
+  </Year-Number>
+  <Calendar-Year rdf:ID="CY1989">
+    <Timepoint.Year rdf:resource="#Y1989"/>
+  </Calendar-Year>
+  <Calendar-Year rdf:ID="CY1984">
+    <Timepoint.Year rdf:resource="#Y1984"/>
+  </Calendar-Year>
+</rdf:RDF>
+
+<!-- Created with Protege (with OWL Plugin 3.2.1, Build 365)  http://protege.stanford.edu -->

@@ -1,0 +1,1235 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://ws.nju.edu.cn/rdf/observer/"
+    xmlns:Bibliographic="http://www.owl-ontologies.com/unnamed.owl#">
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1406278862">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/727280873">
+        <Bibliographic:Author.pennName>C?sar Fern?ndez</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1007364547">
+        <Bibliographic:Publisher.Address>addressClarendon Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Clarendon Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/2010287456">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1141836094">
+        <Bibliographic:Author.pennName>Klaus Vedder</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/829528005">
+        <Bibliographic:Publisher.Address>addressMIT Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>MIT Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1606860516">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/2112085597">
+        <Bibliographic:Author.pennName>Kurt Jensen</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1542736152">
+        <Bibliographic:Publisher.Address>addressICEIS Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ICEIS Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1524935621">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1537054619">
+        <Bibliographic:Author.pennName>Jacques Julliand</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2003567639">
+        <Bibliographic:Publisher.Address>addressMorgan Kaufmann</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Morgan Kaufmann</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/175710377">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/207878675">
+        <Bibliographic:Author.pennName>Ivan Bratko</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/957164990">
+        <Bibliographic:Publisher.Address>addressER Institute</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ER Institute</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/516686242">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1597757055">
+        <Bibliographic:Author.pennName>E. Douglas Jensen</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/64115271">
+        <Bibliographic:Publisher.Address>addressCIACO</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>CIACO</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1156476743">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1847006267">
+        <Bibliographic:Author.pennName>Klaus Voss</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1627227251">
+        <Bibliographic:Publisher.Address>addressNational Institute of Informatics, Tokyo, Japan</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>National Institute of Informatics, Tokyo, Japan</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/328072447">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/814672802">
+        <Bibliographic:Author.pennName>John Mylopoulos</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/937219328">
+        <Bibliographic:Publisher.Address>addressNorth-Holland/Elsevier</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>North-Holland/Elsevier</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/420350949">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1358168582">
+        <Bibliographic:Author.pennName>Jean-Raymond Abrial</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1807390922">
+        <Bibliographic:Publisher.Address>addressComputer Measurement Group</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Computer Measurement Group</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/167391044">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/669075909">
+        <Bibliographic:Author.pennName>Emil Sekerinski</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/450226041">
+        <Bibliographic:Publisher.Address>addressElsevier</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Elsevier</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1281743668">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1388932646">
+        <Bibliographic:Author.pennName>Patrick Behm</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/1627227251"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1587799439">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1136396200">
+        <Bibliographic:Author.pennName>Antti Valmari</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/64619">
+        <Bibliographic:Publisher.Address>addressACM</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ACM</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/653795424">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1662528057">
+        <Bibliographic:Author.pennName>Antoni W. Mazurkiewicz</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1951335636">
+        <Bibliographic:Publisher.Address>addressKatholieke Universiteit Leuven, Belgium</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Katholieke Universiteit Leuven, Belgium</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/770407975">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1235919491">
+        <Bibliographic:Author.pennName>Juan Bicarregui</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1390831495">
+        <Bibliographic:Publisher.Address>addressIEEE Computer Society</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>IEEE Computer Society</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1762397133">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1655904161">
+        <Bibliographic:Author.pennName>Constantine D. Spyropoulos</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/785097205">
+        <Bibliographic:Publisher.Address>addressNorth-Holland/IFIP</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>North-Holland/IFIP</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1562368004">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1301097940">
+        <Bibliographic:Author.pennName>Janez Demsar</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/806108102">
+        <Bibliographic:Publisher.Address>addressIEEE Computer Society and North-Holland</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>IEEE Computer Society and North-Holland</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/2086442136">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1382342771">
+        <Bibliographic:Author.pennName>Thierry Machicoane</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/727022321">
+        <Bibliographic:Publisher.Address>addressSpringer and British Computer Society</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Springer and British Computer Society</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1704023539">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/376513404">
+        <Bibliographic:Author.pennName>Brian Ritchie</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/481810436">
+        <Bibliographic:Publisher.Address>addressFachbereich Informatik, Universitt Rostock</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Fachbereich Informatik, Universitt Rostock</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1298110363">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/717917476">
+        <Bibliographic:Author.pennName>Philipp A. Heuberger</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/180060065">
+        <Bibliographic:Publisher.Address>addressPlemum Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Plemum Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/603089192">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1748864309">
+        <Bibliographic:Author.pennName>Jonathan L. Shapiro</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1975017185">
+        <Bibliographic:Publisher.Address>addressLogica Ltd., Cambridge, UK</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Logica Ltd., Cambridge, UK</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1902681582">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1689568635">
+        <Bibliographic:Author.pennName>Jesper G. Henriksen</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1652807208">
+        <Bibliographic:Publisher.Address>addressButterworth-Heinemann</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Butterworth-Heinemann</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/899209985">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/96270501">
+        <Bibliographic:Author.pennName>Ehud Y. Shapiro</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/719979714">
+        <Bibliographic:Publisher.Address>addressUniversidad Politcnica de Madrid</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Universidad Politcnica de Madrid</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1617803757">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1754089046">
+        <Bibliographic:Author.pennName>Marco Ajmone Marsan</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2110756697">
+        <Bibliographic:Publisher.Address>addressCambridge University Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Cambridge University Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/279083436">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/511921439">
+        <Bibliographic:Author.pennName>Louis Mussat</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/671013158">
+        <Bibliographic:Publisher.Address>addressAAAI Press / The MIT Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>AAAI Press / The MIT Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1703630503">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/22459559">
+        <Bibliographic:Author.pennName>Andrew Herbert</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/903652889">
+        <Bibliographic:Publisher.Address>addressPhysica-Verlag</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Physica-Verlag</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1247764956">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/2046410576">
+        <Bibliographic:Author.pennName>Jean-Marc Meynadier</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/599956136">
+        <Bibliographic:Publisher.Address>addressNorth-Holland</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>North-Holland</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/2036917628">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1567499595">
+        <Bibliographic:Author.pennName>Pat Langley</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/16099890">
+        <Bibliographic:Publisher.Address>addressINFOREC Publishing House Bucharest</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>INFOREC Publishing House Bucharest</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1696435495">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1274019257">
+        <Bibliographic:Author.pennName>Marc Shapiro</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1391718273">
+        <Bibliographic:Publisher.Address>addressCSREA Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>CSREA Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1344001436">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1946931040">
+        <Bibliographic:Author.pennName>Ugo Montanari</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/104429522">
+        <Bibliographic:Publisher.Address>addressACM Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ACM Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1148208996">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/646613503">
+        <Bibliographic:Author.pennName>Alexander Malioukov</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2014981937">
+        <Bibliographic:Publisher.Address>addressJohn Wiley and Sons, Chichester</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>John Wiley and Sons, Chichester</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1593325887">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1705415687">
+        <Bibliographic:Author.pennName>Berry Schoenmakers</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1415070494">
+        <Bibliographic:Publisher.Address>addressIBFI, Dagstuhl</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>IBFI, Dagstuhl</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1215396396">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1096339428">
+        <Bibliographic:Author.pennName>Andrea Bobbio</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2247242">
+        <Bibliographic:Publisher.Address>addressIIIS</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>IIIS</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1432064629">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1700496185">
+        <Bibliographic:Author.pennName>Brian Matthews</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1210221008">
+        <Bibliographic:Publisher.Address>addressIOS Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>IOS Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/2045225858">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1348423871">
+        <Bibliographic:Author.pennName>Benoit Parreaux</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/676738018">
+        <Bibliographic:Publisher.Address>addressOtto-von-Guericke-Universitt Magdeburg</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Otto-von-Guericke-Universitt Magdeburg</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1238026857">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/869805724">
+        <Bibliographic:Author.pennName>Werner Bux</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1558314035">
+        <Bibliographic:Publisher.Address>addressde Gruyter</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>de Gruyter</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1212453680">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/2108154408">
+        <Bibliographic:Author.pennName>C. A. Petri</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/599956136"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1561695624">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1433505950">
+        <Bibliographic:Author.pennName>Bart Preneel</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/739327313">
+        <Bibliographic:Publisher.Address>addressCarnegie Mellon University</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Carnegie Mellon University</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/909371492">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1793903753">
+        <Bibliographic:Author.pennName>Alan W. Biermann</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/349570701">
+        <Bibliographic:Publisher.Address>addressMoscow Egineering Physical Institute (Technical Un</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Moscow Egineering Physical Institute (Technical Un</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1491841284">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/669823771">
+        <Bibliographic:Author.pennName>Tobias Vesper</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/243522557">
+        <Bibliographic:Publisher.Address>addressTeubner</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Teubner</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1804280389">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1807098940">
+        <Bibliographic:Author.pennName>Walter Fumy</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1257373480">
+        <Bibliographic:Publisher.Address>addressNevsky Dialect</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Nevsky Dialect</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1165387567">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/802232993">
+        <Bibliographic:Author.pennName>Pierre Chartier</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1782704330">
+        <Bibliographic:Publisher.Address>addressUSENIX</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>USENIX</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1156305742">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/901929527">
+        <Bibliographic:Author.pennName>Pierre Desforges</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1004700659">
+        <Bibliographic:Publisher.Address>addressChapman &amp; Hall</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Chapman &amp; Hall</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/741222040">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1664113692">
+        <Bibliographic:Author.pennName>Sylvie Vignes</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/964711345">
+        <Bibliographic:Publisher.Address>addressLawrence Erlbaum</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Lawrence Erlbaum</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1277740031">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1959358685">
+        <Bibliographic:Author.pennName>Elmar Holler</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1404583166">
+        <Bibliographic:Publisher.Address>addressMetropolis-Verlag</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Metropolis-Verlag</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/978740464">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1945862771">
+        <Bibliographic:Author.pennName>Rocco De Nicola</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2544898">
+        <Bibliographic:Publisher.Address>addressSIAM</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>SIAM</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1408211481">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1216413797">
+        <Bibliographic:Author.pennName>Marisa Venturini Zilli</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/275939247">
+        <Bibliographic:Publisher.Address>addressUniversity of Waterloo Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>University of Waterloo Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/449598360">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/655637244">
+        <Bibliographic:Author.pennName>Jan Verschuren</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/979701185">
+        <Bibliographic:Publisher.Address>addressVerlag C. H. Beck</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Verlag C. H. Beck</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/75821674">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/655223453">
+        <Bibliographic:Author.pennName>Robert Valette</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1020714615">
+        <Bibliographic:Publisher.Address>addressLawrence Berkeley Laboratory</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Lawrence Berkeley Laboratory</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/99467349">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1445434701">
+        <Bibliographic:Author.pennName>Carroll Morgan</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/234648446">
+        <Bibliographic:Publisher.Address>addressBenjamin/Cummings</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Benjamin/Cummings</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1297126561">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1630026197">
+        <Bibliographic:Author.pennName>Mark Vandenwauver</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/970739902">
+        <Bibliographic:Publisher.Address>addressACM/Springer</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ACM/Springer</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/145077029">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1958007973">
+        <Bibliographic:Author.pennName>Lilian Burdy</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/64619"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1402294086">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1781264413">
+        <Bibliographic:Author.pennName>G?nter Hommel</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/450226041"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1943362149">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1012602645">
+        <Bibliographic:Author.pennName>Susanna Donatelli</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1405123536">
+        <Bibliographic:Publisher.Address>addressDept. of Computer Science, KAIST, P.O. Box 150, Ch</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Dept. of Computer Science, KAIST, P.O. Box 150, Ch</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/579820317">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/607965631">
+        <Bibliographic:Author.pennName>Bruno Tatibou?t</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1367351298">
+        <Bibliographic:Publisher.Address>addressUniversity of Glasgow and St. Andrew$1s</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>University of Glasgow and St. Andrew$1s</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1391996040">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1688779998">
+        <Bibliographic:Author.pennName>Bruno Legeard</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1384353986">
+        <Bibliographic:Publisher.Address>addressNorth-Holland / Elsevier</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>North-Holland / Elsevier</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/632902193">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/457937828">
+        <Bibliographic:Author.pennName>M. Poppleton</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/930829751">
+        <Bibliographic:Publisher.Address>addressWorld Scientific</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>World Scientific</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/360789981">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/839795207">
+        <Bibliographic:Author.pennName>Pierre America</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1296622130">
+        <Bibliographic:Publisher.Address>addressNational Institute of Standards and Technology (NI</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>National Institute of Standards and Technology (NI</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/129213912">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/354770116">
+        <Bibliographic:Author.pennName>Richard Hayton</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/236840237">
+        <Bibliographic:Publisher.Address>addressChapman Hall</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Chapman Hall</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/32001788">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1102472750">
+        <Bibliographic:Author.pennName>Christos Papatheodorou</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/546334401">
+        <Bibliographic:Publisher.Address>addressEUROSTAT</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>EUROSTAT</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/943935708">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1061221599">
+        <Bibliographic:Author.pennName>P. S. Thiagarajan</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1733176665">
+        <Bibliographic:Publisher.Address>addressInstitute of Informatics, Faculty of Electrical En</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Institute of Informatics, Faculty of Electrical En</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1796325466">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1621797928">
+        <Bibliographic:Author.pennName>Andy Galloway</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2000968">
+        <Bibliographic:Publisher.Address>addressAAAI</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>AAAI</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1756305111">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/518396838">
+        <Bibliographic:Author.pennName>Fran?ois Pilarski</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1561393739">
+        <Bibliographic:Publisher.Address>addressAAAI Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>AAAI Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/413230694">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1085554837">
+        <Bibliographic:Author.pennName>G?rard Le Lann</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1276645097">
+        <Bibliographic:Publisher.Address>addressBI Wissenschaftsverlag</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>BI Wissenschaftsverlag</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1941908972">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/681895522">
+        <Bibliographic:Author.pennName>Jean-Fran?ois P?tin</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/806108102"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1377741357">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1985525878">
+        <Bibliographic:Author.pennName>Yann Rouzaud</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/948871801">
+        <Bibliographic:Publisher.Address>addressBrandenburg Technical University</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Brandenburg Technical University</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/868770823">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/848529237">
+        <Bibliographic:Author.pennName>Paulo Ferreira</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/687724995">
+        <Bibliographic:Publisher.Address>addressUniversity of Toronto Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>University of Toronto Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1124013774">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1078160979">
+        <Bibliographic:Author.pennName>Frank Jorissen</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1726261932">
+        <Bibliographic:Publisher.Address>addressCambridge University Press, on behalf of the Briti</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Cambridge University Press, on behalf of the Briti</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1183924196">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/462373328">
+        <Bibliographic:Author.pennName>G?rard Morel</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2274">
+        <Bibliographic:Publisher.Address>addressGI</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>GI</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/912642174">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/913891305">
+        <Bibliographic:Author.pennName>Jean-Loup Baer</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1204497668">
+        <Bibliographic:Publisher.Address>addressLawrence Erlbaum Associates</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Lawrence Erlbaum Associates</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/76268013">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/230115873">
+        <Bibliographic:Author.pennName>Pierpaolo Degano</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/22854893">
+        <Bibliographic:Publisher.Address>addressICMC/USP</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ICMC/USP</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/117113781">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1998058606">
+        <Bibliographic:Author.pennName>Bill Stoddart</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2243260">
+        <Bibliographic:Publisher.Address>addressIEEE</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>IEEE</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/984244863">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/526891360">
+        <Bibliographic:Author.pennName>Richard Banach</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/350016818">
+        <Bibliographic:Publisher.Address>addressInstitute of Cybernetics at Tallin Technical Unive</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Institute of Cybernetics at Tallin Technical Unive</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/162587198">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1063109182">
+        <Bibliographic:Author.pennName>James P. Delgrande</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/71956756">
+        <Bibliographic:Publisher.Address>addressInstitut f. Wissenschaftliches Rechnen Eidgenoessi</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Institut f. Wissenschaftliches Rechnen Eidgenoessi</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/120955761">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/328959023">
+        <Bibliographic:Author.pennName>Maciej Koutny</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/1807390922"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/621166987">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1253125234">
+        <Bibliographic:Author.pennName>Jaco de Bakker</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1847718377">
+        <Bibliographic:Publisher.Address>addressNorth Holland &amp; IFIP</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>North Holland &amp; IFIP</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1817563386">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1906130343">
+        <Bibliographic:Author.pennName>Steve Dunne</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/697465491">
+        <Bibliographic:Publisher.Address>addressNorth-Holland/Elsevier Science Publishers</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>North-Holland/Elsevier Science Publishers</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/184724114">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/501122358">
+        <Bibliographic:Author.pennName>Michel Diaz</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1546134270">
+        <Bibliographic:Publisher.Address>addressAkademie Verlag</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Akademie Verlag</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/261445942">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1234101257">
+        <Bibliographic:Author.pennName>G?rard P. Huet</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1331830990">
+        <Bibliographic:Publisher.Address>addressADERIAS-LIA, Universite de Savoie</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ADERIAS-LIA, Universite de Savoie</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1258438883">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/2118533138">
+        <Bibliographic:Author.pennName>Wayne Iba</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1028534034">
+        <Bibliographic:Publisher.Address>addressThe Society for Computer Simulation</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>The Society for Computer Simulation</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/777972206">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1169742716">
+        <Bibliographic:Author.pennName>Marie-Laure Potet</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/609581709">
+        <Bibliographic:Publisher.Address>addressOxford University Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Oxford University Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1344313703">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1518943985">
+        <Bibliographic:Author.pennName>Anastasia Pagnoni</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1673454806">
+        <Bibliographic:Publisher.Address>addressdpunkt.verlag/Copublication with Morgan-Kaufmann</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>dpunkt.verlag/Copublication with Morgan-Kaufmann</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/533506591">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/309184329">
+        <Bibliographic:Author.pennName>David Hutchison</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/948871801"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1561936078">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/282700236">
+        <Bibliographic:Author.pennName>Raymond R. Devillers</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/609581709"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/773980174">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/399116722">
+        <Bibliographic:Author.pennName>Didier Bert</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1690360934">
+        <Bibliographic:Publisher.Address>addressSpringer</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Springer</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1558659455">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1594335480">
+        <Bibliographic:Author.pennName>Richard W. Watson</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1379932458">
+        <Bibliographic:Publisher.Address>addressPennsylvania State University Press</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Pennsylvania State University Press</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1421274450">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/422588285">
+        <Bibliographic:Author.pennName>Sou?d Taouil-Traverson</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/924430209">
+        <Bibliographic:Publisher.Address>addressSCS Europe</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>SCS Europe</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1231334465">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/374088994">
+        <Bibliographic:Author.pennName>Marina A. Wald?n</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/243522557"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/403181085">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/2102477078">
+        <Bibliographic:Author.pennName>Bart De Decker</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/1004700659"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/259182855">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1552703591">
+        <Bibliographic:Author.pennName>Wolfgang Bibel</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/1690360934"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/2142422799">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1068008154">
+        <Bibliographic:Author.pennName>Dominique M?ry</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/957164990"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1526388789">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1436447525">
+        <Bibliographic:Author.pennName>Blaz Zupan</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/2044437552">
+        <Bibliographic:Publisher.Address>addressKluwer</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Kluwer</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/977147250">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/432934585">
+        <Bibliographic:Author.pennName>Patrick Lamboley</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/2044437552"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1492882155">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1547962310">
+        <Bibliographic:Author.pennName>Eike Best</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1077111909">
+        <Bibliographic:Publisher.Address>addressAuerbach</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Auerbach</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1875951748">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/322563706">
+        <Bibliographic:Author.pennName>Mihir Bellare</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1146843077">
+        <Bibliographic:Publisher.Address>addressButterworths</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Butterworths</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1496317797">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1652336314">
+        <Bibliographic:Author.pennName>J. Draper</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1479050216">
+        <Bibliographic:Publisher.Address>addressVDE Verlag</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>VDE Verlag</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/499855192">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1128218968">
+        <Bibliographic:Author.pennName>Marko Bohanec</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher rdf:resource="http://ws.nju.edu.cn/rdf/observer/publisher/2274"/>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/554995662">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/454998262">
+        <Bibliographic:Author.pennName>Steve Schneider</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1081019103">
+        <Bibliographic:Publisher.Address>addressACM Press / Addison-Wesley</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>ACM Press / Addison-Wesley</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/806388064">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1946483761">
+        <Bibliographic:Author.pennName>Helen Treharne</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/816972133">
+        <Bibliographic:Publisher.Address>addressUniversitt Jena, Institut fr Informatik</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Universitt Jena, Institut fr Informatik</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1049125236">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1592260193">
+        <Bibliographic:Author.pennName>Fabrice Le Fessant</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/1201004174">
+        <Bibliographic:Publisher.Address>addressKorea Institute of Information Security and Crypto</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>Korea Institute of Information Security and Crypto</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+  <Bibliographic:Document rdf:about="http://ws.nju.edu.cn/rdf/observer/doc/1637872273">
+    <Bibliographic:Doc.Author>
+      <Bibliographic:Author rdf:about="http://ws.nju.edu.cn/rdf/observer/author/1248012604">
+        <Bibliographic:Author.pennName>Richard Shore</Bibliographic:Author.pennName>
+      </Bibliographic:Author>
+    </Bibliographic:Doc.Author>
+    <Bibliographic:Doc.Publisher>
+      <Bibliographic:Publisher rdf:about="http://ws.nju.edu.cn/rdf/observer/publisher/631172458">
+        <Bibliographic:Publisher.Address>addressAmerican Institute of Electrical Engineers</Bibliographic:Publisher.Address>
+        <Bibliographic:Agent.name>American Institute of Electrical Engineers</Bibliographic:Agent.name>
+      </Bibliographic:Publisher>
+    </Bibliographic:Doc.Publisher>
+  </Bibliographic:Document>
+</rdf:RDF>

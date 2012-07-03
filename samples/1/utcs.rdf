@@ -1,0 +1,465 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://ws.nju.edu.cn/rdf/utcs/"
+    xmlns:UNIV_CS="http://www.owl-ontologies.com/unnamed.owl#">
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Castro">
+    <UNIV_CS:emailAddress>Castro@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Castro</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Data_Structures_&amp;_Algorithms">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Huber">
+        <UNIV_CS:emailAddress>Huber@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Huber</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Cooke">
+        <UNIV_CS:emailAddress>Cooke@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Cooke</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Data_Structures_&amp;_Algorithms</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Wentworth">
+    <UNIV_CS:emailAddress>Wentworth@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Wentworth</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Ashby">
+    <UNIV_CS:emailAddress>Ashby@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Ashby</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Romero">
+    <UNIV_CS:emailAddress>Romero@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Romero</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Computer_Organization_I">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Paige">
+        <UNIV_CS:emailAddress>Paige@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Paige</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Ella">
+        <UNIV_CS:emailAddress>Ella@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Ella</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Computer_Organization_I</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Barnett">
+    <UNIV_CS:emailAddress>Barnett@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Barnett</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Brennan">
+    <UNIV_CS:emailAddress>Brennan@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Brennan</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Spence">
+    <UNIV_CS:emailAddress>Spence@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Spence</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Software_Design">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Burns">
+        <UNIV_CS:emailAddress>Burns@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Burns</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Maher">
+        <UNIV_CS:emailAddress>Maher@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Maher</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Software_Design</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Professionalism_in_Computing">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Dolan">
+        <UNIV_CS:emailAddress>Dolan@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Dolan</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Welch">
+        <UNIV_CS:emailAddress>Welch@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Welch</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Professionalism_in_Computing</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Griffin">
+    <UNIV_CS:emailAddress>Griffin@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Griffin</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Cooper">
+    <UNIV_CS:emailAddress>Cooper@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Cooper</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Creative_Computing_Studio">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Walton">
+        <UNIV_CS:emailAddress>Walton@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Walton</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Saunders">
+        <UNIV_CS:emailAddress>Saunders@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Saunders</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Creative_Computing_Studio</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Jayden">
+    <UNIV_CS:emailAddress>Jayden@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Jayden</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Schmidt">
+    <UNIV_CS:emailAddress>Schmidt@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Schmidt</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Fletcher">
+    <UNIV_CS:emailAddress>Fletcher@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Fletcher</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Stack">
+    <UNIV_CS:emailAddress>Stack@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Stack</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Ingram">
+    <UNIV_CS:emailAddress>Ingram@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Ingram</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Computer_Organization_II">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Floyd">
+        <UNIV_CS:emailAddress>Floyd@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Floyd</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Little">
+        <UNIV_CS:emailAddress>Little@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Little</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Computer_Organization_II</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/McCallum">
+    <UNIV_CS:emailAddress>McCallum@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>McCallum</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/McCaffrey">
+    <UNIV_CS:emailAddress>McCaffrey@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>McCaffrey</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/King">
+    <UNIV_CS:emailAddress>King@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>King</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Programming_in_C">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/James">
+        <UNIV_CS:emailAddress>James@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>James</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Stone">
+        <UNIV_CS:emailAddress>Stone@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Stone</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Programming_in_C</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Kelly">
+    <UNIV_CS:emailAddress>Kelly@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Kelly</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Faith">
+    <UNIV_CS:emailAddress>Faith@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Faith</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Aidan">
+    <UNIV_CS:emailAddress>Aidan@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Aidan</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Halsey">
+    <UNIV_CS:emailAddress>Halsey@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Halsey</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Reynolds">
+    <UNIV_CS:emailAddress>Reynolds@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Reynolds</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Fournier">
+    <UNIV_CS:emailAddress>Fournier@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Fournier</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Shelton">
+    <UNIV_CS:emailAddress>Shelton@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Shelton</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Harrington">
+    <UNIV_CS:emailAddress>Harrington@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Harrington</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Isaiah">
+    <UNIV_CS:emailAddress>Isaiah@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Isaiah</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Artificial_Intelligence">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Stevens">
+        <UNIV_CS:emailAddress>Stevens@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Stevens</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Zoey">
+        <UNIV_CS:emailAddress>Zoey@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Zoey</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Artificial_Intelligence</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Computational_Biology_and_Bioinformatics">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Neal">
+        <UNIV_CS:emailAddress>Neal@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Neal</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/McFarland">
+        <UNIV_CS:emailAddress>McFarland@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>McFarland</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Computational_Biology_and_Bioinformatics</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Data_Base_Management_Systems">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/McLeod">
+        <UNIV_CS:emailAddress>McLeod@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>McLeod</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/McCain">
+        <UNIV_CS:emailAddress>McCain@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>McCain</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Data_Base_Management_Systems</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/John">
+    <UNIV_CS:emailAddress>John@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>John</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Wireless_Networks_and_Mobile_Systems">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Forbes">
+        <UNIV_CS:emailAddress>Forbes@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Forbes</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Erickson">
+        <UNIV_CS:emailAddress>Erickson@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Erickson</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Wireless_Networks_and_Mobile_Systems</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Human-Computer_Interaction_Capstone">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Zachary">
+        <UNIV_CS:emailAddress>Zachary@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Zachary</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Short">
+        <UNIV_CS:emailAddress>Short@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Short</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Human-Computer_Interaction_Capstone</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Burnham">
+    <UNIV_CS:emailAddress>Burnham@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Burnham</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Brian">
+    <UNIV_CS:emailAddress>Brian@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Brian</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Destiny">
+    <UNIV_CS:emailAddress>Destiny@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Destiny</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Aiden">
+    <UNIV_CS:emailAddress>Aiden@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Aiden</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Computer_Network_Architecture_and_Programming">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Willoughby">
+        <UNIV_CS:emailAddress>Willoughby@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Willoughby</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Wheeler">
+        <UNIV_CS:emailAddress>Wheeler@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Wheeler</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Computer_Network_Architecture_and_Programming</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Introduction_to_Programming_in_Java">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Shepherd">
+        <UNIV_CS:emailAddress>Shepherd@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Shepherd</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Rogers">
+        <UNIV_CS:emailAddress>Rogers@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Rogers</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Introduction_to_Programming_in_Java</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Computer_Organization">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Combs">
+        <UNIV_CS:emailAddress>Combs@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Combs</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Jesus">
+        <UNIV_CS:emailAddress>Jesus@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Jesus</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Computer_Organization</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Computer_Systems">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Kaitlyn">
+        <UNIV_CS:emailAddress>Kaitlyn@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Kaitlyn</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Jenkins">
+        <UNIV_CS:emailAddress>Jenkins@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Jenkins</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Computer_Systems</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Parallel_Computation">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Manning">
+        <UNIV_CS:emailAddress>Manning@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Manning</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Meier">
+        <UNIV_CS:emailAddress>Meier@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Meier</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Parallel_Computation</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Shoemaker">
+    <UNIV_CS:emailAddress>Shoemaker@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Shoemaker</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Internet_Software_Development">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Flores">
+        <UNIV_CS:emailAddress>Flores@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Flores</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Hensley">
+        <UNIV_CS:emailAddress>Hensley@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Hensley</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Internet_Software_Development</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Senior_Seminar">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Middleton">
+        <UNIV_CS:emailAddress>Middleton@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Middleton</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Patton">
+        <UNIV_CS:emailAddress>Patton@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Patton</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Senior_Seminar</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Allen">
+    <UNIV_CS:emailAddress>Allen@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Allen</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Ava">
+    <UNIV_CS:emailAddress>Ava@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Ava</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Hart">
+    <UNIV_CS:emailAddress>Hart@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Hart</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:Course rdf:about="http://ws.nju.edu.cn/rdf/utcs/Performance_Evaluation_of_Computer_Systems">
+    <UNIV_CS:hasTaS>
+      <UNIV_CS:GraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Krause">
+        <UNIV_CS:emailAddress>Krause@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Krause</UNIV_CS:personName>
+      </UNIV_CS:GraduateStudent>
+    </UNIV_CS:hasTaS>
+    <UNIV_CS:instructor>
+      <UNIV_CS:Faculty rdf:about="http://ws.nju.edu.cn/rdf/utcs/Maldonado">
+        <UNIV_CS:emailAddress>Maldonado@utcs.edu</UNIV_CS:emailAddress>
+        <UNIV_CS:personName>Maldonado</UNIV_CS:personName>
+      </UNIV_CS:Faculty>
+    </UNIV_CS:instructor>
+    <UNIV_CS:workTitle>Performance_Evaluation_of_Computer_Systems</UNIV_CS:workTitle>
+  </UNIV_CS:Course>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/Ramsey">
+    <UNIV_CS:emailAddress>Ramsey@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Ramsey</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Hewitt">
+    <UNIV_CS:emailAddress>Hewitt@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Hewitt</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/O&apos;Brien">
+    <UNIV_CS:emailAddress>O'Brien@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>O'Brien</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+  <UNIV_CS:UndergraduateStudent rdf:about="http://ws.nju.edu.cn/rdf/utcs/McNulty">
+    <UNIV_CS:emailAddress>McNulty@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>McNulty</UNIV_CS:personName>
+  </UNIV_CS:UndergraduateStudent>
+  <UNIV_CS:AdministrativeStaff rdf:about="http://ws.nju.edu.cn/rdf/utcs/Drew">
+    <UNIV_CS:emailAddress>Drew@utcs.edu</UNIV_CS:emailAddress>
+    <UNIV_CS:personName>Drew</UNIV_CS:personName>
+  </UNIV_CS:AdministrativeStaff>
+</rdf:RDF>

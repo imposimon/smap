@@ -1,0 +1,2438 @@
+@prefix map: <http://www.ibm.com/metadataweb/d2rmap/> .
+@prefix d2rq: <http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#> .
+@prefix d2r: <http://sites.wiwiss.fu-berlin.de/suhl/bizer/d2r-server/config.rdf#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix bds: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/bds/> .
+@prefix mdw: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/mdw/> .
+@prefix mdw_pdr: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/pdr/> .
+@prefix mdw_wbg: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/wbg/> .
+@prefix mdw_wsrr: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsrr/> .
+@prefix mdw_wsdl: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/> .
+@prefix mdw_xsd: <http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/> .
+@prefix mdw_local: <http://wsrrtest.dyn.webahead.ibm.com/resource/2008/> .
+@prefix dcterms: <http://purl.org/dc/terms/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+
+map:database a d2rq:Database;
+	d2rq:jdbcDSN	"jdbc:db2://wsrr.dyn.webahead.ibm.com:50000/wsrr";
+	d2rq:jdbcDriver	"com.ibm.db2.jcc.DB2Driver";
+	d2rq:username	"db2admin";
+	d2rq:password	"xmeta001";
+	.
+	
+#Test Repository
+# mdw:Repository
+map:RepositoryClassMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class mdw:Repository;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRRepository";
+	d2rq:additionalProperty map:RepositoryComment;
+	d2rq:additionalProperty map:LDSCapability;
+	d2rq:additionalProperty map:SEPCapability;
+	d2rq:additionalProperty map:RDFXMLFormat;
+	d2rq:additionalProperty map:RDFNTFormat;
+	d2rq:additionalProperty map:HTMLFormat;
+	d2rq:additionalProperty map:SELECTQuery;
+	d2rq:additionalProperty map:Pagination;	
+	d2rq:additionalProperty map:WSDLMetamodel;
+	d2rq:additionalProperty map:XSDMetamodel;
+	d2rq:additionalProperty map:WBGMetamodel;
+	d2rq:additionalProperty map:WrapperVersion;
+	d2rq:additionalProperty map:WrapperContact;
+	.
+map:WSDLMetamodel a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportMetamodel;
+    d2rq:propertyValue <http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/>;
+	.
+map:XSDMetamodel a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportMetamodel;
+    d2rq:propertyValue <http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/>;
+	.		
+map:WBGMetamodel a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportMetamodel;
+    d2rq:propertyValue <http://umrr.dyn.webahead.ibm.com/2007/metamodel/wbg/>;
+	.	
+map:WrapperVersion a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:wrapperVersion;
+    d2rq:propertyValue "WSRR-wrapped-2008-06-24";
+	.	
+map:WrapperContact a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:wrapperContact;
+    d2rq:propertyValue "meijing@cn.ibm.com";
+	.		
+map:LDSCapability a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:hasCapability;
+    d2rq:propertyValue "LinkedDataServer";
+	.
+map:SEPCapability a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:hasCapability;
+    d2rq:propertyValue "SPARQLEndPoint";
+	.	
+map:RDFXMLFormat a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportFormat;
+    d2rq:propertyValue "rdfxml";
+	.	
+map:RDFNTFormat a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportFormat;
+    d2rq:propertyValue "rdfnt";
+	.	
+map:HTMLFormat a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportFormat;
+    d2rq:propertyValue "html";
+	.	
+map:SELECTQuery a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportQuery;
+    d2rq:propertyValue "SELECT";
+	.
+map:Pagination a d2rq:AdditionalProperty;
+    d2rq:propertyName mdw:supportPagination;
+    d2rq:propertyValue "100 triples per page";
+	.	
+map:RepositoryComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository exports WSRR service metadata in http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ as Linked Data, and supports SPARQL query over service metadata.";
+	.
+
+#Test RepositoryContainer
+
+map:RepositoryContainerClassificationMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRClassificationInstance";
+	d2rq:additionalProperty map:RepositoryContainerClassificationComment;
+	.
+map:RepositoryContainerClassificationComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsrr/Classification seeAlso http://www.ibm.com/xmlns/prod/serviceregistry/6/1/ontologymanager#ontologyTypeClassification";
+	.
+map:RepositorycontainClassificationMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerClassificationMap;
+	.
+map:ClassificationHasMemberCategoryMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerClassificationMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:BusinessCategory_Map;
+	.
+map:ClassificationHasMemberTermMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerClassificationMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:BusinessTerm_Map;
+	.	
+	
+map:RepositoryContainerDescriptionMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRDescriptionInstance";
+	d2rq:additionalProperty map:RepositoryContainerDescriptionComment;
+	.
+map:RepositoryContainerDescriptionComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Description.";
+	.
+map:RepositorycontainDescriptionMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerDescriptionMap;
+	.
+map:DescriptionHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerDescriptionMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLDescription_Map;
+	.
+
+map:RepositoryContainerSchemaMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRSchemaInstance";
+	d2rq:additionalProperty map:RepositoryContainerSchemaComment;
+	.
+map:RepositoryContainerSchemaComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/Schema.";
+	.
+map:RepositorycontainSchemaMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerSchemaMap;
+	.
+map:SchemaHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerSchemaMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:XSDSchema_Map;
+	.
+
+map:RepositoryContainerSimpleTypeDefinitionMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRSimpleTypeDefinitionInstance";
+	d2rq:additionalProperty map:RepositoryContainerSimpleTypeDefinitionComment;
+	.
+map:RepositoryContainerSimpleTypeDefinitionComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/SimpleTypeDefinition.";
+	.
+map:RepositorycontainSimpleTypeDefinitionMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerSimpleTypeDefinitionMap;
+	.
+map:SimpleTypeDefinitionHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerSimpleTypeDefinitionMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:SimpleTypeDefinition_Map;
+	.
+
+map:RepositoryContainerComplexTypeDefinitionMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRComplexTypeDefinitionInstance";
+	d2rq:additionalProperty map:RepositoryContainerComplexTypeDefinitionComment;
+	.
+map:RepositoryContainerComplexTypeDefinitionComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/ComplexTypeDefinition.";
+	.
+map:RepositorycontainComplexTypeDefinitionMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerComplexTypeDefinitionMap;
+	.
+map:ComplexTypeDefinitionHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerComplexTypeDefinitionMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:ComplexTypeDefinition_Map;
+	.	
+	
+map:RepositoryContainerElementDeclarationMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRElementDeclarationInstance";
+	d2rq:additionalProperty map:RepositoryContainerElementDeclarationComment;
+	.
+map:RepositoryContainerElementDeclarationComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/Element.";
+	.
+map:RepositorycontainElementDeclarationMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerElementDeclarationMap;
+	.
+map:ElementDeclarationHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerElementDeclarationMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:ElementDeclaration_Map;
+	.		
+	
+map:RepositoryContainerAttributeDeclarationMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRAttributeDeclarationInstance";
+	d2rq:additionalProperty map:RepositoryContainerAttributeDeclarationComment;
+	.
+map:RepositoryContainerAttributeDeclarationComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/xsd/Attribute.";
+	.
+map:RepositorycontainAttributeDeclarationMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerAttributeDeclarationMap;
+	.
+map:AttributeDeclarationHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerAttributeDeclarationMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:AttributeDeclaration_Map;
+	.		
+	
+map:RepositoryContainerServiceMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRServiceInstance";
+	d2rq:additionalProperty map:RepositoryContainerServiceComment;
+	.
+map:RepositoryContainerServiceComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Service.";
+	.
+map:RepositorycontainServiceMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerServiceMap;
+	.
+map:ServiceHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerServiceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLService_Map;
+	.
+
+map:RepositoryContainerBindingMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRBindingInstance";
+	d2rq:additionalProperty map:RepositoryContainerBindingComment;
+	.
+map:RepositoryContainerBindingComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Binding.";
+	.
+map:RepositorycontainBindingMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerBindingMap;
+	.
+map:BindingHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerBindingMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLBinding_Map;
+	.
+
+map:RepositoryContainerInterfaceMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRInterfaceInstance";
+	d2rq:additionalProperty map:RepositoryContainerInterfaceComment;
+	.
+map:RepositoryContainerInterfaceComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Interface.";
+	.
+map:RepositorycontainInterfaceMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerInterfaceMap;
+	.
+map:InterfaceHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerInterfaceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLPortType_Map;
+	.
+
+map:RepositoryContainerEndpointMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRREndpointInstance";
+	d2rq:additionalProperty map:RepositoryContainerEndpointComment;
+	.
+map:RepositoryContainerEndpointComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/Endpoint.";
+	.
+map:RepositorycontainEndpointMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerEndpointMap;
+	.
+map:EndpointHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerEndpointMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLPort_Map;
+	.	
+	
+map:RepositoryContainerInterfaceOperationMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRInterfaceOperationInstance";
+	d2rq:additionalProperty map:RepositoryContainerInterfaceOperationComment;
+	.
+map:RepositoryContainerInterfaceOperationComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceOperation.";
+	.
+map:RepositorycontainInterfaceOperationMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerInterfaceOperationMap;
+	.
+map:InterfaceOperationHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerInterfaceOperationMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLInterfaceOperation_Map;
+	.
+
+map:RepositoryContainerInterfaceFaultMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRInterfaceFaultInstance";
+	d2rq:additionalProperty map:RepositoryContainerInterfaceFaultComment;
+	.
+map:RepositoryContainerInterfaceFaultComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFault.";
+	.
+map:RepositorycontainInterfaceFaultMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerInterfaceFaultMap;
+	.
+map:InterfaceFaultHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerInterfaceFaultMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLInterfaceFault_Map;
+	.	
+
+map:RepositoryContainerInterfaceMessageReferenceMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRInterfaceMessageReferenceInstance";
+	d2rq:additionalProperty map:RepositoryContainerInterfaceMessageReferenceComment;
+	.
+map:RepositoryContainerInterfaceMessageReferenceComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceMessageReference.";
+	.
+map:RepositorycontainInterfaceMessageReferenceMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerInterfaceMessageReferenceMap;
+	.
+map:InterfaceMessageReferenceHasInputMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerInterfaceMessageReferenceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLInputMessage_Map;
+	.	
+map:InterfaceMessageReferenceHasOutputMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerInterfaceMessageReferenceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLOutputMessage_Map;
+	.	
+	
+map:RepositoryContainerInterfaceFaultReferenceMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRInterfaceFaultReferenceInstance";
+	d2rq:additionalProperty map:RepositoryContainerInterfaceFaultReferenceComment;
+	.
+map:RepositoryContainerInterfaceFaultReferenceComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/InterfaceFaultReference.";
+	.
+map:RepositorycontainInterfaceFaultReferenceMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerInterfaceFaultReferenceMap;
+	.
+map:InterfaceFaultReferenceHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerInterfaceFaultReferenceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLInterfaceFaultReference_Map;
+	.
+
+map:RepositoryContainerBindingOperationMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRBindingOperationInstance";
+	d2rq:additionalProperty map:RepositoryContainerBindingOperationComment;
+	.
+map:RepositoryContainerBindingOperationComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingOperation.";
+	.
+map:RepositorycontainBindingOperationMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerBindingOperationMap;
+	.
+map:BindingOperationHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerBindingOperationMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLBindingOperation_Map;
+	.
+	
+map:RepositoryContainerBindingFaultMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRBindingFaultInstance";
+	d2rq:additionalProperty map:RepositoryContainerBindingFaultComment;
+	.
+map:RepositoryContainerBindingFaultComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingFault.";
+	.
+map:RepositorycontainBindingFaultMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerBindingFaultMap;
+	.
+map:BindingFaultHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerBindingFaultMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLBindingFault_Map;
+	.	
+
+map:RepositoryContainerBindingMessageReferenceMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRBindingMessageReferenceInstance";
+	d2rq:additionalProperty map:RepositoryContainerBindingMessageReferenceComment;
+	.
+map:RepositoryContainerBindingMessageReferenceComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/wsdl/BindingMessageReference.";
+	.
+map:RepositorycontainBindingMessageReferenceMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerBindingMessageReferenceMap;
+	.
+map:BindingMessageReferenceHasInputMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerBindingMessageReferenceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLBindingMessageReferenceInput_Map;
+	.	
+map:BindingMessageReferenceHasOutputMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerBindingMessageReferenceMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLBindingMessageReferenceOutput_Map;
+	.		
+	
+map:WSDLDescription_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:Description;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.description(@@PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAMESPACE_XMETA@@)";
+	.
+	
+map:WSDLService_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:Service;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.service(@@LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLPortType_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:Interface;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.interface(@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.BSRURI_XMETA@@";
+	.	
+	
+map:WSDLBinding_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:Binding;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.binding(@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.BSRURI_XMETA@@";
+	.	
+
+map:WSDLPort_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:Endpoint;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.endpoint(@@LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLPORT7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLPORT7797C588.BSRURI_XMETA@@";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLSERVICE_PORT_REFFROM_PORT7797C588.PORT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE_PORT_REFFROM_PORT7797C588.REFFROM_PORT_XMETA = LOGWSDL_XMETAGEN_WSDLPORT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLInterfaceOperation_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:InterfaceOperation;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.interfaceOperation(@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.BSRURI_XMETA@@";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLInterfaceFault_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:InterfaceFault;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.interfaceFault(@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLFAULT7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLFAULT7797C588.BSRURI_XMETA@@";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLFAULTS_REFFROM_WSDLFAULTS7797C588.WSDLFAULTS_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLFAULTS_REFFROM_WSDLFAULTS7797C588.REFFROM_WSDLFAULTS_XMETA = LOGWSDL_XMETAGEN_WSDLFAULT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.
+
+map:WSDLInputMessage_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:InputMessage;
+	d2rq:class	mdw_wsdl:InterfaceMessageReference;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.interfaceMessageReference(@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA@@";
+	# d2rq:condition "LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA AND LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_INPUT_REFFROM_INPUT7797C588.INPUT_XMETA";	
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_INPUT_REFFROM_INPUT7797C588.INPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_INPUT_REFFROM_INPUT7797C588.REFFROM_INPUT_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.
+	
+map:WSDLOutputMessage_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:OutputMessage;
+	d2rq:class	mdw_wsdl:InterfaceMessageReference;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.interfaceMessageReference(@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA@@";
+	# d2rq:condition "LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA AND LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_OUTPUT_REFFROM_OUTPUT7797C588.OUTPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_OUTPUT_REFFROM_OUTPUT7797C588.OUTPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_OUTPUT_REFFROM_OUTPUT7797C588.REFFROM_OUTPUT_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+
+map:WSDLInterfaceFaultReference_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:InterfaceFaultReference;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.interfaceFaultReference(@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA@@";
+	# d2rq:condition "LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA AND LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_FAULTS_REFFROM_FAULTS7797C588.FAULTS_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_FAULTS_REFFROM_FAULTS7797C588.FAULTS_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_FAULTS_REFFROM_FAULTS7797C588.REFFROM_FAULTS_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.
+	
+map:WSDLBindingOperation_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:BindingOperation;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.bindingOperation(@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.BSRURI_XMETA@@";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLBindingFault_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:BindingFault;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.bindingFault(@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLFAULT7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLFAULT7797C588.BSRURI_XMETA@@";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLFAULTS_REFFROM_WSDLFAULTS7797C588.WSDLFAULTS_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLFAULTS_REFFROM_WSDLFAULTS7797C588.REFFROM_WSDLFAULTS_XMETA = LOGWSDL_XMETAGEN_WSDLFAULT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.	
+
+map:WSDLDescription_targetNamespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDescription_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAMESPACE_XMETA";
+	.
+	
+map:WSDLService__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.BSRURI_XMETA";
+	.
+	
+map:WSDLService_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.NAME_XMETA";
+	.	
+
+map:WSDLService_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.NAMESPACE_XMETA";
+	.
+	
+map:WSDLService_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLPortType__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.BSRURI_XMETA";
+	.	
+
+map:WSDLPortType_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAME_XMETA";
+	.	
+
+map:WSDLPortType_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLPortType_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLBinding__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.BSRURI_XMETA";
+	.	
+
+map:WSDLBinding_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA";
+	.	
+
+map:WSDLBinding_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLBinding_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLPort__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLPort_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.NAME_XMETA";
+	.	
+
+map:WSDLPort_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLPort_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLPORT7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLInterfaceOperation__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLInterfaceOperation_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA";
+	.	
+
+map:WSDLInterfaceOperation_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLInterfaceOperation_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLInterfaceFault__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFault_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLInterfaceFault_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFault_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.NAME_XMETA";
+	.	
+
+map:WSDLInterfaceFault_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFault_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLInterfaceFault_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFault_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLFAULT7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLInputMessage__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLInputMessage_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAME_XMETA";
+	.	
+
+map:WSDLInputMessage_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLInputMessage_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLOutputMessage__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLOutputMessage_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAME_XMETA";
+	.	
+
+map:WSDLOutputMessage_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLOutputMessage_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA@@";
+	.
+		
+map:WSDLInterfaceFaultReference__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLInterfaceFaultReference_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAME_XMETA";
+	.	
+
+map:WSDLInterfaceFaultReference_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLInterfaceFaultReference_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLBindingOperation__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLBindingOperation_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA";
+	.	
+
+map:WSDLBindingOperation_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLBindingOperation_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLBindingFault__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingFault_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.BSRURI_XMETA";
+	.
+
+map:WSDLBindingFault_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingFault_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.NAME_XMETA";
+	.	
+
+map:WSDLBindingFault_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingFault_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.NAMESPACE_XMETA";
+	.
+
+map:WSDLBindingFault_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingFault_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLFAULT7797C588.BSRURI_XMETA@@";
+	.
+	
+map:SOAPAddress_location_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	mdw_wsdl:address;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_SOAPADDRESS7797C588.LOCATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORT__SOAPADDRESS_REFFROM__SOAPADDRESS7797C588.SOAPADDRESS_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT__SOAPADDRESS_REFFROM__SOAPADDRESS7797C588.REFFROM__SOAPADDRESS_XMETA = LOGWSDL_XMETAGEN_SOAPADDRESS7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+	
+map:WSDLSOAPBinding_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:SOAPBinding;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.binding(@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.BSRURI_XMETA@@";
+	d2rq:condition "LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING__SOAPBINDING_REFFROM__SOAPBINDING7797C588.SOAPBINDING_XMETA AND LOGWSDL_XMETAGEN_WSDLBINDING__SOAPBINDING_REFFROM__SOAPBINDING7797C588.REFFROM__SOAPBINDING_XMETA != ''";
+	.	
+
+# map:SOAPBinding_style_Map	a	d2rq:propertyBridge;
+# 	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+# 	d2rq:property	rdf:type;
+# 	d2rq:uriColumn	"LOGWSDL_XMETAGEN_SOAPBINDING7797C588.TRANSPORT_XMETA";
+# 	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING__SOAPBINDING_REFFROM__SOAPBINDING7797C588.SOAPBINDING_XMETA";
+# 	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING__SOAPBINDING_REFFROM__SOAPBINDING7797C588.REFFROM__SOAPBINDING_XMETA = LOGWSDL_XMETAGEN_SOAPBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+# 	.	
+	
+map:WSDLService_port_WSDLPort_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	mdw_wsdl:endpoint;
+	d2rq:refersToClassMap	map:WSDLPort_Map;
+	.
+
+map:WSDLPort_binding_WSDLBinding_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	mdw_wsdl:usesBinding;
+	d2rq:refersToClassMap	map:WSDLBinding_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLPORT_BINDING_REFFROM_BINDING7797C588.BINDING_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT_BINDING_REFFROM_BINDING7797C588.REFFROM_BINDING_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLBinding_type_WSDLPortType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw_wsdl:binds;
+	d2rq:refersToClassMap	map:WSDLPortType_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_TYPE_REFFROM_TYPE7797C588.TYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_TYPE_REFFROM_TYPE7797C588.REFFROM_TYPE_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLService_implements_WSDLPortType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	mdw_wsdl:implements;
+	d2rq:refersToClassMap	map:WSDLPortType_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLSERVICE_PORT_REFFROM_PORT7797C588.PORT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE_PORT_REFFROM_PORT7797C588.REFFROM_PORT_XMETA = LOGWSDL_XMETAGEN_WSDLPORT_BINDING_REFFROM_BINDING7797C588.BINDING_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT_BINDING_REFFROM_BINDING7797C588.REFFROM_BINDING_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_TYPE_REFFROM_TYPE7797C588.TYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_TYPE_REFFROM_TYPE7797C588.REFFROM_TYPE_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLPortType_operation_WSDLOperation_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	mdw_wsdl:interfaceOperation;
+	d2rq:refersToClassMap	map:WSDLInterfaceOperation_Map;
+	.	
+
+map:WSDLPortType_wsdlFaults_WSDLFault_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	mdw_wsdl:interfaceFault;
+	d2rq:refersToClassMap	map:WSDLInterfaceFault_Map;
+	.
+	
+map:WSDLBinding_operation_WSDLOperation_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw_wsdl:bindingOperation;
+	d2rq:refersToClassMap	map:WSDLBindingOperation_Map;
+	.	
+	
+map:WSDLBinding_wsdlFaults_WSDLFault_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw_wsdl:bindingFault;
+	d2rq:refersToClassMap	map:WSDLBindingFault_Map;
+	.	
+	
+map:WSDLInterfaceOperation_msgRefer_WSDLInputMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw_wsdl:interfaceMessageReference;
+	d2rq:refersToClassMap	map:WSDLInputMessage_Map;
+	.
+
+map:WSDLInterfaceOperation_msgRefer_WSDLOutputMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw_wsdl:interfaceMessageReference;
+	d2rq:refersToClassMap	map:WSDLOutputMessage_Map;
+	.
+	
+map:WSDLInterfaceOperation_msgRefer_WSDLFaultMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw_wsdl:interfaceFaultReference;
+	d2rq:refersToClassMap	map:WSDLInterfaceFaultReference_Map;	
+	.
+	
+map:WSDLFaultMessage_msgReferInv_WSDLInterfaceFault_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wsdl:interfaceFaultReferenceFault;
+	d2rq:refersToClassMap	map:WSDLInterfaceFault_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLFAULT_WSDLMESSAGE_REFFROM_WSDLMESSAGE7797C588.WSDLMESSAGE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLFAULT_WSDLMESSAGE_REFFROM_WSDLMESSAGE7797C588.REFFROM_WSDLMESSAGE_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.	
+	
+map:WSDLDescription_service_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDescription_Map;
+	d2rq:property	mdw_wsdl:service;
+	d2rq:refersToClassMap	map:WSDLService_Map;
+	d2rq:condition "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAMESPACE_XMETA = LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.NAMESPACE_XMETA";
+	.	
+
+map:WSDLDescription_binding_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDescription_Map;
+	d2rq:property	mdw_wsdl:binding;
+	d2rq:refersToClassMap	map:WSDLBinding_Map;
+	d2rq:condition "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAMESPACE_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAMESPACE_XMETA";
+	.
+	
+map:WSDLDescription_interface_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDescription_Map;
+	d2rq:property	mdw_wsdl:interface;
+	d2rq:refersToClassMap	map:WSDLPortType_Map;
+	d2rq:condition "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAMESPACE_XMETA = LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.NAMESPACE_XMETA";
+	.	
+	
+map:WSDLBindingMessageReferenceInput_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:BindingMessageReference;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.bindingMessageReference(@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLINPUT7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLINPUT7797C588.BSRURI_XMETA@@";
+	# d2rq:condition "LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA AND LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLINPUT_REFFROM_WSDLINPUT7797C588.WSDLINPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";	
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLINPUT_REFFROM_WSDLINPUT7797C588.WSDLINPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLINPUT_REFFROM_WSDLINPUT7797C588.REFFROM_WSDLINPUT_XMETA = LOGWSDL_XMETAGEN_WSDLINPUT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLBindingOperation_wsdlInput_WSDLBindingMessageReference_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	mdw_wsdl:bindingMessageReference;
+	d2rq:refersToClassMap	map:WSDLBindingMessageReferenceInput_Map;
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLINPUT_REFFROM_WSDLINPUT7797C588.WSDLINPUT_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLINPUT_REFFROM_WSDLINPUT7797C588.REFFROM_WSDLINPUT_XMETA = LOGWSDL_XMETAGEN_WSDLINPUT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+	
+map:WSDLBindingMessageReferenceOutput_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsdl:BindingMessageReference;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsdl.bindingMessageReference(@@LOGWSDL_XMETAGEN_WSDLBINDING7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.NAME_XMETA@@/@@LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.NAME_XMETA@@)/@@LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.BSRURI_XMETA@@";
+	# d2rq:condition "LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA AND LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLOUTPUT_REFFROM_WSDLOUTPUT7797C588.WSDLOUTPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.OPERATION_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING_OPERATION_REFFROM_OPERATION7797C588.REFFROM_OPERATION_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLOUTPUT_REFFROM_WSDLOUTPUT7797C588.WSDLOUTPUT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLOUTPUT_REFFROM_WSDLOUTPUT7797C588.REFFROM_WSDLOUTPUT_XMETA = LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLBindingOperation_wsdlOutput_WSDLBindingMessageReference_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	mdw_wsdl:bindingMessageReference;
+	d2rq:refersToClassMap	map:WSDLBindingMessageReferenceOutput_Map;
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLOUTPUT_REFFROM_WSDLOUTPUT7797C588.WSDLOUTPUT_XMETA";
+	# d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION_WSDLOUTPUT_REFFROM_WSDLOUTPUT7797C588.REFFROM_WSDLOUTPUT_XMETA = LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+
+map:WSDLInput__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceInput_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLINPUT7797C588.BSRURI_XMETA";
+	.
+	
+map:WSDLInput_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceInput_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLINPUT7797C588.NAME_XMETA";
+	.	
+
+map:WSDLInput_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceInput_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLINPUT7797C588.NAMESPACE_XMETA";
+	.
+	
+map:WSDLInput_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceInput_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLINPUT7797C588.BSRURI_XMETA@@";
+	.
+	
+map:WSDLOutput__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceOutput_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.BSRURI_XMETA";
+	.
+	
+map:WSDLOutput_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceOutput_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.NAME_XMETA";
+	.	
+
+map:WSDLOutput_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceOutput_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.NAMESPACE_XMETA";
+	.
+	
+map:WSDLOutput_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingMessageReferenceOutput_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.BSRURI_XMETA@@";
+	.	
+	
+map:BusinessCategory_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wbg:BusinessCategory; 
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr_wbg/category/@@W_STATEMENT.SUBJ_ID@@";
+	d2rq:condition "W_STATEMENT.PRED_ID = 1000 and W_STATEMENT.OBJ_ID = 1001 and W_STATEMENT.VERSION_TO = 2000000000";
+	.
+map:BusinessTerm_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wbg:BusinessTerm; 
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr_wbg/term/@@W_STATEMENT.SUBJ_ID@@";
+	d2rq:condition "W_STATEMENT.PRED_ID = 1010 and W_STATEMENT.OBJ_ID = 1001 and W_STATEMENT.VERSION_TO = 2000000000";
+	.
+
+map:BusinessCategory_seeAlso_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessCategory_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:uriColumn	"W_URI.URI";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	.		
+map:BusinessCategory_comment06_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessCategory_Map;
+	d2rq:property	mdw_wbg:shortDescription;
+	d2rq:column	"W_OBJ_LIT_STRING.LITVAL";
+	d2rq:condition "TRIPLE1021.PRED_ID = 1021 and TRIPLE1021.OBJ_TYP_CD = 6";
+	d2rq:join "TRIPLE1021.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1021.OBJ_ID = W_OBJ_LIT_STRING.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1021";
+	.
+map:BusinessCategory_comment11_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessCategory_Map;
+	d2rq:property	mdw_wbg:shortDescription;
+	d2rq:column	"W_OBJ_LIT_PLAIN.LITVAL";
+	d2rq:condition "TRIPLE1021.PRED_ID = 1021 and TRIPLE1021.OBJ_TYP_CD = 11 and W_OBJ_LIT_PLAIN.XML_LANG = ''";
+	d2rq:join "TRIPLE1021.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1021.OBJ_ID = W_OBJ_LIT_PLAIN.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1021";
+	.	
+map:BusinessCategory_label06_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessCategory_Map;
+	d2rq:property	mdw_wbg:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"W_OBJ_LIT_STRING.LITVAL";
+	d2rq:condition "TRIPLE1006.PRED_ID = 1006 and TRIPLE1006.OBJ_TYP_CD = 6";
+	d2rq:join "TRIPLE1006.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1006.OBJ_ID = W_OBJ_LIT_STRING.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1006";
+	.	
+map:BusinessCategory_label11_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessCategory_Map;
+	d2rq:property	mdw_wbg:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"W_OBJ_LIT_PLAIN.LITVAL";
+	d2rq:condition "TRIPLE1006.PRED_ID = 1006 and TRIPLE1006.OBJ_TYP_CD = 11 and W_OBJ_LIT_PLAIN.XML_LANG = ''";
+	d2rq:join "TRIPLE1006.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1006.OBJ_ID = W_OBJ_LIT_PLAIN.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1006";
+	.	
+	
+map:BusinessTerm_seeAlso_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:uriColumn	"W_URI.URI";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	.		
+map:BusinessTerm_comment06_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:shortDescription;
+	d2rq:column	"W_OBJ_LIT_STRING.LITVAL";
+	d2rq:condition "TRIPLE1021.PRED_ID = 1021 and TRIPLE1021.OBJ_TYP_CD = 6";
+	d2rq:join "TRIPLE1021.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1021.OBJ_ID = W_OBJ_LIT_STRING.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1021";
+	.
+map:BusinessTerm_comment11_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:shortDescription;
+	d2rq:column	"W_OBJ_LIT_PLAIN.LITVAL";
+	d2rq:condition "TRIPLE1021.PRED_ID = 1021 and TRIPLE1021.OBJ_TYP_CD = 11 and W_OBJ_LIT_PLAIN.XML_LANG = ''";
+	d2rq:join "TRIPLE1021.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1021.OBJ_ID = W_OBJ_LIT_PLAIN.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1021";
+	.	
+map:BusinessTerm_label06_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"W_OBJ_LIT_STRING.LITVAL";
+	d2rq:condition "TRIPLE1006.PRED_ID = 1006 and TRIPLE1006.OBJ_TYP_CD = 6";
+	d2rq:join "TRIPLE1006.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1006.OBJ_ID = W_OBJ_LIT_STRING.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1006";
+	.		
+map:BusinessTerm_label11_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"W_OBJ_LIT_PLAIN.LITVAL";
+	d2rq:condition "TRIPLE1006.PRED_ID = 1006 and TRIPLE1006.OBJ_TYP_CD = 11 and W_OBJ_LIT_PLAIN.XML_LANG = ''";
+	d2rq:join "TRIPLE1006.SUBJ_ID = W_STATEMENT.SUBJ_ID";
+	d2rq:join "TRIPLE1006.OBJ_ID = W_OBJ_LIT_PLAIN.ID";
+	d2rq:alias "W_STATEMENT AS TRIPLE1006";
+	.	
+	
+map:BusinessTerm_of_BusinessCategory_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:ofBusinessCategory;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr_wbg/category/@@TRIPLE1009.OBJ_ID@@";
+    d2rq:alias "W_STATEMENT AS TRIPLE1009";
+	d2rq:join "W_STATEMENT.SUBJ_ID = TRIPLE1009.SUBJ_ID";
+	d2rq:condition "TRIPLE1009.PRED_ID = 1009";
+	.
+map:BusinessCategory_contains_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessCategory_Map;
+	d2rq:property	mdw_wbg:containsBusinessTerm;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr_wbg/term/@@TRIPLE1009.SUBJ_ID@@";
+    d2rq:alias "W_STATEMENT AS TRIPLE1009";
+	d2rq:join "W_STATEMENT.SUBJ_ID = TRIPLE1009.OBJ_ID";
+	d2rq:condition "TRIPLE1009.PRED_ID = 1009";
+	.	
+map:BusinessTerm_suberClassOf_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:superBusinessTerm;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr_wbg/term/@@TRIPLE1015.OBJ_ID@@";
+    d2rq:alias "W_STATEMENT AS TRIPLE1015";
+	d2rq:join "W_STATEMENT.SUBJ_ID = TRIPLE1015.SUBJ_ID";
+	d2rq:condition "TRIPLE1015.PRED_ID = 1015";
+	.	
+map:BusinessTerm_superClassOf_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:subBusinessTerm;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr_wbg/term/@@TRIPLE1015.SUBJ_ID@@";
+    d2rq:alias "W_STATEMENT AS TRIPLE1015";
+	d2rq:join "W_STATEMENT.SUBJ_ID = TRIPLE1015.OBJ_ID";
+	d2rq:condition "TRIPLE1015.PRED_ID = 1015";
+	.		
+
+map:BusinessTerm_classify_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+map:WSDLDocument_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+	
+map:BusinessTerm_classify_WSDLService_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLService_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+map:WSDLService_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLService_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+	
+map:BusinessTerm_classify_WSDLPortType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLPortType_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLPortType_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPortType_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+	
+map:BusinessTerm_classify_WSDLBinding_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLBinding_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLBinding_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBinding_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+
+map:BusinessTerm_classify_WSDLPort_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLPort_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLPort_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLPort_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+	
+map:BusinessTerm_classify_WSDLInterfaceOperation_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLInterfaceOperation_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+	
+map:BusinessTerm_classify_WSDLBindingOperation_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLBindingOperation_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+	
+map:BusinessTerm_classify_WSDLInputMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLInputMessage_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLInputMessage_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+	
+map:BusinessTerm_classify_WSDLOutputMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+map:WSDLOutputMessage_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.	
+	
+map:BusinessTerm_classify_WSDLInterfaceFaultReference_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+map:WSDLInterfaceFaultReference_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+	
+map:RepositoryContainerDocumentMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRDocumentInstance";
+	d2rq:additionalProperty map:RepositoryContainerDocumentComment;
+	.
+map:RepositoryContainerDocumentComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances typed of http://umrr.dyn.webahead.ibm.com/2007/metamodel/mdw/Document.";
+	.
+map:RepositorycontainDocumentMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerDocumentMap;
+	.
+map:DocumentWSDLHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerDocumentMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSDLDocument_Map;
+	.
+map:DocumentXSDHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerDocumentMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:XSDDocument_Map;
+	.	
+	
+map:WSDLDocument_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class mdw:Document;
+	d2rq:class mdw_wsdl:WSDLDocument;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/@@PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAME_XMETA@@/@@PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.BSRURI_XMETA@@";
+	.	
+	
+map:WSDLDocument__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.BSRURI_XMETA";
+	.
+	
+map:WSDLDocument_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wsdl:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAME_XMETA";
+	.	
+
+map:WSDLDocument_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wsdl:namespace;
+	d2rq:uriColumn	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAMESPACE_XMETA";
+	.
+	
+map:WSDLDocument_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.BSRURI_XMETA@@";
+	.	
+	
+map:WSDLDocument_content_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wsdl:content;
+	d2rq:column	"PHYSICAL_XMETAGEN_METADATAITEMCONTENTC8E644F7.CONTENT_XMETA";
+	d2rq:join "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.BSRURI_XMETA=PHYSICAL_XMETAGEN_METADATAITEMCONTENTC8E644F7.BSRURI_XMETA";
+	.		
+	
+map:WSDLDocument_WSDLService_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLService_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLSERVICE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+map:WSDLDocument_WSDLBinding_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLBinding_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLBINDING7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+map:WSDLDocument_WSDLPortType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLPortType_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORTTYPE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+map:WSDLDocument_WSDLPort_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLPort_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPORT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+map:WSDLDocument_WSDLInterfaceOperation_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLInterfaceOperation_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+map:WSDLDocument_WSDLInterfaceFault_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLInterfaceFault_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+map:WSDLDocument_WSDLInputMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLInputMessage_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+map:WSDLDocument_WSDLOutputMessage_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+map:WSDLDocument_WSDLInterfaceFaultReference_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+map:WSDLDocument_WSDLBindingOperation_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLBindingOperation_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOPERATION7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+map:WSDLDocument_WSDLBindingFault_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLBindingFault_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLFAULT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+map:WSDLDocument_WSDLBindingMessageReferenceInput_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLBindingMessageReferenceInput_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLINPUT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+map:WSDLDocument_WSDLBindingMessageReferenceOutput_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:WSDLBindingMessageReferenceOutput_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLOUTPUT7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+	
+map:WSDLDocument_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.		
+map:WSDLDocument_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.				
+map:WSDLDocument_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+map:WSDLDocument_AttributeDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:AttributeDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:XSDDocument_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class mdw:Document;
+	d2rq:class mdw_xsd:XSDDocument;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/@@PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.NAME_XMETA@@/@@PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.BSRURI_XMETA@@";
+	.
+	
+map:XSDDocument__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.BSRURI_XMETA";
+	.
+	
+map:XSDDocument_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw_xsd:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.NAME_XMETA";
+	.	
+
+map:XSDDocument_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw_xsd:namespace;
+	d2rq:uriColumn	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.NAMESPACE_XMETA";
+	.
+	
+map:XSDDocument_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.BSRURI_XMETA@@";
+	.	
+	
+map:XSDDocument_content_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw_xsd:content;
+	d2rq:column	"PHYSICAL_XMETAGEN_METADATAITEMCONTENTC8E644F7.CONTENT_XMETA";
+	d2rq:join "PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.BSRURI_XMETA=PHYSICAL_XMETAGEN_METADATAITEMCONTENTC8E644F7.BSRURI_XMETA";
+	.		
+	
+map:XSDDocument_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.		
+	
+map:XSDDocument_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+	
+map:XSDDocument_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:XSDDocument_AttributeDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:AttributeDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+	
+map:XSDSchema_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_xsd:Schema;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/xsd.schema(@@PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.NAMESPACE_XMETA@@)";
+	.
+	
+map:XSDSchema_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDSchema_Map;
+	d2rq:property	mdw_xsd:hasTypeDefinition;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.		
+	
+map:XSDSchema_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDSchema_Map;
+	d2rq:property	mdw_xsd:hasTypeDefinition;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+	
+map:XSDSchema_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDSchema_Map;
+	d2rq:property	mdw_xsd:hasElementDeclaration;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:XSDSchema_AttributeDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDSchema_Map;
+	d2rq:property	mdw_xsd:hasAttributeDeclaration;
+	d2rq:refersToClassMap	map:AttributeDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:SimpleTypeDefinition_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_xsd:SimpleTypeDefinition;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/xsd.simpleType(@@LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.NAME_XMETA@@)/@@LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.BSRURI_XMETA@@";
+	.
+	
+map:ComplexTypeDefinition_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_xsd:ComplexTypeDefinition;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/xsd.complexType(@@LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.NAME_XMETA@@)/@@LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.BSRURI_XMETA@@";
+	.	
+	
+map:ElementDeclaration_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_xsd:Element;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/xsd.elementDeclaration(@@LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.NAME_XMETA@@)/@@LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.BSRURI_XMETA@@";
+	.	
+
+map:AttributeDeclaration_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_xsd:Attribute;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/xsd.attributeDeclaration(@@LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.NAME_XMETA@@)/@@LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.BSRURI_XMETA@@";
+	.	
+	
+map:XSDSchema_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDSchema_Map;
+	d2rq:property	mdw_xsd:namespace;
+	d2rq:uriColumn	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.NAMESPACE_XMETA";
+	.
+	
+map:SimpleTypeDefinition__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+	
+map:SimpleTypeDefinition_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:property	mdw_xsd:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.NAME_XMETA";
+	.	
+
+map:SimpleTypeDefinition_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:property	mdw_xsd:namespace;
+	d2rq:uriColumn	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.NAMESPACE_XMETA";
+	.
+	
+map:SimpleTypeDefinition_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.BSRURI_XMETA@@";
+	.	
+	
+map:ComplexTypeDefinition__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+	
+map:ComplexTypeDefinition_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:property	mdw_xsd:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.NAME_XMETA";
+	.	
+
+map:ComplexTypeDefinition_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:property	mdw_xsd:namespace;
+	d2rq:uriColumn	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.NAMESPACE_XMETA";
+	.
+	
+map:ComplexTypeDefinition_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.BSRURI_XMETA@@";
+	.		
+	
+map:ElementDeclaration__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ElementDeclaration_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+	
+map:ElementDeclaration_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ElementDeclaration_Map;
+	d2rq:property	mdw_xsd:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.NAME_XMETA";
+	.	
+
+map:ElementDeclaration_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ElementDeclaration_Map;
+	d2rq:property	mdw_xsd:namespace;
+	d2rq:uriColumn	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.NAMESPACE_XMETA";
+	.
+	
+map:ElementDeclaration_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:ElementDeclaration_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.BSRURI_XMETA@@";
+	.
+	
+map:AttributeDeclaration__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:AttributeDeclaration_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.
+	
+map:AttributeDeclaration_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:AttributeDeclaration_Map;
+	d2rq:property	mdw_xsd:localName;
+	d2rq:property	rdfs:label;
+	d2rq:column	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.NAME_XMETA";
+	.	
+
+map:AttributeDeclaration_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:AttributeDeclaration_Map;
+	d2rq:property	mdw_xsd:namespace;
+	d2rq:uriColumn	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.NAMESPACE_XMETA";
+	.
+	
+map:AttributeDeclaration_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:AttributeDeclaration_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.BSRURI_XMETA@@";	
+	.	
+	
+
+map:WSDLInputMessage_xsdType_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw_wsdl:typeDefinition;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.XSDTYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.REFFROM_XSDTYPE_XMETA = LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLInputMessage_xsdType_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw_wsdl:typeDefinition;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.XSDTYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.REFFROM_XSDTYPE_XMETA = LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLInputMessage_xsdElement_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInputMessage_Map;
+	d2rq:property	mdw_wsdl:elementDeclaration;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDELEMENT_REFFROM_XSDELEMENT7797C588.XSDELEMENT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDELEMENT_REFFROM_XSDELEMENT7797C588.REFFROM_XSDELEMENT_XMETA = LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+	
+map:WSDLOutputMessage_xsdType_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw_wsdl:typeDefinition;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.XSDTYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.REFFROM_XSDTYPE_XMETA = LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLOutputMessage_xsdType_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw_wsdl:typeDefinition;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.XSDTYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.REFFROM_XSDTYPE_XMETA = LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLOutputMessage_xsdElement_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLOutputMessage_Map;
+	d2rq:property	mdw_wsdl:elementDeclaration;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDELEMENT_REFFROM_XSDELEMENT7797C588.XSDELEMENT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDELEMENT_REFFROM_XSDELEMENT7797C588.REFFROM_XSDELEMENT_XMETA = LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+	
+map:WSDLInterfaceFaultReference_xsdType_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wsdl:typeDefinition;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.XSDTYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.REFFROM_XSDTYPE_XMETA = LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLInterfaceFaultReference_xsdType_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wsdl:typeDefinition;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.XSDTYPE_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDTYPE_REFFROM_XSDTYPE7797C588.REFFROM_XSDTYPE_XMETA = LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLInterfaceFaultReference_xsdElement_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLInterfaceFaultReference_Map;
+	d2rq:property	mdw_wsdl:elementDeclaration;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE7797C588.XMETA_REPOS_OBJECT_ID_XMETA = LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.MESSAGEPART_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLMESSAGE_MESSAGEPART_REFFROM_MESSAGEPART7797C588.REFFROM_MESSAGEPART_XMETA = LOGWSDL_XMETAGEN_WSDLPART_XSDELEMENT_REFFROM_XSDELEMENT7797C588.XSDELEMENT_XMETA";
+	d2rq:join	"LOGWSDL_XMETAGEN_WSDLPART_XSDELEMENT_REFFROM_XSDELEMENT7797C588.REFFROM_XSDELEMENT_XMETA = LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+	
+map:WSDLDocument_import_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wsdl:import;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEM_IMPORTEDWSDLS_REFFROM_IMPORTEDWSDLSC8E644F7.IMPORTEDWSDLS_XMETA";
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEM_IMPORTEDWSDLS_REFFROM_IMPORTEDWSDLSC8E644F7.REFFROM_IMPORTEDWSDLS_XMETA = WSDLDOCUMENT.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:alias "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7 AS WSDLDOCUMENT";
+	.
+
+map:XSDDocument_import_XSDDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw_xsd:import;
+	d2rq:refersToClassMap	map:XSDDocument_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEM_IMPORTEDSCHEMAS_REFFROM_IMPORTEDSCHEMASC8E644F7.IMPORTEDSCHEMAS_XMETA";
+	d2rq:join	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEM_IMPORTEDSCHEMAS_REFFROM_IMPORTEDSCHEMASC8E644F7.REFFROM_IMPORTEDSCHEMAS_XMETA = XSDDOCUMENT.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:alias "PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7 AS XSDDOCUMENT";
+	.		
+	
+map:XSDDocument_include_XSDDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw_xsd:include;
+	d2rq:refersToClassMap	map:XSDDocument_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEM_INCLUDEDSCHEMAS_REFFROM_INCLUDEDSCHEMASC8E644F7.INCLUDEDSCHEMAS_XMETA";
+	d2rq:join	"PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEM_INCLUDEDSCHEMAS_REFFROM_INCLUDEDSCHEMASC8E644F7.REFFROM_INCLUDEDSCHEMAS_XMETA = XSDDOCUMENT.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:alias "PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7 AS XSDDOCUMENT";
+	.	
+	
+map:WSDLDocument_contain_XSDDocument_Map_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wsdl:xsdDocument;
+	d2rq:refersToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:alias "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7 AS WSDLDOCUMENT";
+	d2rq:join "PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = WSDLDOCUMENT.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLXSDDocument_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_xsd:XSDDocument;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/@@PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.NAME_XMETA@@.xsd/@@PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.BSRURI_XMETA@@";
+	.	
+	
+map:WSDLXSDDocument_import_XSDDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:property	mdw_xsd:import;
+	d2rq:refersToClassMap	map:XSDDocument_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEM_IMPORTEDSCHEMAS_REFFROM_IMPORTEDSCHEMASC8E644F7.IMPORTEDSCHEMAS_XMETA";
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEM_IMPORTEDSCHEMAS_REFFROM_IMPORTEDSCHEMASC8E644F7.REFFROM_IMPORTEDSCHEMAS_XMETA = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+	
+map:WSDLXSDDocument_include_XSDDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:property	mdw_xsd:include;
+	d2rq:refersToClassMap	map:XSDDocument_Map;
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEM_INCLUDEDSCHEMAS_REFFROM_INCLUDEDSCHEMASC8E644F7.INCLUDEDSCHEMAS_XMETA";
+	d2rq:join	"PHYSICAL_XMETAGEN_WSDLMETADATAITEM_INCLUDEDSCHEMAS_REFFROM_INCLUDEDSCHEMASC8E644F7.REFFROM_INCLUDEDSCHEMAS_XMETA = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLXSDDocument_SimpleTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:SimpleTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_SIMPLETYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.		
+	
+map:WSDLXSDDocument_ComplexTypeDefinition_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:ComplexTypeDefinition_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_COMPLEXTYPEDEFINITION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.			
+	
+map:WSDLXSDDocument_ElementDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:ElementDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ELEMENTDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.	
+	
+map:WSDLXSDDocument_AttributeDeclaration_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLXSDDocument_Map;
+	d2rq:property	mdw:contain;
+	d2rq:refersToClassMap	map:AttributeDeclaration_Map;
+	d2rq:join	"LOGXSD_XMETAGEN_ATTRIBUTEDECLARATION87FCA705.XMETA_REPOS_OBJECT_ID_XMETA = LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.CONTRIBUTINGPHYSICALOBJECTXMET";
+	d2rq:join	"LOGBASE_XMETAGEN_SR_BASELOGICALOBJECT_CONTRIBUTING_PHYSICALOBJECT_REFFROM_CONTRIBUTING_PHYSICALOBJECT778E7415.REFFROMCONTRIBTNGPHYSCLBJCTXMT = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	.		
+
+map:RepositoryContainerGenericObjectMap a d2rq:ClassMap;
+	d2rq:dataStorage map:database;
+	d2rq:class rdfs:Class;
+	d2rq:uriPattern "http://wsrrtest.dyn.webahead.ibm.com/resource/2008/repository/WSRRGenericObjectInstance";
+	d2rq:additionalProperty map:RepositoryContainerGenericObjectComment;
+	.
+map:RepositoryContainerGenericObjectComment a d2rq:AdditionalProperty;
+        d2rq:propertyName rdfs:comment;
+        d2rq:propertyValue "This repository container has instances which are WSRR Generic Objects.";
+	.
+map:RepositorycontainGenericObjectMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryClassMap;
+	d2rq:property mdw:contain;
+	d2rq:refersToClassMap map:RepositoryContainerGenericObjectMap;
+	.
+map:ServiceVersionHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerGenericObjectMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSRR_ServiceVersion_Map;
+	.
+map:ServiceEndpointHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerGenericObjectMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSRR_ServiceEndpoint_Map;
+	.
+map:ServiceInterfaceHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerGenericObjectMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSRR_ServiceInterface_Map;
+	.	
+map:ServiceBindingHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerGenericObjectMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSRR_ServiceBinding_Map;
+	.	
+	
+map:WSRR_ServiceVersion_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsrr:ServiceVersion;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr.serviceVersion(@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA@@)/@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	# d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA LIKE '%ServiceVersion'";
+	d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA = 'http://www.ibm.com/xmlns/prod/serviceregistry/6/1/TechnicalModel#ServiceVersion'";
+	.
+map:WSRR_ServiceVersion__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA";
+	.	
+map:WSRR_ServiceVersion_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wsrr:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA";
+	.	
+map:WSRR_ServiceVersion_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wsrr:namespace;
+	d2rq:uriColumn	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAMESPACE_XMETA";
+	.	
+map:WSRR_ServiceVersion_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	.
+map:WSRR_ServiceVersion_primaryType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wsrr:primaryType;
+	d2rq:uriColumn  "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA";
+	.
+	
+map:WSRR_ServiceEndpoint_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsrr:ServiceEndpoint;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr.serviceEndpoint(@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA@@)/@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	# d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA LIKE '%ServiceEndpoint'";
+	d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA = 'http://www.ibm.com/xmlns/prod/serviceregistry/6/1/TechnicalModel#ServiceEndpoint'";	
+	.	
+map:WSRR_ServiceEndpoint__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA";
+	.	
+map:WSRR_ServiceEndpoint_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wsrr:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA";
+	.	
+map:WSRR_ServiceEndpoint_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wsrr:namespace;
+	d2rq:uriColumn	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAMESPACE_XMETA";
+	.	
+map:WSRR_ServiceEndpoint_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	.
+map:WSRR_ServiceEndpoint_primaryType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wsrr:primaryType;
+	d2rq:uriColumn  "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA";
+	.
+	
+map:WSRR_ServiceInterface_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsrr:ServiceInterface;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr.serviceInterface(@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA@@)/@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	# d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA LIKE '%ServiceInterface'";
+	d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA = 'http://www.ibm.com/xmlns/prod/serviceregistry/6/1/TechnicalModel#ServiceInterface'";	
+	.		
+map:WSRR_ServiceInterface__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA";
+	.	
+map:WSRR_ServiceInterface_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw_wsrr:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA";
+	.	
+map:WSRR_ServiceInterface_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw_wsrr:namespace;
+	d2rq:uriColumn	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAMESPACE_XMETA";
+	.	
+map:WSRR_ServiceInterface_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	.
+map:WSRR_ServiceInterface_primaryType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw_wsrr:primaryType;
+	d2rq:uriColumn  "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA";
+	.
+	
+map:WSRR_ServiceBinding_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsrr:ServiceBinding;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr.serviceBinding(@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA@@)/@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	# d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA LIKE '%ServiceBinding'";
+	d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA = 'http://www.ibm.com/xmlns/prod/serviceregistry/6/1/TechnicalModel#ServiceBinding'";	
+	.	
+map:WSRR_ServiceBinding__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA";
+	.	
+map:WSRR_ServiceBinding_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wsrr:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA";
+	.	
+map:WSRR_ServiceBinding_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wsrr:namespace;
+	d2rq:uriColumn	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAMESPACE_XMETA";
+	.	
+map:WSRR_ServiceBinding_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	.		
+map:WSRR_ServiceBinding_primaryType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wsrr:primaryType;
+	d2rq:uriColumn  "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA";
+	.	
+	
+
+map:BusinessTerm_classify_WSRR_ServiceVersion_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+map:WSRR_ServiceVersion_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+	
+map:BusinessTerm_classify_WSRR_ServiceEndpoint_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+map:WSRR_ServiceEndpoint_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+	
+map:BusinessTerm_classify_WSRR_ServiceInterface_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+map:WSRR_ServiceInterface_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+	
+map:BusinessTerm_classify_WSRR_ServiceBinding_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:BusinessTerm_Map;
+	d2rq:property	mdw_wbg:classify;
+	d2rq:refersToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.
+map:WSRR_ServiceBinding_isClassifiedBy_BusinessTerm_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wbg:isClassifiedBy;
+	d2rq:refersToClassMap	map:BusinessTerm_Map;
+	d2rq:join	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.SR_CLASSIFICATION_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_CLASSIFICATION_REFFROM__SR_CLASSIFICATION92453DD0.REFFROMSRCLASSIFICATIONXMETA = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join "W_STATEMENT.SUBJ_ID = W_URI.ID";
+	d2rq:join "W_URI.URI = SRBASE_XMETAGEN_SR_CLASSIFICATION92453DD0.CLASSIFICATIONURI_XMETA";
+	.		
+	
+map:WSRR_ServiceVersion_authoritativeWSDLs_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wsrr:authoritativeWSDLs;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_authoritativeWSDLs'";
+	.
+
+map:WSRR_ServiceVersion_realizingEndpoints_WSRR_ServiceEndpoint_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wsrr:realizingEndpoints;
+	d2rq:refersToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = ALIAS_GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_realizingEndpoints'";
+	d2rq:alias "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7 AS ALIAS_GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7";
+	.	
+	
+map:WSRR_ServiceEndpoint_authoritativeWSDLs_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wsrr:authoritativeWSDLs;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_authoritativeWSDLs'";
+	.	
+	
+map:WSRR_ServiceEndpoint_associatedBinding_WSRR_ServiceBinding_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wsrr:associatedBinding;
+	d2rq:refersToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = ALIAS_GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_associatedBinding'";
+	d2rq:alias "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7 AS ALIAS_GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7";
+	.	
+	
+map:WSRR_ServiceBinding_authoritativeWSDLs_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wsrr:authoritativeWSDLs;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_authoritativeWSDLs'";
+	.
+	
+map:WSRR_ServiceBinding_Map_associatedInterface_WSRR_ServiceInterface_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wsrr:associatedInterface;
+	d2rq:refersToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = ALIAS_GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_associatedInterface'";
+	d2rq:alias "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7 AS ALIAS_GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7";
+	.	
+	
+map:WSRR_ServiceInterface_authoritativeWSDLs_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw_wsrr:authoritativeWSDLs;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_authoritativeWSDLs'";
+	.		
+	
+map:WSRR_ServiceVersion_governanceState_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceVersion_Map;
+	d2rq:property	mdw_wsrr:governanceState;
+	d2rq:uriColumn	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.STATES_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.XMETA_REPOS_OBJECT_ID_XMETA = GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.GOVERNEDOBJECTS_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.REFFROM_GOVERNEDOBJECTS_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.
+map:WSRR_ServiceEndpoint_governanceState_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceEndpoint_Map;
+	d2rq:property	mdw_wsrr:governanceState;
+	d2rq:uriColumn	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.STATES_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.XMETA_REPOS_OBJECT_ID_XMETA = GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.GOVERNEDOBJECTS_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.REFFROM_GOVERNEDOBJECTS_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.
+map:WSRR_ServiceBinding_governanceState_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceBinding_Map;
+	d2rq:property	mdw_wsrr:governanceState;
+	d2rq:uriColumn	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.STATES_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.XMETA_REPOS_OBJECT_ID_XMETA = GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.GOVERNEDOBJECTS_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.REFFROM_GOVERNEDOBJECTS_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.
+map:WSRR_ServiceInterface_governanceState_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_ServiceInterface_Map;
+	d2rq:property	mdw_wsrr:governanceState;
+	d2rq:uriColumn	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.STATES_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.XMETA_REPOS_OBJECT_ID_XMETA = GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.GOVERNEDOBJECTS_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.REFFROM_GOVERNEDOBJECTS_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.	
+	
+map:WSDLDocument_governanceState_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSDLDocument_Map;
+	d2rq:property	mdw_wsrr:governanceState;
+	d2rq:uriColumn	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.STATES_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.XMETA_REPOS_OBJECT_ID_XMETA = GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.GOVERNEDOBJECTS_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.REFFROM_GOVERNEDOBJECTS_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.		
+map:XSDDocument_governanceState_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:XSDDocument_Map;
+	d2rq:property	mdw_wsrr:governanceState;
+	d2rq:uriColumn	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.STATES_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD936EE202.XMETA_REPOS_OBJECT_ID_XMETA = GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.GOVERNEDOBJECTS_XMETA";
+	d2rq:join	"GOVERNANCE_XMETAGEN_GOVERNANCERECORD_GOVERNEDOBJECTS_REFFROM_GOVERNEDOBJECTS936EE202.REFFROM_GOVERNEDOBJECTS_XMETA = PHYSICAL_XMETAGEN_XMLSCHEMAMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	.			
+	
+map:EnterpriseApplicationHasMemberMap a d2rq:PropertyBridge;
+	d2rq:belongsToClassMap map:RepositoryContainerGenericObjectMap;
+	d2rq:property mdw:hasMember;
+	d2rq:refersToClassMap map:WSRR_EnterpriseApplication_Map;
+	.
+	
+map:WSRR_EnterpriseApplication_Map a d2rq:ClassMap;
+	d2rq:dataStorage	map:database;
+	d2rq:class	mdw_wsrr:EnterpriseApplication;
+	d2rq:uriPattern	"http://wsrrtest.dyn.webahead.ibm.com/resource/2008/wsrr.enterpriseApplication(@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA@@)/@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	#d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA LIKE '%EnterpriseApplication'";
+	d2rq:condition "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA = 'http://www.ibm.com/xmlns/prod/serviceregistry/6/1/TechnicalModel#EnterpriseApplication'";	
+	.	
+map:WSRR_EnterpriseApplication__xmeta_repos_object_id_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_EnterpriseApplication_Map;
+	d2rq:property	mdw:originalID;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA";
+	.	
+map:WSRR_EnterpriseApplication_name_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_EnterpriseApplication_Map;
+	d2rq:property	mdw_wsrr:name;
+	d2rq:property	rdfs:label;
+	d2rq:column	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAME_XMETA";
+	.	
+map:WSRR_EnterpriseApplication_namespace_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_EnterpriseApplication_Map;
+	d2rq:property	mdw_wsrr:namespace;
+	d2rq:uriColumn	"GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.NAMESPACE_XMETA";
+	.	
+map:WSRR_EnterpriseApplication_bsruri_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_EnterpriseApplication_Map;
+	d2rq:property	rdfs:seeAlso;
+	d2rq:uriPattern	"http://wsrr.dyn.webahead.ibm.com:9080/ServiceRegistry/ViewDetail.do?uri=@@GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.BSRURI_XMETA@@";
+	.
+map:WSRR_EnterpriseApplication_primaryType_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_EnterpriseApplication_Map;
+	d2rq:property	mdw_wsrr:primaryType;
+	d2rq:uriColumn  "GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.PRIMARYTYPE_XMETA";
+	.	
+	
+map:WSRR_EnterpriseApplication_authoritativeWSDLs_WSDLDocument_Map	a	d2rq:propertyBridge;
+	d2rq:belongsToClassMap	map:WSRR_EnterpriseApplication_Map;
+	d2rq:property	mdw_wsrr:WSDLDocuments;
+	d2rq:refersToClassMap	map:WSDLDocument_Map;
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.SR_BASEOBJECT_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.XMETA_REPOS_OBJECT_ID_XMETA = SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.REFFROM__SR_RELATIONSHIP_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_RELATIONSHIP__SR_BASEOBJECT_REFFROM__SR_BASEOBJECT92453DD0.REFFROM__SR_BASEOBJECT_XMETA = PHYSICAL_XMETAGEN_WSDLMETADATAITEMC8E644F7.XMETA_REPOS_OBJECT_ID_XMETA";
+	d2rq:join	"SRBASE_XMETAGEN_SR_BASEOBJECT__SR_RELATIONSHIP_REFFROM__SR_RELATIONSHIP92453DD0.SR_RELATIONSHIP_XMETA = GENERIC_XMETAGEN_GENERICOBJECT5E71A1B7.XMETA_REPOS_OBJECT_ID_XMETA";	
+	d2rq:condition "SRBASE_XMETAGEN_SR_RELATIONSHIP92453DD0.NAME_XMETA = 'wsrrtm_WSDLDocuments'";
+	.			

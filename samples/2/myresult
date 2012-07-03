@@ -1,0 +1,5 @@
+db_paper_authors(A, B) :- onto_title(C, A), onto_name(D, B), onto_Paper(C), onto_abstract(C, E), onto_Person(D), onto_email(D, F), onto_Presenter(D), onto_author(C, D).
+db_presentation(A, B, C, __, __) :- onto_name(D, A), onto_Person(D), onto_email(D, E), onto_Presenter(D), onto_presenterOf(D, F).
+db_person(A, __, __, B) :- onto_name(C, A), onto_email(C, B), onto_Person(C).
+onto_Presentation(A) :- onto_eventTitle(A, B).
+db_paper(A, B, __, __, __, __) :- onto_title(C, A), onto_abstract(C, B), onto_Paper(C).

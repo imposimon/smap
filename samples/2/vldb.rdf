@@ -1,0 +1,1805 @@
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns="http://ws.nju.edu.cn/rdf/country/"
+    xmlns:Conference="http://www.mindswap.org/~golbeck/web/www04photo.owl#">
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Christos Papatheodorou">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/943935708">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/943935708">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Christos Papatheodorou"/>
+            <Conference:abstract>Wide Area Internetworking. 's abstract</Conference:abstract>
+            <Conference:title>Wide Area Internetworking.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Christos Papatheodorou"/>
+        <Conference:eventTitle>Wide Area Internetworking. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Christos Papatheodorou@gmail.com</Conference:email>
+    <Conference:name>Christos Papatheodorou</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jesper G. Henriksen">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/421141879">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/421141879">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jesper G. Henriksen"/>
+            <Conference:abstract>The Generalised Substitution Language Extended to Probabilistic Programs. 's abstract</Conference:abstract>
+            <Conference:title>The Generalised Substitution Language Extended to Probabilistic Programs.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jesper G. Henriksen"/>
+        <Conference:eventTitle>The Generalised Substitution Language Extended to Probabilistic Programs. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jesper G. Henriksen@gmail.com</Conference:email>
+    <Conference:name>Jesper G. Henriksen</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/John Mylopoulos">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/868770823">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/868770823">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/John Mylopoulos"/>
+            <Conference:abstract>``Forgotten Topics$1$1 of Net Theory. 's abstract</Conference:abstract>
+            <Conference:title>``Forgotten Topics$1$1 of Net Theory.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/John Mylopoulos"/>
+        <Conference:eventTitle>``Forgotten Topics$1$1 of Net Theory. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>John Mylopoulos@gmail.com</Conference:email>
+    <Conference:name>John Mylopoulos</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jonathan L. Shapiro">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1297126561">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1297126561">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jonathan L. Shapiro"/>
+            <Conference:abstract>The Cambridge Distributed Computing System. 's abstract</Conference:abstract>
+            <Conference:title>The Cambridge Distributed Computing System.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jonathan L. Shapiro"/>
+        <Conference:eventTitle>The Cambridge Distributed Computing System. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jonathan L. Shapiro@gmail.com</Conference:email>
+    <Conference:name>Jonathan L. Shapiro</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Richard Hayton">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1617803757">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1617803757">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard Hayton"/>
+            <Conference:abstract>Modelling Architectural Features with Petri Nets. 's abstract</Conference:abstract>
+            <Conference:title>Modelling Architectural Features with Petri Nets.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard Hayton"/>
+        <Conference:eventTitle>Modelling Architectural Features with Petri Nets. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Richard Hayton@gmail.com</Conference:email>
+    <Conference:name>Richard Hayton</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Emil Sekerinski">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1281743668">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1281743668">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Emil Sekerinski"/>
+            <Conference:abstract>Introduction. 's abstract</Conference:abstract>
+            <Conference:title>Introduction.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Emil Sekerinski"/>
+        <Conference:eventTitle>Introduction. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Emil Sekerinski@gmail.com</Conference:email>
+    <Conference:name>Emil Sekerinski</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Brian Ritchie">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/2045225858">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/2045225858">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Brian Ritchie"/>
+            <Conference:abstract>Views of Distributed Systems. 's abstract</Conference:abstract>
+            <Conference:title>Views of Distributed Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Brian Ritchie"/>
+        <Conference:eventTitle>Views of Distributed Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Brian Ritchie@gmail.com</Conference:email>
+    <Conference:name>Brian Ritchie</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Fabrice Le Fessant">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/2121230074">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/2121230074">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Fabrice Le Fessant"/>
+            <Conference:abstract>Specification of an Integrated Circuit Card Protocol Application Using the B Method and Linear Tempo 's abstract</Conference:abstract>
+            <Conference:title>Specification of an Integrated Circuit Card Protocol Application Using the B Method and Linear Tempo</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Fabrice Le Fessant"/>
+        <Conference:eventTitle>Specification of an Integrated Circuit Card Protocol Application Using the B Method and Linear Tempo Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Fabrice Le Fessant@gmail.com</Conference:email>
+    <Conference:name>Fabrice Le Fessant</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Yann Rouzaud">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1377741357">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1377741357">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Yann Rouzaud"/>
+            <Conference:abstract>Security of Computer Networks. 's abstract</Conference:abstract>
+            <Conference:title>Security of Computer Networks.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Yann Rouzaud"/>
+        <Conference:eventTitle>Security of Computer Networks. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Yann Rouzaud@gmail.com</Conference:email>
+    <Conference:name>Yann Rouzaud</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/C?sar Fern?ndez">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/261445942">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/261445942">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/C?sar Fern?ndez"/>
+            <Conference:abstract>Multiple Copy Update. 's abstract</Conference:abstract>
+            <Conference:title>Multiple Copy Update.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/C?sar Fern?ndez"/>
+        <Conference:eventTitle>Multiple Copy Update. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>C?sar Fern?ndez@gmail.com</Conference:email>
+    <Conference:name>C?sar Fern?ndez</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Kurt Jensen">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1796325466">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1796325466">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Kurt Jensen"/>
+            <Conference:abstract>Stochastic Nets and Performance Evaluation. 's abstract</Conference:abstract>
+            <Conference:title>Stochastic Nets and Performance Evaluation.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Kurt Jensen"/>
+        <Conference:eventTitle>Stochastic Nets and Performance Evaluation. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Kurt Jensen@gmail.com</Conference:email>
+    <Conference:name>Kurt Jensen</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Blaz Zupan">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/499855192">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/499855192">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Blaz Zupan"/>
+            <Conference:abstract>The State Explosion Problem. 's abstract</Conference:abstract>
+            <Conference:title>The State Explosion Problem.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Blaz Zupan"/>
+        <Conference:eventTitle>The State Explosion Problem. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Blaz Zupan@gmail.com</Conference:email>
+    <Conference:name>Blaz Zupan</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/J. Draper">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/806388064">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/806388064">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/J. Draper"/>
+            <Conference:abstract>Nets in Production Systems. 's abstract</Conference:abstract>
+            <Conference:title>Nets in Production Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/J. Draper"/>
+        <Conference:eventTitle>Nets in Production Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>J. Draper@gmail.com</Conference:email>
+    <Conference:name>J. Draper</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Andy Galloway">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/2006855502">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/2006855502">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Andy Galloway"/>
+            <Conference:abstract>Modelling and Analysis of Distributed Software Using GSPNs. 's abstract</Conference:abstract>
+            <Conference:title>Modelling and Analysis of Distributed Software Using GSPNs.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Andy Galloway"/>
+        <Conference:eventTitle>Modelling and Analysis of Distributed Software Using GSPNs. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Andy Galloway@gmail.com</Conference:email>
+    <Conference:name>Andy Galloway</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Pat Langley">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1875951748">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1875951748">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Pat Langley"/>
+            <Conference:abstract>Performance Issues. 's abstract</Conference:abstract>
+            <Conference:title>Performance Issues.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Pat Langley"/>
+        <Conference:eventTitle>Performance Issues. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Pat Langley@gmail.com</Conference:email>
+    <Conference:name>Pat Langley</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Richard Banach">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1496317797">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1496317797">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard Banach"/>
+            <Conference:abstract>Predicate/Transition Nets. 's abstract</Conference:abstract>
+            <Conference:title>Predicate/Transition Nets.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard Banach"/>
+        <Conference:eventTitle>Predicate/Transition Nets. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Richard Banach@gmail.com</Conference:email>
+    <Conference:name>Richard Banach</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Klaus Voss">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1156476743">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1156476743">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Klaus Voss"/>
+            <Conference:abstract>Hierarchy. 's abstract</Conference:abstract>
+            <Conference:title>Hierarchy.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Klaus Voss"/>
+        <Conference:eventTitle>Hierarchy. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Klaus Voss@gmail.com</Conference:email>
+    <Conference:name>Klaus Voss</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Marisa Venturini Zilli">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1598723511">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1598723511">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Marisa Venturini Zilli"/>
+            <Conference:abstract>Component-Based Programming of Distributed Applications. 's abstract</Conference:abstract>
+            <Conference:title>Component-Based Programming of Distributed Applications.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Marisa Venturini Zilli"/>
+        <Conference:eventTitle>Component-Based Programming of Distributed Applications. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Marisa Venturini Zilli@gmail.com</Conference:email>
+    <Conference:name>Marisa Venturini Zilli</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Berry Schoenmakers">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1215396396">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1215396396">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Berry Schoenmakers"/>
+            <Conference:abstract>Concurrent Prolog: A Progress Report. 's abstract</Conference:abstract>
+            <Conference:title>Concurrent Prolog: A Progress Report.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Berry Schoenmakers"/>
+        <Conference:eventTitle>Concurrent Prolog: A Progress Report. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Berry Schoenmakers@gmail.com</Conference:email>
+    <Conference:name>Berry Schoenmakers</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Ivan Bratko">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/983360412">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/983360412">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Ivan Bratko"/>
+            <Conference:abstract>PerDiS: Design, Implementation, and Use of a PERsistent DIstributed Store. 's abstract</Conference:abstract>
+            <Conference:title>PerDiS: Design, Implementation, and Use of a PERsistent DIstributed Store.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Ivan Bratko"/>
+        <Conference:eventTitle>PerDiS: Design, Implementation, and Use of a PERsistent DIstributed Store. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Ivan Bratko@gmail.com</Conference:email>
+    <Conference:name>Ivan Bratko</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Steve Schneider">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1229778709">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1229778709">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Steve Schneider"/>
+            <Conference:abstract>Distributed Versions of Linear Time Temporal Logic: A Trace Perspective. 's abstract</Conference:abstract>
+            <Conference:title>Distributed Versions of Linear Time Temporal Logic: A Trace Perspective.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Steve Schneider"/>
+        <Conference:eventTitle>Distributed Versions of Linear Time Temporal Logic: A Trace Perspective. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Steve Schneider@gmail.com</Conference:email>
+    <Conference:name>Steve Schneider</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Pierre Chartier">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1391996040">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1391996040">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierre Chartier"/>
+            <Conference:abstract>Introduction to Computer Security. 's abstract</Conference:abstract>
+            <Conference:title>Introduction to Computer Security.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierre Chartier"/>
+        <Conference:eventTitle>Introduction to Computer Security. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Pierre Chartier@gmail.com</Conference:email>
+    <Conference:name>Pierre Chartier</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Philipp A. Heuberger">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/614016898">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/614016898">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Philipp A. Heuberger"/>
+            <Conference:abstract>Petri Nets Based Models in the Specification and Verification of Protocols. 's abstract</Conference:abstract>
+            <Conference:title>Petri Nets Based Models in the Specification and Verification of Protocols.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Philipp A. Heuberger"/>
+        <Conference:eventTitle>Petri Nets Based Models in the Specification and Verification of Protocols. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Philipp A. Heuberger@gmail.com</Conference:email>
+    <Conference:name>Philipp A. Heuberger</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Fran?ois Pilarski">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/579820317">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/579820317">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Fran?ois Pilarski"/>
+            <Conference:abstract>Graphical Design of Reactive Systems. 's abstract</Conference:abstract>
+            <Conference:title>Graphical Design of Reactive Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Fran?ois Pilarski"/>
+        <Conference:eventTitle>Graphical Design of Reactive Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Fran?ois Pilarski@gmail.com</Conference:email>
+    <Conference:name>Fran?ois Pilarski</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Alan W. Biermann">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/2010287456">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/2010287456">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Alan W. Biermann"/>
+            <Conference:abstract>Nets in Computer Organisation. 's abstract</Conference:abstract>
+            <Conference:title>Nets in Computer Organisation.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Alan W. Biermann"/>
+        <Conference:eventTitle>Nets in Computer Organisation. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Alan W. Biermann@gmail.com</Conference:email>
+    <Conference:name>Alan W. Biermann</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Marco Ajmone Marsan">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1238026857">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1238026857">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Marco Ajmone Marsan"/>
+            <Conference:abstract>Recent Advances in Distributed Garbage Collection. 's abstract</Conference:abstract>
+            <Conference:title>Recent Advances in Distributed Garbage Collection.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Marco Ajmone Marsan"/>
+        <Conference:eventTitle>Recent Advances in Distributed Garbage Collection. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Marco Ajmone Marsan@gmail.com</Conference:email>
+    <Conference:name>Marco Ajmone Marsan</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Pierpaolo Degano">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1762397133">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1762397133">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierpaolo Degano"/>
+            <Conference:abstract>CCS is an (Augmented) Contact Free C/E System. 's abstract</Conference:abstract>
+            <Conference:title>CCS is an (Augmented) Contact Free C/E System.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierpaolo Degano"/>
+        <Conference:eventTitle>CCS is an (Augmented) Contact Free C/E System. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Pierpaolo Degano@gmail.com</Conference:email>
+    <Conference:name>Pierpaolo Degano</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Thierry Machicoane">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/984244863">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/984244863">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Thierry Machicoane"/>
+            <Conference:abstract>Constructing Dependable Web Services. 's abstract</Conference:abstract>
+            <Conference:title>Constructing Dependable Web Services.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Thierry Machicoane"/>
+        <Conference:eventTitle>Constructing Dependable Web Services. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Thierry Machicoane@gmail.com</Conference:email>
+    <Conference:name>Thierry Machicoane</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Paulo Ferreira">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/76268013">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/76268013">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Paulo Ferreira"/>
+            <Conference:abstract>On B. 's abstract</Conference:abstract>
+            <Conference:title>On B.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Paulo Ferreira"/>
+        <Conference:eventTitle>On B. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Paulo Ferreira@gmail.com</Conference:email>
+    <Conference:name>Paulo Ferreira</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Ehud Y. Shapiro">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/75821674">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/75821674">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Ehud Y. Shapiro"/>
+            <Conference:abstract>Pattern Recognition and Neural Networks. 's abstract</Conference:abstract>
+            <Conference:title>Pattern Recognition and Neural Networks.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Ehud Y. Shapiro"/>
+        <Conference:eventTitle>Pattern Recognition and Neural Networks. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Ehud Y. Shapiro@gmail.com</Conference:email>
+    <Conference:name>Ehud Y. Shapiro</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/G?rard Morel">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1720456908">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1720456908">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/G?rard Morel"/>
+            <Conference:abstract>Abstract State Machines: Designing Distributed Systems with State Machines and B. 's abstract</Conference:abstract>
+            <Conference:title>Abstract State Machines: Designing Distributed Systems with State Machines and B.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/G?rard Morel"/>
+        <Conference:eventTitle>Abstract State Machines: Designing Distributed Systems with State Machines and B. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>G?rard Morel@gmail.com</Conference:email>
+    <Conference:name>G?rard Morel</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Werner Bux">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1049125236">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1049125236">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Werner Bux"/>
+            <Conference:abstract>Unconditional Security in Cryptography. 's abstract</Conference:abstract>
+            <Conference:title>Unconditional Security in Cryptography.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Werner Bux"/>
+        <Conference:eventTitle>Unconditional Security in Cryptography. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Werner Bux@gmail.com</Conference:email>
+    <Conference:name>Werner Bux</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Helen Treharne">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1779760084">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1779760084">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Helen Treharne"/>
+            <Conference:abstract>Retrenchment: An Engineering Variation on Refinement. 's abstract</Conference:abstract>
+            <Conference:title>Retrenchment: An Engineering Variation on Refinement.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Helen Treharne"/>
+        <Conference:eventTitle>Retrenchment: An Engineering Variation on Refinement. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Helen Treharne@gmail.com</Conference:email>
+    <Conference:name>Helen Treharne</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Benoit Parreaux">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/720969526">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/720969526">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Benoit Parreaux"/>
+            <Conference:abstract>Cost Effectiveness of Formal Methods in the Development of Avionics Systems at A?ROSPATIALE. 's abstract</Conference:abstract>
+            <Conference:title>Cost Effectiveness of Formal Methods in the Development of Avionics Systems at A?ROSPATIALE.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Benoit Parreaux"/>
+        <Conference:eventTitle>Cost Effectiveness of Formal Methods in the Development of Avionics Systems at A?ROSPATIALE. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Benoit Parreaux@gmail.com</Conference:email>
+    <Conference:name>Benoit Parreaux</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/C. A. Petri">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1212453680">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1212453680">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/C. A. Petri"/>
+            <Conference:abstract>COSY: Its Relation to Nets and CSP. 's abstract</Conference:abstract>
+            <Conference:title>COSY: Its Relation to Nets and CSP.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/C. A. Petri"/>
+        <Conference:eventTitle>COSY: Its Relation to Nets and CSP. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>C. A. Petri@gmail.com</Conference:email>
+    <Conference:name>C. A. Petri</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/David Hutchison">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1787228514">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1787228514">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/David Hutchison"/>
+            <Conference:abstract>Pre- and Post-processing in Machine Learning and Data Mining. 's abstract</Conference:abstract>
+            <Conference:title>Pre- and Post-processing in Machine Learning and Data Mining.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/David Hutchison"/>
+        <Conference:eventTitle>Pre- and Post-processing in Machine Learning and Data Mining. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>David Hutchison@gmail.com</Conference:email>
+    <Conference:name>David Hutchison</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Dominique M?ry">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/2142422799">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/2142422799">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Dominique M?ry"/>
+            <Conference:abstract>Key Management Techniques. 's abstract</Conference:abstract>
+            <Conference:title>Key Management Techniques.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Dominique M?ry"/>
+        <Conference:eventTitle>Key Management Techniques. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Dominique M?ry@gmail.com</Conference:email>
+    <Conference:name>Dominique M?ry</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Sou?d Taouil-Traverson">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1432064629">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1432064629">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Sou?d Taouil-Traverson"/>
+            <Conference:abstract>Knowledge Representation: Features of Knowledge. 's abstract</Conference:abstract>
+            <Conference:title>Knowledge Representation: Features of Knowledge.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Sou?d Taouil-Traverson"/>
+        <Conference:eventTitle>Knowledge Representation: Features of Knowledge. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Sou?d Taouil-Traverson@gmail.com</Conference:email>
+    <Conference:name>Sou?d Taouil-Traverson</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Klaus Vedder">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/912642174">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/912642174">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Klaus Vedder"/>
+            <Conference:abstract>International Standardisation of IT Security. 's abstract</Conference:abstract>
+            <Conference:title>International Standardisation of IT Security.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Klaus Vedder"/>
+        <Conference:eventTitle>International Standardisation of IT Security. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Klaus Vedder@gmail.com</Conference:email>
+    <Conference:name>Klaus Vedder</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Bart De Decker">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1526388789">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1526388789">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Bart De Decker"/>
+            <Conference:abstract>Well Defined B. 's abstract</Conference:abstract>
+            <Conference:title>Well Defined B.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Bart De Decker"/>
+        <Conference:eventTitle>Well Defined B. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Bart De Decker@gmail.com</Conference:email>
+    <Conference:name>Bart De Decker</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Wayne Iba">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1696435495">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1696435495">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Wayne Iba"/>
+            <Conference:abstract>Petri Nets and Other Models of Concurrency. 's abstract</Conference:abstract>
+            <Conference:title>Petri Nets and Other Models of Concurrency.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Wayne Iba"/>
+        <Conference:eventTitle>Petri Nets and Other Models of Concurrency. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Wayne Iba@gmail.com</Conference:email>
+    <Conference:name>Wayne Iba</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Richard Shore">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1166961345">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1166961345">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard Shore"/>
+            <Conference:abstract>Cryptographic Primitives for Information Authentication - State of the Art. 's abstract</Conference:abstract>
+            <Conference:title>Cryptographic Primitives for Information Authentication - State of the Art.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard Shore"/>
+        <Conference:eventTitle>Cryptographic Primitives for Information Authentication - State of the Art. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Richard Shore@gmail.com</Conference:email>
+    <Conference:name>Richard Shore</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Anastasia Pagnoni">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1606860516">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1606860516">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Anastasia Pagnoni"/>
+            <Conference:abstract>Distibuted System Architecture Model. 's abstract</Conference:abstract>
+            <Conference:title>Distibuted System Architecture Model.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Anastasia Pagnoni"/>
+        <Conference:eventTitle>Distibuted System Architecture Model. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Anastasia Pagnoni@gmail.com</Conference:email>
+    <Conference:name>Anastasia Pagnoni</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Mihir Bellare">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/997764353">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/997764353">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Mihir Bellare"/>
+            <Conference:abstract>Structure Theory of Petri Nets: the Free Choice Hiatus. 's abstract</Conference:abstract>
+            <Conference:title>Structure Theory of Petri Nets: the Free Choice Hiatus.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Mihir Bellare"/>
+        <Conference:eventTitle>Structure Theory of Petri Nets: the Free Choice Hiatus. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Mihir Bellare@gmail.com</Conference:email>
+    <Conference:name>Mihir Bellare</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Susanna Donatelli">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1786678279">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1786678279">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Susanna Donatelli"/>
+            <Conference:abstract>Elliptic Curve Public-Key Cryptosystems - An Introduction. 's abstract</Conference:abstract>
+            <Conference:title>Elliptic Curve Public-Key Cryptosystems - An Introduction.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Susanna Donatelli"/>
+        <Conference:eventTitle>Elliptic Curve Public-Key Cryptosystems - An Introduction. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Susanna Donatelli@gmail.com</Conference:email>
+    <Conference:name>Susanna Donatelli</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Pierre America">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/516686242">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/516686242">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierre America"/>
+            <Conference:abstract>An Object-Based Approach to the B Formal Method. 's abstract</Conference:abstract>
+            <Conference:title>An Object-Based Approach to the B Formal Method.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierre America"/>
+        <Conference:eventTitle>An Object-Based Approach to the B Formal Method. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Pierre America@gmail.com</Conference:email>
+    <Conference:name>Pierre America</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Rocco De Nicola">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/863158496">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/863158496">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Rocco De Nicola"/>
+            <Conference:abstract>Universal Models in Categories for Process Synchronization. 's abstract</Conference:abstract>
+            <Conference:title>Universal Models in Categories for Process Synchronization.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Rocco De Nicola"/>
+        <Conference:eventTitle>Universal Models in Categories for Process Synchronization. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Rocco De Nicola@gmail.com</Conference:email>
+    <Conference:name>Rocco De Nicola</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Maciej Koutny">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1491841284">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1491841284">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Maciej Koutny"/>
+            <Conference:abstract>Complexity of Place/Transition Nets. 's abstract</Conference:abstract>
+            <Conference:title>Complexity of Place/Transition Nets.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Maciej Koutny"/>
+        <Conference:eventTitle>Complexity of Place/Transition Nets. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Maciej Koutny@gmail.com</Conference:email>
+    <Conference:name>Maciej Koutny</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Sylvie Vignes">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/240630930">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/240630930">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Sylvie Vignes"/>
+            <Conference:abstract>Unsupervised Learning of Probabilistic Concept Hierarchies. 's abstract</Conference:abstract>
+            <Conference:title>Unsupervised Learning of Probabilistic Concept Hierarchies.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Sylvie Vignes"/>
+        <Conference:eventTitle>Unsupervised Learning of Probabilistic Concept Hierarchies. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Sylvie Vignes@gmail.com</Conference:email>
+    <Conference:name>Sylvie Vignes</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jean-Marc Meynadier">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/145077029">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/145077029">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Marc Meynadier"/>
+            <Conference:abstract>Access Units. 's abstract</Conference:abstract>
+            <Conference:title>Access Units.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Marc Meynadier"/>
+        <Conference:eventTitle>Access Units. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jean-Marc Meynadier@gmail.com</Conference:email>
+    <Conference:name>Jean-Marc Meynadier</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Louis Mussat">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/632902193">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/632902193">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Louis Mussat"/>
+            <Conference:abstract>Nets in Data Bases. 's abstract</Conference:abstract>
+            <Conference:title>Nets in Data Bases.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Louis Mussat"/>
+        <Conference:eventTitle>Nets in Data Bases. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Louis Mussat@gmail.com</Conference:email>
+    <Conference:name>Louis Mussat</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Robert Valette">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1804280389">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1804280389">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Robert Valette"/>
+            <Conference:abstract>Practice-Oriented Provable Security. 's abstract</Conference:abstract>
+            <Conference:title>Practice-Oriented Provable Security.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Robert Valette"/>
+        <Conference:eventTitle>Practice-Oriented Provable Security. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Robert Valette@gmail.com</Conference:email>
+    <Conference:name>Robert Valette</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/James P. Delgrande">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1902681582">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1902681582">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/James P. Delgrande"/>
+            <Conference:abstract>Synchronization. 's abstract</Conference:abstract>
+            <Conference:title>Synchronization.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/James P. Delgrande"/>
+        <Conference:eventTitle>Synchronization. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>James P. Delgrande@gmail.com</Conference:email>
+    <Conference:name>James P. Delgrande</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Marie-Laure Potet">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/420350949">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/420350949">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Marie-Laure Potet"/>
+            <Conference:abstract>Network Operating Systems. 's abstract</Conference:abstract>
+            <Conference:title>Network Operating Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Marie-Laure Potet"/>
+        <Conference:eventTitle>Network Operating Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Marie-Laure Potet@gmail.com</Conference:email>
+    <Conference:name>Marie-Laure Potet</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/E. Douglas Jensen">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1637872273">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1637872273">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/E. Douglas Jensen"/>
+            <Conference:abstract>Identifiers (Naming) in Distributed Systems. 's abstract</Conference:abstract>
+            <Conference:title>Identifiers (Naming) in Distributed Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/E. Douglas Jensen"/>
+        <Conference:eventTitle>Identifiers (Naming) in Distributed Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>E. Douglas Jensen@gmail.com</Conference:email>
+    <Conference:name>E. Douglas Jensen</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Eike Best">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/622146217">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/622146217">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Eike Best"/>
+            <Conference:abstract>Motivations, Objectives and Characterization of Distributed Systems. 's abstract</Conference:abstract>
+            <Conference:title>Motivations, Objectives and Characterization of Distributed Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Eike Best"/>
+        <Conference:eventTitle>Motivations, Objectives and Characterization of Distributed Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Eike Best@gmail.com</Conference:email>
+    <Conference:name>Eike Best</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Constantine D. Spyropoulos">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1934772266">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1934772266">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Constantine D. Spyropoulos"/>
+            <Conference:abstract>Designing a B Model for Safety-Critical Software Systems. 's abstract</Conference:abstract>
+            <Conference:title>Designing a B Model for Safety-Critical Software Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Constantine D. Spyropoulos"/>
+        <Conference:eventTitle>Designing a B Model for Safety-Critical Software Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Constantine D. Spyropoulos@gmail.com</Conference:email>
+    <Conference:name>Constantine D. Spyropoulos</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Walter Fumy">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/725695884">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/725695884">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Walter Fumy"/>
+            <Conference:abstract>Linear Algebraic and Linear Programming Techniques for the Analysis of Place or Transition Net Syste 's abstract</Conference:abstract>
+            <Conference:title>Linear Algebraic and Linear Programming Techniques for the Analysis of Place or Transition Net Syste</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Walter Fumy"/>
+        <Conference:eventTitle>Linear Algebraic and Linear Programming Techniques for the Analysis of Place or Transition Net Syste Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Walter Fumy@gmail.com</Conference:email>
+    <Conference:name>Walter Fumy</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Andrea Bobbio">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/899209985">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/899209985">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Andrea Bobbio"/>
+            <Conference:abstract>The State of Cryptographic Hash Functions. 's abstract</Conference:abstract>
+            <Conference:title>The State of Cryptographic Hash Functions.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Andrea Bobbio"/>
+        <Conference:eventTitle>The State of Cryptographic Hash Functions. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Andrea Bobbio@gmail.com</Conference:email>
+    <Conference:name>Andrea Bobbio</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jan Verschuren">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/129213912">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/129213912">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jan Verschuren"/>
+            <Conference:abstract>CCS - and its Relationship to Net Theory. 's abstract</Conference:abstract>
+            <Conference:title>CCS - and its Relationship to Net Theory.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jan Verschuren"/>
+        <Conference:eventTitle>CCS - and its Relationship to Net Theory. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jan Verschuren@gmail.com</Conference:email>
+    <Conference:name>Jan Verschuren</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Steve Dunne">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/2093018256">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/2093018256">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Steve Dunne"/>
+            <Conference:abstract>Smart Cards - Requirements, Properties, and Applications. 's abstract</Conference:abstract>
+            <Conference:title>Smart Cards - Requirements, Properties, and Applications.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Steve Dunne"/>
+        <Conference:eventTitle>Smart Cards - Requirements, Properties, and Applications. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Steve Dunne@gmail.com</Conference:email>
+    <Conference:name>Steve Dunne</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jacques Julliand">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1108726987">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1108726987">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jacques Julliand"/>
+            <Conference:abstract>Designing Equvialent Semantic Models for Process Creation. 's abstract</Conference:abstract>
+            <Conference:title>Designing Equvialent Semantic Models for Process Creation.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jacques Julliand"/>
+        <Conference:eventTitle>Designing Equvialent Semantic Models for Process Creation. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jacques Julliand@gmail.com</Conference:email>
+    <Conference:name>Jacques Julliand</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Frank Jorissen">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/621166987">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/621166987">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Frank Jorissen"/>
+            <Conference:abstract>Deduction and Computation. 's abstract</Conference:abstract>
+            <Conference:title>Deduction and Computation.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Frank Jorissen"/>
+        <Conference:eventTitle>Deduction and Computation. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Frank Jorissen@gmail.com</Conference:email>
+    <Conference:name>Frank Jorissen</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Bruno Tatibou?t">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1298110363">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1298110363">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Bruno Tatibou?t"/>
+            <Conference:abstract>Behaviour of Elementary Net Systems. 's abstract</Conference:abstract>
+            <Conference:title>Behaviour of Elementary Net Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Bruno Tatibou?t"/>
+        <Conference:eventTitle>Behaviour of Elementary Net Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Bruno Tatibou?t@gmail.com</Conference:email>
+    <Conference:name>Bruno Tatibou?t</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Patrick Behm">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1156305742">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1156305742">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Patrick Behm"/>
+            <Conference:abstract>Machine Learning in User Modeling. 's abstract</Conference:abstract>
+            <Conference:title>Machine Learning in User Modeling.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Patrick Behm"/>
+        <Conference:eventTitle>Machine Learning in User Modeling. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Patrick Behm@gmail.com</Conference:email>
+    <Conference:name>Patrick Behm</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Pierre Desforges">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1183924196">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1183924196">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierre Desforges"/>
+            <Conference:abstract>Distributed Algorithms for Networks of Agents. 's abstract</Conference:abstract>
+            <Conference:title>Distributed Algorithms for Networks of Agents.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Pierre Desforges"/>
+        <Conference:eventTitle>Distributed Algorithms for Networks of Agents. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Pierre Desforges@gmail.com</Conference:email>
+    <Conference:name>Pierre Desforges</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Didier Bert">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1247764956">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1247764956">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Didier Bert"/>
+            <Conference:abstract>GSM: Security, Services, and the SIM. 's abstract</Conference:abstract>
+            <Conference:title>GSM: Security, Services, and the SIM.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Didier Bert"/>
+        <Conference:eventTitle>GSM: Security, Services, and the SIM. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Didier Bert@gmail.com</Conference:email>
+    <Conference:name>Didier Bert</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Marina A. Wald?n">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/99467349">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/99467349">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Marina A. Wald?n"/>
+            <Conference:abstract>An Introduction to Automated Deduction. 's abstract</Conference:abstract>
+            <Conference:title>An Introduction to Automated Deduction.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Marina A. Wald?n"/>
+        <Conference:eventTitle>An Introduction to Automated Deduction. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Marina A. Wald?n@gmail.com</Conference:email>
+    <Conference:name>Marina A. Wald?n</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/G?rard P. Huet">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/328072447">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/328072447">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/G?rard P. Huet"/>
+            <Conference:abstract>Security Aspects of the Ecash? Payment System. 's abstract</Conference:abstract>
+            <Conference:title>Security Aspects of the Ecash? Payment System.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/G?rard P. Huet"/>
+        <Conference:eventTitle>Security Aspects of the Ecash? Payment System. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>G?rard P. Huet@gmail.com</Conference:email>
+    <Conference:name>G?rard P. Huet</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Wolfgang Bibel">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1049008572">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1049008572">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Wolfgang Bibel"/>
+            <Conference:abstract>On Axiomatic Definition of Max-Model of Concurrency. 's abstract</Conference:abstract>
+            <Conference:title>On Axiomatic Definition of Max-Model of Concurrency.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Wolfgang Bibel"/>
+        <Conference:eventTitle>On Axiomatic Definition of Max-Model of Concurrency. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Wolfgang Bibel@gmail.com</Conference:email>
+    <Conference:name>Wolfgang Bibel</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Bart Preneel">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/117113781">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/117113781">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Bart Preneel"/>
+            <Conference:abstract>Formalisation of B in Isabelle/HOL. 's abstract</Conference:abstract>
+            <Conference:title>Formalisation of B in Isabelle/HOL.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Bart Preneel"/>
+        <Conference:eventTitle>Formalisation of B in Isabelle/HOL. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Bart Preneel@gmail.com</Conference:email>
+    <Conference:name>Bart Preneel</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Marc Shapiro">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1577330314">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1577330314">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Marc Shapiro"/>
+            <Conference:abstract>Consensus in Asynchronous Distributed Systems: A Concise Guided Tour. 's abstract</Conference:abstract>
+            <Conference:title>Consensus in Asynchronous Distributed Systems: A Concise Guided Tour.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Marc Shapiro"/>
+        <Conference:eventTitle>Consensus in Asynchronous Distributed Systems: A Concise Guided Tour. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Marc Shapiro@gmail.com</Conference:email>
+    <Conference:name>Marc Shapiro</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/P. S. Thiagarajan">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1344001436">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1344001436">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/P. S. Thiagarajan"/>
+            <Conference:abstract>On Solutions to the Key Escrow Problem. 's abstract</Conference:abstract>
+            <Conference:title>On Solutions to the Key Escrow Problem.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/P. S. Thiagarajan"/>
+        <Conference:eventTitle>On Solutions to the Key Escrow Problem. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>P. S. Thiagarajan@gmail.com</Conference:email>
+    <Conference:name>P. S. Thiagarajan</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jean-Raymond Abrial">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1718202252">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1718202252">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Raymond Abrial"/>
+            <Conference:abstract>FlexiNet: A Flexible, Component-Oriented Middleware System. 's abstract</Conference:abstract>
+            <Conference:title>FlexiNet: A Flexible, Component-Oriented Middleware System.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Raymond Abrial"/>
+        <Conference:eventTitle>FlexiNet: A Flexible, Component-Oriented Middleware System. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jean-Raymond Abrial@gmail.com</Conference:email>
+    <Conference:name>Jean-Raymond Abrial</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Richard W. Watson">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1817563386">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1817563386">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard W. Watson"/>
+            <Conference:abstract>Securing Internet Electronic Mail. 's abstract</Conference:abstract>
+            <Conference:title>Securing Internet Electronic Mail.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Richard W. Watson"/>
+        <Conference:eventTitle>Securing Internet Electronic Mail. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Richard W. Watson@gmail.com</Conference:email>
+    <Conference:name>Richard W. Watson</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jaco de Bakker">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1727536877">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1727536877">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jaco de Bakker"/>
+            <Conference:abstract>Topology-Aware Algorithms for Large-Scale Communication. 's abstract</Conference:abstract>
+            <Conference:title>Topology-Aware Algorithms for Large-Scale Communication.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jaco de Bakker"/>
+        <Conference:eventTitle>Topology-Aware Algorithms for Large-Scale Communication. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jaco de Bakker@gmail.com</Conference:email>
+    <Conference:name>Jaco de Bakker</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Raymond R. Devillers">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/120955761">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/120955761">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Raymond R. Devillers"/>
+            <Conference:abstract>Genetic Algorithms in Machine Learning. 's abstract</Conference:abstract>
+            <Conference:title>Genetic Algorithms in Machine Learning.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Raymond R. Devillers"/>
+        <Conference:eventTitle>Genetic Algorithms in Machine Learning. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Raymond R. Devillers@gmail.com</Conference:email>
+    <Conference:name>Raymond R. Devillers</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Carroll Morgan">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1421274450">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1421274450">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Carroll Morgan"/>
+            <Conference:abstract>Synthesising Structure from Flat Specifications. 's abstract</Conference:abstract>
+            <Conference:title>Synthesising Structure from Flat Specifications.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Carroll Morgan"/>
+        <Conference:eventTitle>Synthesising Structure from Flat Specifications. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Carroll Morgan@gmail.com</Conference:email>
+    <Conference:name>Carroll Morgan</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jean-Loup Baer">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1148208996">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1148208996">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Loup Baer"/>
+            <Conference:abstract>Nets in Office Automation. 's abstract</Conference:abstract>
+            <Conference:title>Nets in Office Automation.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Loup Baer"/>
+        <Conference:eventTitle>Nets in Office Automation. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jean-Loup Baer@gmail.com</Conference:email>
+    <Conference:name>Jean-Loup Baer</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Antoni W. Mazurkiewicz">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/570336465">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/570336465">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Antoni W. Mazurkiewicz"/>
+            <Conference:abstract>Quality of Service and Electronic Newspaper: The Etel Solution. 's abstract</Conference:abstract>
+            <Conference:title>Quality of Service and Electronic Newspaper: The Etel Solution.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Antoni W. Mazurkiewicz"/>
+        <Conference:eventTitle>Quality of Service and Electronic Newspaper: The Etel Solution. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Antoni W. Mazurkiewicz@gmail.com</Conference:email>
+    <Conference:name>Antoni W. Mazurkiewicz</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Ugo Montanari">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1424692981">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1424692981">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Ugo Montanari"/>
+            <Conference:abstract>Hardware/Software Relationships in Distributed Systems. 's abstract</Conference:abstract>
+            <Conference:title>Hardware/Software Relationships in Distributed Systems.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Ugo Montanari"/>
+        <Conference:eventTitle>Hardware/Software Relationships in Distributed Systems. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Ugo Montanari@gmail.com</Conference:email>
+    <Conference:name>Ugo Montanari</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Bruno Legeard">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/929680464">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/929680464">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Bruno Legeard"/>
+            <Conference:abstract>Process Control Engineering: Contribution to a Formal Structuring Framework with the B Method. 's abstract</Conference:abstract>
+            <Conference:title>Process Control Engineering: Contribution to a Formal Structuring Framework with the B Method.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Bruno Legeard"/>
+        <Conference:eventTitle>Process Control Engineering: Contribution to a Formal Structuring Framework with the B Method. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Bruno Legeard@gmail.com</Conference:email>
+    <Conference:name>Bruno Legeard</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Brian Matthews">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1524935621">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1524935621">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Brian Matthews"/>
+            <Conference:abstract>Function Decomposition in Machine Learning. 's abstract</Conference:abstract>
+            <Conference:title>Function Decomposition in Machine Learning.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Brian Matthews"/>
+        <Conference:eventTitle>Function Decomposition in Machine Learning. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Brian Matthews@gmail.com</Conference:email>
+    <Conference:name>Brian Matthews</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/G?rard Le Lann">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1406278862">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1406278862">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/G?rard Le Lann"/>
+            <Conference:abstract>Composition and Refinement in the B-Method. 's abstract</Conference:abstract>
+            <Conference:title>Composition and Refinement in the B-Method.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/G?rard Le Lann"/>
+        <Conference:eventTitle>Composition and Refinement in the B-Method. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>G?rard Le Lann@gmail.com</Conference:email>
+    <Conference:name>G?rard Le Lann</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Juan Bicarregui">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/728702138">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/728702138">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Juan Bicarregui"/>
+            <Conference:abstract>Fundamental Mechanisms in Machine Learning and Inductive Inference. 's abstract</Conference:abstract>
+            <Conference:title>Fundamental Mechanisms in Machine Learning and Inductive Inference.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Juan Bicarregui"/>
+        <Conference:eventTitle>Fundamental Mechanisms in Machine Learning and Inductive Inference. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Juan Bicarregui@gmail.com</Conference:email>
+    <Conference:name>Juan Bicarregui</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Tobias Vesper">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/430856512">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/430856512">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Tobias Vesper"/>
+            <Conference:abstract>M?T?OR : An Industrial Success in Formal Development. 's abstract</Conference:abstract>
+            <Conference:title>M?T?OR : An Industrial Success in Formal Development.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Tobias Vesper"/>
+        <Conference:eventTitle>M?T?OR : An Industrial Success in Formal Development. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Tobias Vesper@gmail.com</Conference:email>
+    <Conference:name>Tobias Vesper</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Jean-Fran?ois P?tin">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1941908972">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1941908972">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Fran?ois P?tin"/>
+            <Conference:abstract>Support for Distributed CSCW Applications. 's abstract</Conference:abstract>
+            <Conference:title>Support for Distributed CSCW Applications.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Jean-Fran?ois P?tin"/>
+        <Conference:eventTitle>Support for Distributed CSCW Applications. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Jean-Fran?ois P?tin@gmail.com</Conference:email>
+    <Conference:name>Jean-Fran?ois P?tin</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/M. Poppleton">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/117923291">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/117923291">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/M. Poppleton"/>
+            <Conference:abstract>Responsive Protocols for Distributed Multimedia Applications. 's abstract</Conference:abstract>
+            <Conference:title>Responsive Protocols for Distributed Multimedia Applications.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/M. Poppleton"/>
+        <Conference:eventTitle>Responsive Protocols for Distributed Multimedia Applications. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>M. Poppleton@gmail.com</Conference:email>
+    <Conference:name>M. Poppleton</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Andrew Herbert">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1943362149">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1943362149">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Andrew Herbert"/>
+            <Conference:abstract>Methods of Automated Reasoning. 's abstract</Conference:abstract>
+            <Conference:title>Methods of Automated Reasoning.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Andrew Herbert"/>
+        <Conference:eventTitle>Methods of Automated Reasoning. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Andrew Herbert@gmail.com</Conference:email>
+    <Conference:name>Andrew Herbert</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Lilian Burdy">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/977147250">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/977147250">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Lilian Burdy"/>
+            <Conference:abstract>Test Case Preparation Using a Prototype. 's abstract</Conference:abstract>
+            <Conference:title>Test Case Preparation Using a Prototype.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Lilian Burdy"/>
+        <Conference:eventTitle>Test Case Preparation Using a Prototype. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Lilian Burdy@gmail.com</Conference:email>
+    <Conference:name>Lilian Burdy</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/G?nter Hommel">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/449598360">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/449598360">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/G?nter Hommel"/>
+            <Conference:abstract>Introducing Dynamic Constraints in B. 's abstract</Conference:abstract>
+            <Conference:title>Introducing Dynamic Constraints in B.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/G?nter Hommel"/>
+        <Conference:eventTitle>Introducing Dynamic Constraints in B. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>G?nter Hommel@gmail.com</Conference:email>
+    <Conference:name>G?nter Hommel</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Mark Vandenwauver">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/909371492">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/909371492">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Mark Vandenwauver"/>
+            <Conference:abstract>IPC Interface and End-to-End Protocols. 's abstract</Conference:abstract>
+            <Conference:title>IPC Interface and End-to-End Protocols.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Mark Vandenwauver"/>
+        <Conference:eventTitle>IPC Interface and End-to-End Protocols. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Mark Vandenwauver@gmail.com</Conference:email>
+    <Conference:name>Mark Vandenwauver</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Antti Valmari">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1059899094">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1059899094">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Antti Valmari"/>
+            <Conference:abstract>Petri Nets, Process Algebras and Concurrent Programming Languages. 's abstract</Conference:abstract>
+            <Conference:title>Petri Nets, Process Algebras and Concurrent Programming Languages.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Antti Valmari"/>
+        <Conference:eventTitle>Petri Nets, Process Algebras and Concurrent Programming Languages. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Antti Valmari@gmail.com</Conference:email>
+    <Conference:name>Antti Valmari</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Elmar Holler">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1802898610">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1802898610">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Elmar Holler"/>
+            <Conference:abstract>Layering Distributed Algorithms within the B-Method. 's abstract</Conference:abstract>
+            <Conference:title>Layering Distributed Algorithms within the B-Method.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Elmar Holler"/>
+        <Conference:eventTitle>Layering Distributed Algorithms within the B-Method. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Elmar Holler@gmail.com</Conference:email>
+    <Conference:name>Elmar Holler</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Janez Demsar">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1465550925">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1465550925">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Janez Demsar"/>
+            <Conference:abstract>Trends in the Fight Against Computer-Related Delinquency. 's abstract</Conference:abstract>
+            <Conference:title>Trends in the Fight Against Computer-Related Delinquency.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Janez Demsar"/>
+        <Conference:eventTitle>Trends in the Fight Against Computer-Related Delinquency. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Janez Demsar@gmail.com</Conference:email>
+    <Conference:name>Janez Demsar</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Alexander Malioukov">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/554995662">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/554995662">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Alexander Malioukov"/>
+            <Conference:abstract>Trace Theory. 's abstract</Conference:abstract>
+            <Conference:title>Trace Theory.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Alexander Malioukov"/>
+        <Conference:eventTitle>Trace Theory. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Alexander Malioukov@gmail.com</Conference:email>
+    <Conference:name>Alexander Malioukov</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Bill Stoddart">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/765608462">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/765608462">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Bill Stoddart"/>
+            <Conference:abstract>Petri Nets in Performance Analysis: An Introduction. 's abstract</Conference:abstract>
+            <Conference:title>Petri Nets in Performance Analysis: An Introduction.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Bill Stoddart"/>
+        <Conference:eventTitle>Petri Nets in Performance Analysis: An Introduction. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Bill Stoddart@gmail.com</Conference:email>
+    <Conference:name>Bill Stoddart</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Marko Bohanec">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1561936078">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1561936078">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Marko Bohanec"/>
+            <Conference:abstract>Non-sequential Processes. 's abstract</Conference:abstract>
+            <Conference:title>Non-sequential Processes.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Marko Bohanec"/>
+        <Conference:eventTitle>Non-sequential Processes. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Marko Bohanec@gmail.com</Conference:email>
+    <Conference:name>Marko Bohanec</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Michel Diaz">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/1408211481">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/1408211481">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Michel Diaz"/>
+            <Conference:abstract>Coloured Petri Nets. 's abstract</Conference:abstract>
+            <Conference:title>Coloured Petri Nets.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Michel Diaz"/>
+        <Conference:eventTitle>Coloured Petri Nets. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Michel Diaz@gmail.com</Conference:email>
+    <Conference:name>Michel Diaz</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+  <Conference:Presenter rdf:about="http://ws.nju.edu.cn/rdf/country/Patrick Lamboley">
+    <Conference:presenterOf>
+      <Conference:Presentation rdf:about="http://ws.nju.edu.cn/rdf/country/event/389880026">
+        <Conference:hasPaper>
+          <Conference:Paper rdf:about="http://ws.nju.edu.cn/rdf/country/paper/389880026">
+            <Conference:author rdf:resource="http://ws.nju.edu.cn/rdf/country/Patrick Lamboley"/>
+            <Conference:abstract>Two Strategies to Data-Refine an Equivalence to a Forest. 's abstract</Conference:abstract>
+            <Conference:title>Two Strategies to Data-Refine an Equivalence to a Forest.</Conference:title>
+          </Conference:Paper>
+        </Conference:hasPaper>
+        <Conference:hasPresenter rdf:resource="http://ws.nju.edu.cn/rdf/country/Patrick Lamboley"/>
+        <Conference:eventTitle>Two Strategies to Data-Refine an Equivalence to a Forest. Presentation</Conference:eventTitle>
+      </Conference:Presentation>
+    </Conference:presenterOf>
+    <Conference:email>Patrick Lamboley@gmail.com</Conference:email>
+    <Conference:name>Patrick Lamboley</Conference:name>
+    <rdf:type rdf:resource="http://www.mindswap.org/~golbeck/web/www04photo.owl#Person"/>
+  </Conference:Presenter>
+</rdf:RDF>
